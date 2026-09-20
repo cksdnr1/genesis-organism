@@ -36,6 +36,90 @@ implementation work. An unresolved protocol decision is an input dependency,
 never permission for a later implementer to invent a convenient default. A
 planning gate approves this decomposition, not an unresolved protocol option.
 
+## Minimal Sufficiency — project-wide design principle
+
+**DESIGN DECISION — creator-directed, 2026-09-21.** “The simplest thing is the
+most beautiful.” Engineering interpretation: **The simplest mechanism that
+preserves the organism is preferred.** This governs how we design the project;
+it is not an additional numbered Genesis invariant or a biological property.
+
+> MINIMAL SUFFICIENCY
+>
+> Genesis Organism SHOULD use the smallest mechanism that preserves the
+> required identity, encounter, continuity, causal effect and verifiability.
+>
+> Additional complexity MUST justify itself through at least one of:
+>
+> 1. a required invariant,
+> 2. a demonstrated capability,
+> 3. a necessary security/privacy property,
+> 4. interoperability that is actually required by an accepted profile, or
+> 5. evidence required by an accepted experiment.
+>
+> A mechanism MUST NOT be added merely because it may be useful in the future.
+
+This applies to protocol and organism design, canonical state, event vocabulary,
+schemas, interfaces, algorithms, dependencies, adapters, storage, cryptography,
+observer profiles, encounter semantics, memory, synapses, adaptation, reproduction,
+ecology, embodiment, anchoring and birth. These review requirements do not select
+unresolved protocol mechanisms. Correctness, deterministic replay, provenance,
+privacy, security, independent verification and historical compatibility win any
+conflict with minimality; existing normative invariants remain authoritative.
+
+### Removal Test
+
+If removing a component does not break an accepted invariant, demonstrated
+capability, required security/privacy property, accepted interoperability
+requirement, or required experiment, prefer removing it. Apply this to fields,
+event types, schemas, abstractions, modules, dependencies, services, adapters,
+stored state, cryptographic commitments, protocol layers, observer profiles,
+algorithms and execution phases.
+
+The test is not permission to remove provenance, historical evidence, compatibility
+records, security/privacy boundaries, negative test coverage, independent
+verification or already-published origin history. Minimalism must not weaken
+correctness or evidence. Record the requirement and evidence preserved by any
+simplification; use attributable revisions rather than rewriting historical records.
+
+### Complexity Budget
+
+Every accepted protocol addition SHOULD answer:
+
+1. What exact requirement requires this?
+2. What breaks if it is removed?
+3. Why can an existing mechanism not satisfy the requirement?
+4. What new state, dependency or failure mode does it introduce?
+5. How will its necessity be demonstrated?
+
+If these cannot be answered, default to **DEFER / OMIT**. This is a non-numeric
+review discipline, not an organism score, consensus field, new subsystem or service.
+A proposed demonstration needs an accepted requirement and bounded evidence plan;
+it is not a licence to add speculative machinery before demonstrating the need.
+
+### Simple origin, earned complexity
+
+> Complexity is not designed into life.
+> Complexity is earned through life.
+
+This artistic principle rejects unnecessary preloaded complexity, not sophisticated
+organisms emerging later through valid history. Apply it especially strongly to
+GENESIS #0001: prefer a minimal sufficient genome and canonical birth state, no
+prior experiences, empty/minimal memory, no synapses or children, origin-only
+lineage, and no adaptation until caused. These are conceptual starting conditions,
+not selected wire fields or fabricated birth data. Required birth evidence and
+protocol semantics still need to be defined and verified; #0001 remains **UNBORN**.
+
+Simple origin → encounter → experience → memory/synapse → causal change →
+adaptation → reproduction → ecology → emergent complexity describes the intended
+conditional research path, not a requirement to instantiate every later stage
+in an initial single-organism demonstration.
+
+Minimalism preserves the full Phase 22 product milestone: Encounter A →
+Observer-Negotiated Expression → Authorized Experience → Memory/Synapse causal
+effect → Encounter B → causally changed expression, with no-experience and
+rejected-experience controls. Identity plus a signed log is insufficient. Reduce
+supporting infrastructure only while verifiability and causal evidence survive.
+
 ## Core product acceptance — an encounter changes a later encounter
 
 A historically continuous synthetic organism presents different permitted
@@ -133,13 +217,29 @@ interfaces must funnel through the accepted rules, with explicit failure behavio
 ## Current Architecture and Proposed Direction
 
 Verified: a documentation repository and experimental structural schemas.
-Proposed: philosophy → protocol decisions → canonical schemas/vectors → reference
-core → adapters → instantiated organisms. Core validation/replay cannot depend
+Preferred: philosophy → minimal protocol contracts → canonical schemas/vectors →
+small deterministic core → optional adapters → organisms. Core validation/replay cannot depend
 on UI, model service, robot vendor or blockchain. Capability negotiation is
 separate from event authority. An observer expression is not canonical truth. PhenotypeState is a separate
 conceptual trait/behavior layer; D07 decides canonical-versus-derived representation
 before adding any stored state. Observer-Negotiated Expression is the current
 term; old Observer-Dependent Phenotype prose and schema descriptors remain historical.
+
+Keep the core's responsibilities smaller than those of optional integrations
+wherever possible; this is a boundary discipline, not a line-count target. Keep
+external adapter concerns outside canonical validation/replay.
+
+Design heuristics, subordinate to accepted requirements and existing evidence gates:
+
+- If local cryptographic commitment suffices, do not require blockchain.
+- If one meaningful event type suffices, do not invent an event hierarchy.
+- If deterministic code suffices, do not introduce an LLM.
+- If one profile proves a required mechanism, do not create ten profiles. The
+  existing human/language/embodied mock acceptance remains; mocks need no model service.
+- If one synthetic organism proves a property, do not introduce a population.
+  Reproduction/ecology experiments remain separately scoped with their own evidence.
+- Reuse an existing contract when it expresses the requirement; avoid parallel abstractions.
+- Keep an adapter external when it need not be part of the canonical core.
 
 Proposed flow (not implemented):
 
@@ -235,8 +335,10 @@ organismStateRef; negotiationRef is not negotiationProtocolVersion; outputRef is
 not an output digest. Preserve old JSON bytes and IDs. Select a distinct version
 and acceptance/migration mapping before implementing a typed profile.
 
-Typed profiles must express units, modality, resolution/rates, coordinate frames,
-robot limits and evidence without inventing precision from historical booleans.
+Typed successor profiles encode only semantics required by an accepted D07 profile.
+Units, modality, resolution/rates, coordinate frames, robot limits and evidence
+need explicit representation when used; unused descriptors are deferred, not
+placeholder fields. Never invent precision from historical booleans.
 Separate claims, issuer attestations and scoped verifier evaluations. Capability
 declaration grants neither event authority nor actuation. D03 controls any
 consensus-relevant numerical encoding; D07/D13 define byte/depth/resource limits.
@@ -249,6 +351,15 @@ Each decision record needs compared options, source evidence, constraints,
 selection rationale, rejected options, exact affected contracts, verification
 criteria, responsible acceptance and compatibility consequences. A research
 phase may deliver a recommendation, but cannot invent missing acceptance.
+
+Minimal Sufficiency applies across **D01–D14**, without a new decision number.
+Every new or revised accepted decision record MUST contain a **Minimality /
+Complexity Justification** section documenting the minimum mechanism considered,
+alternatives rejected for unnecessary complexity, the requirement justifying
+retained complexity, the Removal Test result and new failure modes introduced.
+Answer the Complexity Budget questions, including how necessity will be demonstrated.
+Apply this prospectively; historical accepted records are not rewritten, and these
+requirements do not claim any unresolved D-record has been accepted.
 
 | Decision | Questions / options to compare | Owner and closing evidence | Consumers |
 | --- | --- | --- | --- |
@@ -343,10 +454,15 @@ inclusion/consistency designs do not retain unavailable bytes or prove the lates
 head without witnesses/trust assumptions. Do not promise fifty-year operation
 from a small synthetic fixture; measure budgets and failure/recovery behavior.
 
-Evaluate MCP/A2A transport/capability exchange, DID resolution, PROV evidence
-relations, C2PA asset claims, Event Sourcing and CT/Merkle concepts as reusable
-infrastructure. None is a mandatory dependency or substitute for the encounter
-contract. See the primary-source ledger for versions and limits.
+Treat MCP/A2A transport/capability exchange, DID resolution, PROV evidence
+relations, C2PA asset claims and CT/Merkle constructions as deferred integration
+candidates. Compare one only when an accepted profile or measured requirement
+needs its property; do not implement a standards-adapter suite in advance.
+Append-only replay retains the event-sourcing principle without requiring a
+framework. Checkpoint/index/Merkle machinery needs a justified recovery, proof or
+measured scale requirement; durable history and required recovery evidence remain.
+None is a mandatory dependency or substitute for the encounter contract. See the
+primary-source ledger for versions and limits.
 
 ## Reset, Recovery and Compatibility
 

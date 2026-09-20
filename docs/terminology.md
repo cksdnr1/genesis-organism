@@ -57,3 +57,16 @@ Earlier phenotype/expression wording above is the origin draft's vocabulary.
 Current separation is defined in [phenotype](../spec/phenotype.md) and
 [successor compatibility](../schemas/successor-design.md); no old reference field
 is silently renamed or reinterpreted.
+
+## Project-wide design discipline
+
+These terms describe engineering/design review, not biological properties,
+canonical organism fields or additional Genesis invariants.
+
+| Term | Meaning |
+| --- | --- |
+| Minimal Sufficiency | Selecting the smallest mechanism satisfying accepted requirements without weakening invariants or evidence. |
+| Removal Test | Asking whether a component can be removed without breaking an accepted invariant, demonstrated capability, required protection, interoperability requirement or experiment; historical evidence and required verification remain protected. |
+| Complexity Budget | Non-numeric review discipline requiring added mechanisms to justify their necessity, new state, dependencies and failure modes. |
+
+See the [design principle and safeguards](features/genesis_organism/genesis_organism_total_spec.md#minimal-sufficiency--project-wide-design-principle).
