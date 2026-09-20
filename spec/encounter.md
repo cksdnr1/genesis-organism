@@ -65,6 +65,40 @@ signature/authorization scope, policy binding, accepted/refused outcomes and
 canonical serialization. The table does not silently complete these contracts.
 Do not fabricate observer identities, real receipt numbers or commitment values.
 
+## D13 — explicit open questions and closing evidence
+
+- **Encounter Idempotency:** How can we demonstrate that retrying the same
+  encounter cannot admit duplicate experience or apply its causal effect twice?
+  Compare an `encounterId` with a deterministic encounter commitment; neither is
+  selected here. Define identity scope, authenticated payload binding, durable
+  deduplication and outcome recovery with D02/D04. Test timeout after acceptance,
+  concurrent retries and restart, conflicting payloads reusing an identifier, and
+  distinct genuine encounters with identical content. At-most-once admission/effect
+  does not promise exactly-once network delivery or collapse separate visits.
+- **Policy Binding:** How is the access/disclosure policy applied during negotiation
+  bound to encounter evidence? Compare `policyRef` and `accessPolicyCommitment`
+  with the existing input binding; neither becomes a required field here. Pin the
+  policy version and relevant decision inputs, distinguish negotiation/disclosure
+  from admission authority, and define how policy changes before admission are
+  handled. Test policy substitution, changed or unavailable historical policy,
+  and disclosure beyond the allowed scope. A commitment supports integrity; it
+  does not by itself prove enforcement or justify publishing private policy data.
+- **Meaningful Consequence (with D07/D08):** What constitutes a meaningful causal
+  consequence of an encounter, and how can it be observed in a later expression?
+  Before implementation, specify an observable expression or behavior feature and
+  its justified deterministic memory/synapse rule. Counter-only, timestamp-only
+  or digest-only differences do not satisfy the encounter milestone. Compare
+  matched later requests, observer profiles, policies and external inputs from
+  the same initial state, varying only the admitted experience and its causal
+  consequences. No-experience/rejected-experience controls and a targeted rule
+  ablation must isolate the effect; replay must reproduce it. This verifies a
+  specified causal mechanism, not subjective meaning or an invented affinity score.
+
+These questions refine D13 and its downstream D08 integration; they do not freeze the eight
+candidate fields above, create a receipt schema or assert that the decisions are
+closed. Execution phases 15/18 resolve and test idempotency/policy binding;
+phases 19/22 define and demonstrate meaningful consequence.
+
 ## Avoid cyclic commitments
 
 A receipt that contains resulting event hashes cannot also be the exact object

@@ -53,6 +53,23 @@ conditions. It cannot prove indefinite novelty, unlimited scalability, machine
 preference or open-ended evolution. Those need separately operationalized
 longitudinal research; no convenient novelty counter establishes them.
 
+## D14 — long-term Niche Construction question
+
+**OPEN QUESTION:** Can organisms create new ecological niches that alter the
+future selection pressures of other organisms?
+
+A future study would distinguish organism-caused environmental changes from
+externally scripted changes, trace their effects on other organisms' encounter
+opportunities and differential reproduction, and compare controls that disable
+that environmental feedback. New behavior or a novelty count alone does not
+establish a new niche; niche and novelty criteria would need separate definitions.
+This question concerns changing ecology as well as adaptation to a fixed objective.
+
+This is a long-term research direction, not a selected mechanism, a new Phase 1
+or birth gate, or additional required implementation in the bounded Phase 29
+experiment. Scope and accept any such study separately after lineage/ecology
+foundations. Finite experiments do not establish open-ended evolution.
+
 ## Scale, safety and acceptance
 
 D05/D14 specify per-encounter and per-population storage/computation budgets,

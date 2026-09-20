@@ -259,18 +259,37 @@ phase may deliver a recommendation, but cannot invent missing acceptance.
 | D05 Privacy/version/retention | Public vs authorized replay; projections, keys, dependencies, snapshots/pruning, migration authority | Accepted data classification, replay-access and historical-version policy | Memory, archives, migrations |
 | D06 Implementation boundary | Reference language/toolchain and independent verifier; small modules and CLI contracts | Accepted implementation spec after D02–D05; dependency review | Source layout and executable tests |
 | D07 Perception validity | PhenotypeState versus expression; typed capability successor, units/frames/evidence; selection/policy; historical schema compatibility | Accepted profile, exact mappings/rejections, claim/attestation boundaries and counterexamples | Negotiation and expression verification |
-| D08 Memory/synapse | Canonical/local/private partitions, consent, causal relation semantics, bounded retention | Accepted transition/effect tables without arbitrary scores | Experience components |
+| D08 Memory/synapse | Canonical/local/private partitions, consent, causal relation semantics, bounded retention; D13 Meaningful Consequence in later expression | Accepted observable transition/effect criteria, matched controls and rule ablation; counter-only differences do not suffice | Experience components and causal-loop demonstration |
 | D09 Individual change/adaptation | What changes within one organism, what is heritable; deterministic inputs and justified adaptation measures | Accepted transition rules and replay/control vectors; no population-evolution claim from individual change | Individual transitions and D14 research |
 | D10 Reproduction/lineage | Parent-state eligibility, contributions, authorization, failure/retry and ancestry verification | Accepted inheritance/birth contract and failure vectors | Child creation and ancestry |
 | D11 Embodiment/evidence | Simultaneous bodies, body authority, witness/attestation scope, limits and safety | Accepted simulator boundaries; separate physical-operation authorization if ever requested | Simulated adapter, later real bodies |
 | D12 Anchoring/freeze/birth | Whether to anchor; storage/chain split; profile freeze, release evidence and exact birth act | Creator accepts all prior birth evidence and explicit irreversible actions | Optional adapter, release and eventual birth |
-| D13 Encounter contract | Evidence/receipt/outcome, exact eight candidate fields, policy binding, admission authority, idempotence, refusal/pending distinction, acyclic commitments, retained bytes | Creator-directed encounter concept; exact contract still requires accepted D02–D05/D07-compatible record and adversarial vectors | Encounter admission and causal-loop demonstration |
-| D14 Population/Ecology | Heritable variation, differential reproduction, environment/resource constraints, controls, measurement/uncertainty and open-endedness limits | Accepted bounded synthetic study design before experiments; no arbitrary fitness/death mechanism | Post-lineage roadmap 5E; evidence for limited evolution claims |
+| D13 Encounter contract | Evidence/receipt/outcome, eight candidate fields (not a frozen field set), explicit Encounter Idempotency and Policy Binding questions, admission authority, refusal/pending distinction, acyclic commitments, retained bytes | Creator-directed encounter concept; exact contract still requires accepted D02–D05/D07-compatible record and retry/policy adversarial vectors; downstream D08 defines Meaningful Consequence before the causal-loop demonstration | Encounter admission and causal-loop demonstration |
+| D14 Population/Ecology | Heritable variation, differential reproduction, environment/resource constraints, controls, measurement/uncertainty and open-endedness limits; long-term Niche Construction question, separately scoped | Accepted bounded synthetic study design before experiments; no arbitrary fitness/death mechanism | Post-lineage roadmap 5E; evidence for limited evolution claims |
 
 The full-project planning task need not select these options. Its phase plan must
 assign each decision before any dependent implementation and make blocked entry
 conditions explicit. If a decision contradicts an invariant, stop and request
 an explicit design revision instead of silently changing the total spec.
+
+## Four-question follow-up — 2026-09-21
+
+**DESIGN DECISION:** Retain the encounter-centered architecture and all 38 execution
+phases. This scoped clarification adds questions and closing evidence, not accepted
+protocol mechanisms or a new implementation gate.
+
+| Question | Decision / execution phases | Required clarification or evidence |
+| --- | --- | --- |
+| Encounter Idempotency | D13 with D02/D04; 15, 18 | Same-encounter timeout/concurrent/restart retries cannot duplicate admission or causal effect; reject conflicting reuse while preserving distinct genuine encounters. Compare `encounterId` and deterministic commitment without selecting either. |
+| Policy Binding | D13 with D05/D07; 15, 18 | Bind the historical negotiation/disclosure policy and decision inputs to evidence; compare `policyRef`, `accessPolicyCommitment` and existing input binding. Define policy changes before admission, test substitution/unavailable policy, and preserve private-data boundaries. Integrity alone does not prove enforcement. |
+| Meaningful Consequence | D13 with D07/D08; 19, 22 | Define an observable later-expression/behavior effect before implementation; matched no-experience and rejected-experience controls, rule ablation and replay isolate the causal rule. Counter/timestamp/digest-only differences are insufficient. |
+| Niche Construction | D14; 28 research question, 29 scope boundary | Can organisms create new ecological niches that alter the future selection pressures of other organisms? Future studies would isolate organism-caused environmental feedback; no implementation or early/birth gate is added. |
+
+Detailed question boundaries are in [Encounter](../../../spec/encounter.md) and
+[Ecology](../../../spec/ecology.md). Finite experiments do not establish open-ended
+evolution. The next roadmap step remains Phase 0 closure against its existing
+criteria, followed by Phase 1's minimal synthetic deterministic organism; these
+additions neither declare those gates passed nor authorize GENESIS #0001's birth.
 
 ## Contract and Data Boundaries
 
@@ -405,7 +424,7 @@ Future conformance families:
 | Replay | Same state/commitments across independent implementations, altered genesis, duplicate/out-of-order/conflicting inputs, unsupported versions |
 | Persistence | Interrupted append, crash/retry, unavailable dependency, valid old prefix versus witnessed head, authenticated checkpoint |
 | Perception | Three mock observers against one state, unknown/missing capabilities, denied disclosure, substitution and semantic counterexamples |
-| Encounter/Experience | Acyclic receipt/event binding, exact LLM bytes, pending vs no-event, consent, duplicate/forged outcomes, private input unavailable, causal later-expression effect versus control |
+| Encounter/Experience | Acyclic receipt/event binding, exact LLM bytes, pending vs no-event, consent, timeout/concurrent/restart retries and conflicting identifier reuse, historical policy substitution, duplicate/forged outcomes, private input unavailable, specified later-expression effect versus matched controls/rule ablation; counter-only negative case |
 | Individual change/lineage | Genesis invariant, deterministic mutation inputs, eligible inheritance, unchanged parents, partial/retried births, bad/cyclic ancestry |
 | Population/Ecology | Matched no-selection/no-experience controls, heritable variation, actual offspring counts, resource bounds, uncertainty; no claim of open-endedness |
 | Embodiment/anchor | Forged/replayed sensor claim, concurrent bodies, bounded simulated action; optional-chain outage/reorganization without identity change |

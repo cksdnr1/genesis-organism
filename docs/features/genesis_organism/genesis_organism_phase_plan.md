@@ -332,13 +332,13 @@ inputs requires available accepted bytes, not just digests and never a model rer
 
 - **Roadmap / dependencies:** creator Phase 2; predecessors: 2, 3, 4, 5, 6, 14.
 - **Entry / decision gate:** Accepted D02–D05/D07; finalize D13 before receipt/event schemas or adapter code.
-- **Scope and entry points:** Define the eight candidate receipt fields, policy binding, evidence/outcome separation, idempotence, result terminality and admitted experience contract with exact accepted versions.
+- **Scope and entry points:** Resolve Encounter Idempotency and Policy Binding alongside the eight candidate receipt responsibilities, evidence/outcome separation, result terminality and admitted experience contract. Compare encounterId/deterministic commitment and policyRef/accessPolicyCommitment/existing input binding without treating them as selected fields; define identity/payload scope, historical policy inputs and policy changes before admission.
 - **Target artifacts / paths:** spec/encounter.md; spec/event-model.md; schemas/successor-design.md; D13 record with concrete successor paths and vectors.
 - **Data and state updates:** Immutable encounter evidence and separately bound accepted-event outcome; display receipt is not an unapproved canonical object or authority token.
 - **Propagation / callbacks / events:** Fix an acyclic commitment graph: events never require the hash of a receipt that already needs those event hashes. Bind actual pre-state, profile and policy.
 - **Reset / clear / failure recovery:** Pending, refused, failed and resolved-with-no-event outcomes differ explicitly; retries/corrections preserve prior evidence and cannot fabricate acceptance.
 - **User-visible outcome:** An implementer can trace expression and interaction bytes into either an authorized experience or an explicit non-acceptance without guessing hashes.
-- **Tests and exit evidence:** Digest-cycle construction, forged event refs, duplicate submission, pending versus empty final result, wrong source/profile/policy, unavailable accepted LLM bytes and redacted evidence.
+- **Tests and exit evidence:** Digest-cycle construction, forged event refs, timeout/concurrent/restart retries, conflicting identifier reuse versus distinct same-content visits, pending versus empty final result, historical policy substitution/change/unavailability, unauthorized disclosure, unavailable accepted LLM bytes and redacted evidence. Specify at-most-once admission/effect without promising exactly-once delivery.
 - **Explicit non-goals:** No model regeneration for replay, receipt signature equals authority assumption, schema created before acceptance, or real #0001 records.
 
 ## Phase 16 — Capability negotiation
@@ -377,14 +377,14 @@ inputs requires available accepted bytes, not just digests and never a model rer
 - **Propagation / callbacks / events:** Negotiated expression → interaction evidence → authorized proposal → accepted event → separately linked outcome; no bypass into memory/reducer.
 - **Reset / clear / failure recovery:** Crash/retry/rejection produces no duplicate canonical effect; pending and terminal no-event are distinguishable; missing private bytes limit replay explicitly.
 - **User-visible outcome:** Observer can inspect why an encounter did or did not become experience and verify its links without a cyclic hash dependency.
-- **Tests and exit evidence:** Receipt/event cycle rejection, forged links, source-state/policy substitution, denied access, duplicate/reordered outcomes, interruption at admission and exact captured LLM-byte replay.
+- **Tests and exit evidence:** Receipt/event cycle rejection, forged links, source-state/historical-policy substitution, policy changes before admission, denied disclosure, duplicate/reordered outcomes and exact captured LLM-byte replay. Exercise timeout after acceptance, concurrent retries and restart: recover the same outcome without duplicate experience/effect; reject conflicting identifier reuse and preserve distinct same-content visits.
 - **Explicit non-goals:** No arbitrary new event semantics, public disclosure by default, model re-query, real sensor truth or organism birth.
 
 ## Phase 19 — Memory and causal relationship decision
 
 - **Roadmap / dependencies:** creator Phase 3; predecessors: 6, 13, 17, 18.
 - **Entry / decision gate:** Accepted D08 required before memory/synapse transitions.
-- **Scope and entry points:** Close D08 memory/synapse rules for admitted encounter experience: classification, consent, relationship formation/revocation and a specified later-expression effect without arbitrary scores.
+- **Scope and entry points:** Close D08 memory/synapse rules for admitted encounter experience: classification, consent, relationship formation/revocation and D13 Meaningful Consequence. Define an observable later-expression/behavior feature and justified deterministic rule before implementation; counter/timestamp/digest-only changes do not suffice and arbitrary scores remain excluded.
 - **Target artifacts / paths:** spec/memory.md; spec/synapse.md; proposed D08 record.
 - **Data and state updates:** Name canonical versus private/local/derived components under D05; define corrections without erasing past records.
 - **Propagation / callbacks / events:** Specify which admitted interactions affect future behavior/expression and which are merely local summaries.
@@ -429,7 +429,7 @@ inputs requires available accepted bytes, not just digests and never a model rer
 - **Propagation / callbacks / events:** Encounter A → accepted experience → memory/synapse rule → Encounter B expression; no-experience and rejected-experience controls omit the defined effect.
 - **Reset / clear / failure recovery:** Replay the same accepted bytes to the same later result; clear only derived caches; repeated encounter cannot compound an idempotent event.
 - **User-visible outcome:** An engineer observes why this organism behaves differently after an encounter; this is the first primary product milestone, beyond identity/log infrastructure.
-- **Tests and exit evidence:** Positive causal loop, no-event control, rejected-event control, replay equality, private-input unavailable, cross-observer fidelity and mutation-free read-only encounter.
+- **Tests and exit evidence:** Positive causal loop with a specified observable expression/behavior feature, no-event and rejected-event controls, and targeted causal-rule ablation. Match initial state, later request, observer profile, policy and external inputs; vary only admitted experience and its consequences. Replay reproduces the effect; counter/timestamp/digest-only differences fail. Also verify private-input unavailable, cross-observer fidelity and mutation-free read-only encounter.
 - **Explicit non-goals:** No claim of AI appreciation, adaptation without a criterion, Darwinian selection, open-ended evolution or live #0001.
 
 ## Phase 23 — Within-individual change and adaptation decision
@@ -501,7 +501,7 @@ inputs requires available accepted bytes, not just digests and never a model rer
 
 - **Roadmap / dependencies:** creator Phase 5E; predecessors: 6, 22, 24, 25, 26, 27.
 - **Entry / decision gate:** Accepted D09/D10 and synthetic inheritance/lineage evidence; D14 accepted before population experiment implementation.
-- **Scope and entry points:** Define justified environment/resources, heritable variables, variation, reproductive opportunity and differential success, controls, replicate/stopping policy and uncertainty reporting.
+- **Scope and entry points:** Define justified environment/resources, heritable variables, variation, reproductive opportunity and differential success, controls, replicate/stopping policy and uncertainty reporting. Record the long-term D14 Niche Construction question: Can organisms create new ecological niches that alter the future selection pressures of other organisms? A future study must distinguish organism-caused environmental feedback from scripted changes; no mechanism or additional experiment is selected now.
 - **Target artifacts / paths:** spec/ecology.md; spec/evolution.md; proposed D14 record and preregistered experiment/measurement design.
 - **Data and state updates:** Population/environment state is distinct from organism canonical histories; selection metrics are observations, not arbitrary canonical fitness fields.
 - **Propagation / callbacks / events:** Encounter experiences may affect measured individual and inherited outcomes only through accepted rules; proposed births are not counted as offspring.
@@ -521,7 +521,7 @@ inputs requires available accepted bytes, not just digests and never a model rer
 - **Reset / clear / failure recovery:** Restart only isolated runs using recorded inputs; preserve prior run evidence, stops and failed outcomes; never erase or kill #0001.
 - **User-visible outcome:** Limited reproducible evidence can support a specified selection/adaptation claim or show its failure; it cannot prove open-ended evolution.
 - **Tests and exit evidence:** Replicates/controls, reproducibility and uncertainty per D14; invalid/cyclic lineage, duplicate offspring, unavailable input, resource exhaustion and no-selection control.
-- **Explicit non-goals:** No live population, external infrastructure, economic incentives, arbitrary fitness, death semantics or indefinite novelty claim.
+- **Explicit non-goals:** No live population, external infrastructure, economic incentives, arbitrary fitness, death semantics or indefinite novelty claim. Niche-construction dynamics require a separately scoped future study and are not added to this experiment or birth gates. Finite experiments do not establish open-ended evolution.
 
 ## Phase 30 — Embodiment and attestation policy decision
 
