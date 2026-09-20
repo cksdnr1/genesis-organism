@@ -26,3 +26,8 @@ verified default/base is origin/genesis/protocol-origin. Used the real baseline
 0fd529e; no master branch was invented. Reviewed new research/workflow artifacts
 and found no justified refactor. No behavior or evidence was changed. Subsequent
 tasks set TARGET_BRANCH explicitly through the supported create option.
+
+Final review: research scope passed; PR https://github.com/cksdnr1/genesis-organism/pull/3.
+No reusable AGENTS framework is needed. Use the real target-branch variable for
+subsequent tasks. Remain on an isolated branch to execute the user's next phase;
+there is no master branch to return to. PR publication is not D01 rights acceptance.
