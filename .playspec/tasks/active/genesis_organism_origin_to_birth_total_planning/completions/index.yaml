@@ -1,0 +1,145 @@
+taskId: genesis_organism_origin_to_birth_total_planning
+events:
+  - id: "0001"
+    sequence: 1
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: total_spec_draft
+    phaseTitle: Total Technical Spec Draft
+    completedAt: 2026-09-20T07:26:04.118Z
+    type: draft_completed
+    previousPhase: total_spec_draft
+    nextPhase: total_spec_validate
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasetotal_spec_draft_git_status.txt
+      - evidence/phasetotal_spec_draft_git_diff_stat.txt
+      - evidence/phasetotal_spec_draft_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasetotal_spec_draft_before_complete.yaml
+      - snapshots/phasetotal_spec_draft_prompt.md
+    rollbackSafePointId: phasetotal_spec_draft_2026-09-20T07-26-04-118Z
+    markdownFile: completions/0001-total_spec_draft.md
+  - id: "0002"
+    sequence: 2
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: total_spec_validate
+    phaseTitle: Total Technical Spec Validation
+    completedAt: 2026-09-20T07:27:01.907Z
+    type: approved
+    result: approved
+    previousPhase: total_spec_validate
+    nextPhase: phase_plan_create
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasetotal_spec_validate_git_status.txt
+      - evidence/phasetotal_spec_validate_git_diff_stat.txt
+      - evidence/phasetotal_spec_validate_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasetotal_spec_validate_before_complete.yaml
+      - snapshots/phasetotal_spec_validate_prompt.md
+    rollbackSafePointId: phasetotal_spec_validate_2026-09-20T07-27-01-907Z
+    markdownFile: completions/0002-total_spec_validate-approved.md
+  - id: "0003"
+    sequence: 3
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: phase_plan_create
+    phaseTitle: Phase Implementation Plan Create
+    completedAt: 2026-09-20T07:31:02.636Z
+    type: plan_created
+    previousPhase: phase_plan_create
+    nextPhase: phase_plan_validate
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasephase_plan_create_git_status.txt
+      - evidence/phasephase_plan_create_git_diff_stat.txt
+      - evidence/phasephase_plan_create_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasephase_plan_create_before_complete.yaml
+      - snapshots/phasephase_plan_create_prompt.md
+    rollbackSafePointId: phasephase_plan_create_2026-09-20T07-31-02-636Z
+    markdownFile: completions/0003-phase_plan_create.md
+  - id: "0004"
+    sequence: 4
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: phase_plan_validate
+    phaseTitle: Phase Implementation Plan Validation
+    completedAt: 2026-09-20T07:31:48.498Z
+    type: needs_revision
+    result: needs_revision
+    previousPhase: phase_plan_validate
+    nextPhase: phase_plan_patch
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasephase_plan_validate_git_status.txt
+      - evidence/phasephase_plan_validate_git_diff_stat.txt
+      - evidence/phasephase_plan_validate_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasephase_plan_validate_before_complete.yaml
+      - snapshots/phasephase_plan_validate_prompt.md
+    rollbackSafePointId: phasephase_plan_validate_2026-09-20T07-31-48-498Z
+    markdownFile: completions/0004-phase_plan_validate-needs_revision.md
+  - id: "0005"
+    sequence: 5
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: phase_plan_patch
+    phaseTitle: Phase Implementation Plan Patch
+    completedAt: 2026-09-20T07:33:26.223Z
+    type: patch_completed
+    previousPhase: phase_plan_patch
+    nextPhase: phase_plan_validate
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasephase_plan_patch_git_status.txt
+      - evidence/phasephase_plan_patch_git_diff_stat.txt
+      - evidence/phasephase_plan_patch_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasephase_plan_patch_before_complete.yaml
+      - snapshots/phasephase_plan_patch_prompt.md
+    rollbackSafePointId: phasephase_plan_patch_2026-09-20T07-33-26-223Z
+    markdownFile: completions/0005-phase_plan_patch.md
+  - id: "0006"
+    sequence: 6
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: phase_plan_validate
+    phaseTitle: Phase Implementation Plan Validation
+    completedAt: 2026-09-20T07:34:44.417Z
+    type: approved
+    result: approved
+    previousPhase: phase_plan_validate
+    nextPhase: final_review
+    statusAfterCompletion: active
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasephase_plan_validate_visit2_git_status.txt
+      - evidence/phasephase_plan_validate_visit2_git_diff_stat.txt
+      - evidence/phasephase_plan_validate_visit2_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasephase_plan_validate_visit2_before_complete.yaml
+      - snapshots/phasephase_plan_validate_visit2_prompt.md
+    rollbackSafePointId: phasephase_plan_validate_2026-09-20T07-34-44-417Z
+    markdownFile: completions/0006-phase_plan_validate-approved.md
+  - id: "0007"
+    sequence: 7
+    taskId: genesis_organism_origin_to_birth_total_planning
+    phase: final_review
+    phaseTitle: Final Planning Review
+    completedAt: 2026-09-20T07:35:43.145Z
+    type: phase_completed
+    previousPhase: final_review
+    nextPhase: null
+    statusAfterCompletion: completed
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    evidenceFiles:
+      - evidence/phasefinal_review_git_status.txt
+      - evidence/phasefinal_review_git_diff_stat.txt
+      - evidence/phasefinal_review_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasefinal_review_before_complete.yaml
+      - snapshots/phasefinal_review_prompt.md
+    rollbackSafePointId: phasefinal_review_2026-09-20T07-35-43-145Z
+    markdownFile: completions/0007-final_review.md

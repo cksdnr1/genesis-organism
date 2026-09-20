@@ -1,0 +1,152 @@
+id: genesis_organism_origin_to_birth_total_planning
+title: Genesis Organism — origin-to-birth total planning
+workflow: total-plan
+status: active
+workflowMode: linear
+currentPhase: phase_plan_validate
+createdAt: 2026-09-20T07:22:36.194Z
+updatedAt: 2026-09-20T07:31:02.636Z
+paths:
+  taskRoot: .playspec/tasks/active/genesis_organism_origin_to_birth_total_planning
+  projectDocRoot: docs/features/genesis_organism_origin_to_birth_total_planning
+variables:
+  FEATURE_SLUG: genesis_organism
+  SOURCE_PROBLEM_FILE: .playspec/tasks/active/genesis_organism_origin_to_birth_total_planning/sources/source_problem.md
+phaseHistory:
+  - phase: total_spec_draft
+    status: completed
+    completedAt: 2026-09-20T07:26:04.118Z
+    evidenceFiles:
+      - evidence/phasetotal_spec_draft_git_status.txt
+      - evidence/phasetotal_spec_draft_git_diff_stat.txt
+      - evidence/phasetotal_spec_draft_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasetotal_spec_draft_before_complete.yaml
+      - snapshots/phasetotal_spec_draft_prompt.md
+  - phase: total_spec_validate
+    status: completed
+    completedAt: 2026-09-20T07:27:01.907Z
+    evidenceFiles:
+      - evidence/phasetotal_spec_validate_git_status.txt
+      - evidence/phasetotal_spec_validate_git_diff_stat.txt
+      - evidence/phasetotal_spec_validate_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasetotal_spec_validate_before_complete.yaml
+      - snapshots/phasetotal_spec_validate_prompt.md
+    result: approved
+    visitCount: 1
+  - phase: phase_plan_create
+    status: completed
+    completedAt: 2026-09-20T07:31:02.636Z
+    evidenceFiles:
+      - evidence/phasephase_plan_create_git_status.txt
+      - evidence/phasephase_plan_create_git_diff_stat.txt
+      - evidence/phasephase_plan_create_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasephase_plan_create_before_complete.yaml
+      - snapshots/phasephase_plan_create_prompt.md
+stateSync:
+  lastKnownGitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+  lastCompletedAt: 2026-09-20T07:31:02.636Z
+rollback:
+  lastSafePoint:
+    id: phasephase_plan_create_2026-09-20T07-31-02-636Z
+    createdAt: 2026-09-20T07:31:02.636Z
+    phase: phase_plan_create
+    gitHead: 5f0076280ca4171d54bc9a25a6772d07a10a6d5a
+    taskSnapshotFile: snapshots/phasephase_plan_create_before_complete.yaml
+    promptSnapshotFile: snapshots/phasephase_plan_create_prompt.md
+contextRefs:
+  - path: .playspec/tasks/active/genesis_organism_origin_to_birth_total_planning/sources/source_problem.md
+    role: source-problem
+    source: create
+  - path: CONTRIBUTING.md
+    role: planning-context
+    source: manual
+  - path: LICENSE-DECISION.md
+    role: planning-context
+    source: manual
+  - path: MANIFESTO.md
+    role: planning-context
+    source: manual
+  - path: ORIGIN.md
+    role: planning-context
+    source: manual
+  - path: README.md
+    role: planning-context
+    source: manual
+  - path: docs/draft-review.md
+    role: planning-context
+    source: manual
+  - path: docs/open-questions.md
+    role: planning-context
+    source: manual
+  - path: docs/prior-art.md
+    role: planning-context
+    source: manual
+  - path: docs/terminology.md
+    role: planning-context
+    source: manual
+  - path: docs/threat-model.md
+    role: planning-context
+    source: manual
+  - path: organisms/genesis-0001/README.md
+    role: planning-context
+    source: manual
+  - path: schemas/README.md
+    role: planning-context
+    source: manual
+  - path: schemas/observer.schema.json
+    role: planning-context
+    source: manual
+  - path: schemas/phenotype.schema.json
+    role: planning-context
+    source: manual
+  - path: spec/GENESIS.md
+    role: planning-context
+    source: manual
+  - path: spec/README.md
+    role: planning-context
+    source: manual
+  - path: spec/canonicalization.md
+    role: planning-context
+    source: manual
+  - path: spec/embodiment.md
+    role: planning-context
+    source: manual
+  - path: spec/event-model.md
+    role: planning-context
+    source: manual
+  - path: spec/evolution.md
+    role: planning-context
+    source: manual
+  - path: spec/genome.md
+    role: planning-context
+    source: manual
+  - path: spec/identity.md
+    role: planning-context
+    source: manual
+  - path: spec/lineage.md
+    role: planning-context
+    source: manual
+  - path: spec/memory.md
+    role: planning-context
+    source: manual
+  - path: spec/perception.md
+    role: planning-context
+    source: manual
+  - path: spec/phenotype.md
+    role: planning-context
+    source: manual
+  - path: spec/reproduction.md
+    role: planning-context
+    source: manual
+  - path: spec/synapse.md
+    role: planning-context
+    source: manual
+  - path: docs/planning/genesis-organism/master-context.md
+    role: planning-context
+    source: manual
+  - path: docs/planning/genesis-organism/source-index.md
+    role: planning-context
+    source: manual
