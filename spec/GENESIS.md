@@ -45,3 +45,15 @@ How is a failed or partially published candidate superseded without ambiguous
 births? Is identity derivable without self-referential hashes? How are birth
 retries idempotent? ALIVE/DORMANT/EXTINCT and death are not specified; token
 burning does not itself establish death.
+
+## Encounter-oriented evidence clarification
+
+The perception/experience gates include the encounter→expression→authorized
+experience→causal memory/synapse loop described in [Machine Encounter](encounter.md).
+This clarifies evidence to demonstrate, without declaring a gate passed or
+creating #0001. The historical JSON schemas remain experimental.
+
+[Ecology](ecology.md) evidence is necessary before claiming demonstrated Darwinian
+selection for a selected profile; otherwise leave that claim unproven. No existing
+birth requirement is waived, and unproven open-ended evolution is not silently
+added as a new prerequisite. Death and extinction remain unimplemented.

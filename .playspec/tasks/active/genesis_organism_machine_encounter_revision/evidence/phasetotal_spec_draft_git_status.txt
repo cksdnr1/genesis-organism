@@ -1,0 +1,30 @@
+## docs/machine-encounter-plan
+ M .playspec/HEAD
+ M README.md
+ M docs/features/genesis_organism/genesis_organism_total_spec.md
+ M docs/open-questions.md
+ M docs/prior-art.md
+ M docs/terminology.md
+ M docs/threat-model.md
+ M schemas/README.md
+ M spec/GENESIS.md
+ M spec/README.md
+ M spec/event-model.md
+ M spec/evolution.md
+ M spec/memory.md
+ M spec/perception.md
+ M spec/phenotype.md
+ M spec/synapse.md
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/memory.yaml
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/prompts/2026-09-20T13-15-07-229Z.md
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/prompts/2026-09-20T13-15-07-229Z.md.meta.yaml
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/snapshots/phasetotal_spec_draft_before_complete.yaml
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/snapshots/phasetotal_spec_draft_prompt.md
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/snapshots/phasetotal_spec_draft_prompt.md.meta.yaml
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/sources/source_problem.md
+?? .playspec/tasks/active/genesis_organism_machine_encounter_revision/task.yaml
+?? docs/planning/genesis-organism/encounter-revision-source.md
+?? docs/research/2026-09-20-encounter-prior-art.md
+?? schemas/successor-design.md
+?? spec/ecology.md
+?? spec/encounter.md

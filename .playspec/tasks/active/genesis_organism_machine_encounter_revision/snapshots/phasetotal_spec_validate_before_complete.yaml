@@ -1,0 +1,166 @@
+id: genesis_organism_machine_encounter_revision
+title: Genesis Organism — Machine Encounter revision
+workflow: total-plan
+status: active
+workflowMode: linear
+currentPhase: total_spec_validate
+createdAt: 2026-09-20T13:09:57.886Z
+updatedAt: 2026-09-20T13:16:56.691Z
+paths:
+  taskRoot: .playspec/tasks/active/genesis_organism_machine_encounter_revision
+  projectDocRoot: docs/features/genesis_organism_machine_encounter_revision
+variables:
+  FEATURE_SLUG: genesis_organism
+  RESULT_FILE: docs/features/genesis_organism/encounter_revision_result.md
+  SOURCE_PROBLEM_FILE: .playspec/tasks/active/genesis_organism_machine_encounter_revision/sources/source_problem.md
+phaseHistory:
+  - phase: total_spec_draft
+    status: completed
+    completedAt: 2026-09-20T13:16:56.691Z
+    evidenceFiles:
+      - evidence/phasetotal_spec_draft_git_status.txt
+      - evidence/phasetotal_spec_draft_git_diff_stat.txt
+      - evidence/phasetotal_spec_draft_changed_files.txt
+    snapshotFiles:
+      - snapshots/phasetotal_spec_draft_before_complete.yaml
+      - snapshots/phasetotal_spec_draft_prompt.md
+stateSync:
+  lastKnownGitHead: d5710fe987c0abc206a217a4aa95be61f94a2f3e
+  lastCompletedAt: 2026-09-20T13:16:56.691Z
+rollback:
+  lastSafePoint:
+    id: phasetotal_spec_draft_2026-09-20T13-16-56-691Z
+    createdAt: 2026-09-20T13:16:56.691Z
+    phase: total_spec_draft
+    gitHead: d5710fe987c0abc206a217a4aa95be61f94a2f3e
+    taskSnapshotFile: snapshots/phasetotal_spec_draft_before_complete.yaml
+    promptSnapshotFile: snapshots/phasetotal_spec_draft_prompt.md
+contextRefs:
+  - path: .playspec/tasks/active/genesis_organism_machine_encounter_revision/sources/source_problem.md
+    role: source-problem
+    source: create
+  - path: CONTRIBUTING.md
+    role: planning-context
+    source: manual
+  - path: LICENSE-DECISION.md
+    role: planning-context
+    source: manual
+  - path: MANIFESTO.md
+    role: planning-context
+    source: manual
+  - path: ORIGIN.md
+    role: planning-context
+    source: manual
+  - path: README.md
+    role: planning-context
+    source: manual
+  - path: docs/draft-review.md
+    role: planning-context
+    source: manual
+  - path: docs/features/genesis_organism/genesis_organism_phase_plan.md
+    role: planning-context
+    source: manual
+  - path: docs/features/genesis_organism/genesis_organism_total_spec.md
+    role: planning-context
+    source: manual
+  - path: docs/features/genesis_organism/phase_plan_validation.md
+    role: planning-context
+    source: manual
+  - path: docs/features/genesis_organism/result.md
+    role: planning-context
+    source: manual
+  - path: docs/features/genesis_organism/total_spec_validation.md
+    role: planning-context
+    source: manual
+  - path: docs/open-questions.md
+    role: planning-context
+    source: manual
+  - path: docs/planning/genesis-organism/master-context.md
+    role: planning-context
+    source: manual
+  - path: docs/planning/genesis-organism/source-index.md
+    role: planning-context
+    source: manual
+  - path: docs/prior-art.md
+    role: planning-context
+    source: manual
+  - path: docs/terminology.md
+    role: planning-context
+    source: manual
+  - path: docs/threat-model.md
+    role: planning-context
+    source: manual
+  - path: organisms/genesis-0001/README.md
+    role: planning-context
+    source: manual
+  - path: schemas/README.md
+    role: planning-context
+    source: manual
+  - path: schemas/observer.schema.json
+    role: planning-context
+    source: manual
+  - path: schemas/phenotype.schema.json
+    role: planning-context
+    source: manual
+  - path: spec/GENESIS.md
+    role: planning-context
+    source: manual
+  - path: spec/README.md
+    role: planning-context
+    source: manual
+  - path: spec/canonicalization.md
+    role: planning-context
+    source: manual
+  - path: spec/embodiment.md
+    role: planning-context
+    source: manual
+  - path: spec/event-model.md
+    role: planning-context
+    source: manual
+  - path: spec/evolution.md
+    role: planning-context
+    source: manual
+  - path: spec/genome.md
+    role: planning-context
+    source: manual
+  - path: spec/identity.md
+    role: planning-context
+    source: manual
+  - path: spec/lineage.md
+    role: planning-context
+    source: manual
+  - path: spec/memory.md
+    role: planning-context
+    source: manual
+  - path: spec/perception.md
+    role: planning-context
+    source: manual
+  - path: spec/phenotype.md
+    role: planning-context
+    source: manual
+  - path: spec/reproduction.md
+    role: planning-context
+    source: manual
+  - path: spec/synapse.md
+    role: planning-context
+    source: manual
+  - path: docs/planning/genesis-organism/encounter-revision-source.md
+    role: planning-context
+    source: manual
+  - path: docs/research/2026-09-20-encounter-prior-art.md
+    role: planning-context
+    source: manual
+  - path: spec/encounter.md
+    role: planning-context
+    source: manual
+  - path: spec/ecology.md
+    role: planning-context
+    source: manual
+  - path: schemas/successor-design.md
+    role: planning-context
+    source: manual
+links:
+  - type: after
+    targetTaskId: genesis_organism_origin_to_birth_total_planning
+    createdAt: 2026-09-20T13:09:57.876Z
+    createdBy: cli

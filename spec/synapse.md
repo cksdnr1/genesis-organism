@@ -16,3 +16,10 @@ revocation and persistence; consent to shared experiences; bounded storage and
 Sybil resistance. A relationship claim made by one organism does not prove the
 other party accepted it. History can preserve a past relationship while its
 current permissions or influence change.
+
+## Encounter-to-relationship evidence
+
+A [Machine Encounter](encounter.md) can propose experience; only accepted events
+may update a canonical relationship under D08. Test refusal, duplicate encounter
+submission and a later expression with/without the relationship effect. The
+receipt records causal evidence, not implicit mutual consent or an affinity score.

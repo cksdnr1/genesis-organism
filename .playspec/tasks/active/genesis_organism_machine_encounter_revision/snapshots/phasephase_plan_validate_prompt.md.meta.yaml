@@ -1,0 +1,171 @@
+promptArtifactPath: .playspec/tasks/active/genesis_organism_machine_encounter_revision/snapshots/phasephase_plan_validate_prompt.md
+contextMode: compact
+generationSource: complete
+taskId: genesis_organism_machine_encounter_revision
+phaseId: phase_plan_validate
+generatedAt: 2026-09-20T13:22:25.302Z
+omittedContext:
+  - path: .playspec/tasks/active/genesis_organism_machine_encounter_revision/sources/source_problem.md
+    role: source-problem
+    source: create
+    reason: full context file body omitted by compact context mode
+  - path: CONTRIBUTING.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: LICENSE-DECISION.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: MANIFESTO.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: ORIGIN.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: README.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/draft-review.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/features/genesis_organism/genesis_organism_phase_plan.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/features/genesis_organism/genesis_organism_total_spec.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/features/genesis_organism/phase_plan_validation.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/features/genesis_organism/result.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/features/genesis_organism/total_spec_validation.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/open-questions.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/planning/genesis-organism/master-context.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/planning/genesis-organism/source-index.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/prior-art.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/terminology.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/threat-model.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: organisms/genesis-0001/README.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: schemas/README.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: schemas/observer.schema.json
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: schemas/phenotype.schema.json
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/GENESIS.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/README.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/canonicalization.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/embodiment.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/event-model.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/evolution.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/genome.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/identity.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/lineage.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/memory.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/perception.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/phenotype.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/reproduction.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/synapse.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/planning/genesis-organism/encounter-revision-source.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: docs/research/2026-09-20-encounter-prior-art.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/encounter.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: spec/ecology.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode
+  - path: schemas/successor-design.md
+    role: planning-context
+    source: manual
+    reason: full context file body omitted by compact context mode

@@ -46,3 +46,15 @@ rejected. A syntactically valid forged reference is not rejected by these schema
 semantic validation, integrity and authorization require a later protocol.
 
 Dialect source: [JSON Schema 2020-12](https://json-schema.org/draft/2020-12/json-schema-core).
+
+## Historical status and successor work
+
+Both JSON files above are preserved byte-for-byte as historical experimental
+artifacts. Their schemaVersion and $id values retain their original meanings.
+Current prose separates PhenotypeState from Observer-Negotiated Expression;
+phenotype.schema.json remains the old expression descriptor, not a state schema.
+
+[Successor design](successor-design.md) specifies typed capability requirements,
+claim/attestation separation and explicit field-by-field compatibility limits.
+[Machine Encounter](../spec/encounter.md) describes candidate receipt fields.
+No new version, typed JSON schema or canonical receipt format is frozen here.

@@ -45,3 +45,17 @@ and authorization restrictions require distinguishable outcomes.
 Decide retention and personal-data policy before recording real interactions.
 A public digest may still reveal or correlate information. No real private
 memory, credentials or sensor traces are included in this conception draft.
+
+## Encounter revision risks
+
+| Threat | Required design/test boundary |
+| --- | --- |
+| Generic identity scope displaces the organism experience | Make encounter-to-later-expression causal demonstration a product gate |
+| Receipt and event hashes depend on each other | D03/D04/D13 acyclic evidence/event/outcome binding; reject unresolved/forged outcomes |
+| LLM digest treated as replayable input | Retain exact accepted bytes or available checked references; never re-call model during replay |
+| Claimed robot capacity mistaken for evidence | Typed successor separates claim, issuer evidence and verifier scope; capability grants no actuation |
+| Adaptation called Darwinian/open-ended evolution | D14 controlled population study and limited claims; no arbitrary fitness or death shortcut |
+| Unbounded encounter history or private-data commitment leakage | D05/D13 budgets, retention, archives and scoped replay; Merkle roots do not retain bytes |
+
+See [encounter](../spec/encounter.md), [successor design](../schemas/successor-design.md)
+and [ecology](../spec/ecology.md). All are proposed controls, not implemented guarantees.

@@ -1,0 +1,17 @@
+ .playspec/HEAD                                     |   2 +-
+ README.md                                          |  23 ++-
+ .../genesis_organism_total_spec.md                 | 225 ++++++++++++++++-----
+ docs/open-questions.md                             |  12 ++
+ docs/prior-art.md                                  |   8 +
+ docs/terminology.md                                |  19 ++
+ docs/threat-model.md                               |  14 ++
+ schemas/README.md                                  |  12 ++
+ spec/GENESIS.md                                    |  12 ++
+ spec/README.md                                     |  14 +-
+ spec/event-model.md                                |  15 ++
+ spec/evolution.md                                  |  44 ++--
+ spec/memory.md                                     |   8 +
+ spec/perception.md                                 |  56 ++---
+ spec/phenotype.md                                  |  70 ++++---
+ spec/synapse.md                                    |   7 +
+ 16 files changed, 408 insertions(+), 133 deletions(-)

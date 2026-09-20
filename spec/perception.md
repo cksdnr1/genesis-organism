@@ -1,34 +1,36 @@
-# Perception Handshake
+# Perception Handshake within a Machine Encounter
 
-STATUS: EXPERIMENTAL v0.1. **DESIGN DECISION — proposed:** negotiate capabilities
-rather than hard-code an expression from an observer class name. A type label is
-self-description, not authentication, permission or evidence of intelligence.
+STATUS: EXPERIMENTAL research. Capability negotiation is supporting machinery
+for a [Machine Encounter](encounter.md), not a novelty claim or generic agent
+identity product. Current presentation term: Observer-Negotiated Expression.
 
-Proposed exchange:
+Proposed flow: select canonical source state → observer profile plus access
+policy → bounded negotiation → permitted expression → interaction evidence →
+experience proposal → authorized admission → causal memory/synapse effect.
+Denied, unsupported, read-only or interrupted encounters may admit no event.
+A type label is self-description, not authentication, authority or intelligence.
 
-1. Observer submits a bounded capability description and supported profiles.
-2. Organism evaluates available expressions, consent and access policy against
-   a specified canonical state.
-3. Negotiation returns an explicit selected profile or unsupported result.
-4. An expression receipt identifies its source state, profile, producer procedure
-   and output; see [phenotype](phenotype.md).
+## Capability and access boundaries
 
-Step ordering is a review aid. No transport, authority or selection algorithm
-is defined. Unknown capabilities need an explicit unsupported/ignored policy;
-do not silently claim to satisfy them. Missing capability claims are unknown,
-not false. Raw canonical data is a possible fallback only where disclosure is
-permitted; private memories are not an automatic fallback for unknown machines.
+Preserve the historical boolean [observer schema](../schemas/observer.schema.json).
+A future typed profile needs explicit units, bounds, modalities, coordinate frames,
+versioning and evidence under [successor design](../schemas/successor-design.md).
+Missing is unknown; claimed support is not verified capacity. A verified signature
+may authenticate an attestation issuer without proving hardware capability or
+physical truth. Evaluate claims under a named scoped policy; do not invent scores.
 
-Exploratory mappings: humans may use visual/sound/narrative expression; language
-agents semantic structures; vision systems geometry; robots spatial or motion
-representations. These examples neither limit observer classes nor establish
-what an observer values. A motion expression is not permission to actuate a body.
+Unknown capabilities/profiles require explicit unsupported or limited behavior.
+Never expose private memory as automatic raw fallback. A trajectory expression
+is not permission to actuate. Capability and access-policy inputs that affect
+selection need unambiguous binding in the encounter evidence.
 
-The [observer schema](../schemas/observer.schema.json) describes claims only.
-Human, LLM and embodied mock observers are Phase 2 fixtures, not real identities.
-Selection determinism requires an explicit versioned rule and pinned available
-profiles. Reading/negotiating is not automatically a life event; decide separately
-which interactions can produce authorized canonical events.
+Human, LLM and embodied mocks are test fixtures, not hard-coded audience classes.
+Negotiation version/tie-breaking and available profiles need pinned semantics.
+An encounter's canonical effects pass through D02/D04; no automatic life event
+occurs merely because a request was received or an expression was viewed.
 
-**OPEN QUESTIONS:** capability vocabulary/versioning, accessibility, negotiation
-privacy, resource limits, profile authenticity, consent and validity evidence.
+MCP and A2A already provide capability/interface mechanisms; evaluate adapters
+without importing their identities or task lifecycle as organism semantics.
+[The research review](../docs/research/2026-09-20-encounter-prior-art.md) records
+sources and limits. D07/D13 must define bindings, profile validity, consent,
+retries and refusal before implementation.

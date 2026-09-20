@@ -35,3 +35,11 @@ and verifiable computation. Evaluate dated implementations and publications
 against concrete requirements. No absence in this ledger establishes novelty.
 EIP status and version must be checked again before adoption; inclusion is not
 an endorsement of maturity, safety, or compatibility.
+
+## Encounter revision — 2026-09-20
+
+The [expanded primary-source review](research/2026-09-20-encounter-prior-art.md)
+adds identity/history neighbours, machine-audience art, capability negotiation,
+provenance standards and population-evolution research. It distinguishes verified
+source text from author claims and unaudited implementations. Current positioning
+is the integrated encounter-to-causal-experience loop, not component novelty.

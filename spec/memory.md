@@ -18,3 +18,11 @@ authorized-only, or of a defined public projection before claiming conformance.
 Avoid publishing personal data into permanent history by default. Erasing a
 private key may reduce accessibility but does not erase already disclosed data
 or public commitments. No private-memory mechanism is implemented here.
+
+## Encounter provenance
+
+Admitted [encounter](encounter.md) experience can update defined projections;
+private interaction evidence need not be publicly disclosed. Receipt links bind
+the causal input without making its contents true or globally replayable. D08
+must demonstrate a later expression effect against a no-experience control and
+distinguish lossy summaries from accepted canonical input bytes.

@@ -6,17 +6,27 @@ ART / DESIGN DECISION / HYPOTHESIS / OPEN QUESTION / SPECULATION retain their
 meanings in docs/terminology.md. Normative invariants are inherited from
 spec/README.md; proposed mechanisms below are not silently normative.
 
-Planning task: `genesis_organism_origin_to_birth_total_planning`.
-Baseline: `5f0076280ca4171d54bc9a25a6772d07a10a6d5a`.
+Revision task: `genesis_organism_machine_encounter_revision`.
+Previous planning task: `genesis_organism_origin_to_birth_total_planning` (completed).
+Revision baseline: `d5710fe987c0abc206a217a4aa95be61f94a2f3e`.
+Origin baseline: `5f0076280ca4171d54bc9a25a6772d07a10a6d5a` (preserved).
+Creator revision: [R01–R12](../../planning/genesis-organism/encounter-revision-source.md).
+Primary-source review: [2026-09-20 ledger](../../research/2026-09-20-encounter-prior-art.md).
 Source requirements: [H00–H28](../../planning/genesis-organism/master-context.md).
 Evidence: [complete baseline index](../../planning/genesis-organism/source-index.md).
 Downstream output: `docs/features/genesis_organism/genesis_organism_phase_plan.md`.
-Final planning review: `docs/features/genesis_organism/result.md`.
+Final revision review: `docs/features/genesis_organism/encounter_revision_result.md`.
+The original result.md and validation records describe the prior baseline.
 
 ## Scope
 
-Plan the path from Phase 0 origin to a possible Phase 8 birth while preserving
-the artistic question and machine-first perception. The deliverable now is one
+Center the project on Machine Encounter → Observer-Negotiated Expression →
+Experience → Synapse → later expression/adaptation and eligible heritable change.
+Identity, signatures and replay are supporting infrastructure. Do not turn the
+project into a generic persistent AI identity protocol.
+
+Plan the path from Phase 0 origin to a possible Phase 8 birth, with a post-lineage
+5E Population/Ecology research extension, preserving the artistic question. The deliverable now is one
 PlaySpec planning task, source traceability, total spec, detailed phase plan and
 honest validation records. No organism runtime, dependency, external contribution,
 child task, deployment, release, licence choice or birth is implemented here.
@@ -25,6 +35,21 @@ Future execution is split into bounded decision/specification work and condition
 implementation work. An unresolved protocol decision is an input dependency,
 never permission for a later implementer to invent a convenient default. A
 planning gate approves this decomposition, not an unresolved protocol option.
+
+## Core product acceptance — an encounter changes a later encounter
+
+A historically continuous synthetic organism presents different permitted
+expressions from one canonical state to human, language and embodied mocks.
+A bounded interaction produces attributable evidence; authorized admission can
+create experience with a specified memory/synapse effect. A later expression
+changes for that explicit reason and replays from retained accepted bytes. A
+control with the experience omitted lacks the effect. This loop is the first
+product milestone, not merely a signed identity record or successful replay CLI.
+
+This is a narrowly stated research direction, not a claim the combination is
+unique. There is prior art for machine audiences, genetic art, identity/history,
+capability negotiation and environment-dependent phenotype. No subjective
+engineering ratings are turned into measured scientific or protocol results.
 
 ## Use Case Alignment
 
@@ -43,35 +68,40 @@ Neither is an implementation acceptance test for sentience, preference or price.
 
 ## Main and Alternative Scenarios
 
-1. A synthetic genesis and authorized events enter a future validator. Defined
+1. A Machine Encounter binds source state, observer profile, access policy and
+   negotiated expression to bounded interaction evidence. Only admitted experience
+   can affect canonical memory/synapse state; a later expression demonstrates the
+   defined effect against a no-experience control.
+2. A synthetic genesis and authorized events enter a future validator. Defined
    validity and ordering rules admit events; a deterministic reducer derives state;
    an archivist verifies the committed result against independent vectors.
-2. Human, language and embodied mocks negotiate against the same synthetic state.
+3. Human, language and embodied mocks negotiate against the same synthetic state.
    Selection uses declared profiles/capabilities and access policy. Different
    outputs carry state/procedure/input/output attribution and profile validity.
-3. Unknown or missing capabilities produce explicitly defined unsupported or
+4. Unknown or missing capabilities produce explicitly defined unsupported or
    permitted fallback behavior. No private raw data is exposed as a universal fallback.
-4. Forged, duplicate, conflicting, out-of-order or unsupported-version proposals
+5. Forged, duplicate, conflicting, out-of-order or unsupported-version proposals
    produce defined rejection/uncertainty; they do not silently alter canonical state.
-5. A false environmental statement remains a claim. A policy-scoped attestation
+6. A false environmental statement remains a claim. A policy-scoped attestation
    binds its evidence/issuer; a later correction preserves the accepted prior record.
-6. An unavailable private input or dependency prevents the affected replay claim;
+7. An unavailable private input or dependency prevents the affected replay claim;
    it is distinguished from evidence of tampering. Public projections have their own scope.
-7. A replica, divergent history and child are distinguished by accepted identity
+8. A replica, divergent history and child are distinguished by accepted identity
    rules. Copying files or creating a Git branch is not automatic reproduction.
-8. Failed child creation preserves parents and cannot accidentally produce two
+9. Failed child creation preserves parents and cannot accidentally produce two
    accepted origins on retry. Details depend on a future accepted birth model.
-9. A restarted process rebuilds from authenticated history or a permitted checkpoint;
+10. A restarted process rebuilds from authenticated history or a permitted checkpoint;
    clearing a cache never clears organism history. A token burn is not death.
-10. Optional anchoring may be skipped with an explicit decision. Chain outage,
+11. Optional anchoring may be skipped with an explicit decision. Chain outage,
     transfer or reorganization cannot redefine the independent organism identity.
 
 ## Current Implementation Summary
 
-FACT: the baseline contains 26 Markdown documents and two experimental JSON
+FACT: the origin baseline contains 26 Markdown documents and two experimental JSON
 schemas, with no package manifest, runtime, reducer, CLI, test suite, real
 organism data or deployed adapter. The origin commit is real; genesis-0001
-remains `STATUS: UNBORN`. Added PlaySpec files manage this task only.
+remains `STATUS: UNBORN`. The prior planning commit added planning and PlaySpec evidence, not runtime.
+This revision changes active prose and leaves both original JSON schemas byte-identical.
 No end-to-end organism behavior has been demonstrated. JSON parsing and local-link
 checks do not establish schema conformance or protocol implementation.
 
@@ -81,8 +111,9 @@ Every baseline file in the source index is attached individually. Root prose
 establishes intent/history/licence boundaries; docs/ contains vocabulary, prior
 art, questions, threats and the historical draft review; spec/ contains invariant
 and research notes; schemas/ contains review-only structures; organisms/ contains
-only an unborn placeholder. The inherited prior-art ledger records partial
-source access; it is not a fresh comprehensive review or priority finding.
+only an unborn placeholder. The original ledger records partial source access. The linked 2026-09-20
+revision review checks additional primary sources and explicitly bounds author
+claims, draft status and unaudited implementation behavior; it is not a priority finding.
 
 ## Active Entry Points and Bypasses
 
@@ -105,22 +136,34 @@ Verified: a documentation repository and experimental structural schemas.
 Proposed: philosophy → protocol decisions → canonical schemas/vectors → reference
 core → adapters → instantiated organisms. Core validation/replay cannot depend
 on UI, model service, robot vendor or blockchain. Capability negotiation is
-separate from event authority. A phenotype view is not the canonical truth.
+separate from event authority. An observer expression is not canonical truth. PhenotypeState is a separate
+conceptual trait/behavior layer; D07 decides canonical-versus-derived representation
+before adding any stored state. Observer-Negotiated Expression is the current
+term; old Observer-Dependent Phenotype prose and schema descriptors remain historical.
 
 Proposed flow (not implemented):
 
 ```mermaid
 flowchart LR
-  Proposal[Untrusted proposed event] --> Admission[Versioned admission rules]
-  Genesis[Immutable genesis] --> Replay[Deterministic replay]
-  Admission --> History[Accepted history]
-  History --> Replay
-  Replay --> State[Canonical state]
-  Observer[Capability claims and policy] --> Negotiate[Perception Handshake]
-  State --> Negotiate
-  Negotiate --> Expression[Expression and attribution]
-  Expression --> Verify[Profile-specific verification]
+  State[Canonical source state] --> Encounter[Machine Encounter]
+  Observer[Observer profile and access policy] --> Encounter
+  Encounter --> Negotiation[Negotiation]
+  Negotiation --> Expression[Observer-Negotiated Expression]
+  Expression --> Interaction[Bounded interaction evidence]
+  Interaction --> Evidence[Immutable encounter evidence]
+  Evidence --> Admission[Authorized experience admission]
+  Admission --> Event[Accepted experience event]
+  Event --> Memory[Memory and Synapse]
+  Memory --> Later[Later expression or adaptation]
+  Event --> Replay[Deterministic replay]
+  Admission --> Outcome[Separate outcome and event references]
+  Evidence --> Receipt[Receipt projection]
+  Outcome --> Receipt
 ```
+
+The receipt projection must not introduce reciprocal hashes between its evidence
+and resulting events. The precise acyclic binding graph is D03/D04/D13 work.
+Interaction evidence alone does not authorize an event or prove physical truth.
 
 No transport, hashing suite, identifier format, consensus, persistence engine,
 signing key, programming language or signature algorithm is selected here.
@@ -176,6 +219,28 @@ The source inventory's SHA-256 values cover source file bytes only. Paths, local
 timestamps, absolute directories, Git metadata, prose and planning report scores
 are not implied inputs to future organism identity or state commitments.
 
+## Proposed EncounterReceipt and successor evidence
+
+The creator's candidate responsibilities are `organismStateRef`,
+`observerProfileCommitment`, `negotiationProtocolVersion`, `expressionProcedureRef`,
+`expressionInputCommitment`, `expressionOutputDigest`, `interactionDigest`, and
+`resultingEventRefs`. They are proposed names, not fields in an existing schema.
+[Machine Encounter](../../../spec/encounter.md) specifies their interpretation
+questions, privacy boundaries, replay inputs and acyclic admission/outcome model.
+
+The current phenotype.schema.json remains an old expression descriptor, not
+PhenotypeState or EncounterReceipt. [Successor design](../../../schemas/successor-design.md)
+records explicit non-equivalences: sourceStateRef is not automatically the new
+organismStateRef; negotiationRef is not negotiationProtocolVersion; outputRef is
+not an output digest. Preserve old JSON bytes and IDs. Select a distinct version
+and acceptance/migration mapping before implementing a typed profile.
+
+Typed profiles must express units, modality, resolution/rates, coordinate frames,
+robot limits and evidence without inventing precision from historical booleans.
+Separate claims, issuer attestations and scoped verifier evaluations. Capability
+declaration grants neither event authority nor actuation. D03 controls any
+consensus-relevant numerical encoding; D07/D13 define byte/depth/resource limits.
+
 ## Problems and Decision Register
 
 Decision identifiers below are planning labels, not protocol field names. All
@@ -193,12 +258,14 @@ phase may deliver a recommendation, but cannot invent missing acceptance.
 | D04 Events/transitions | Minimal meaningful event vocabulary; ordering/causality; duplicates, invalid proposals and correction; deterministic input closure | Reviewed state-transition table with admission/rejection examples | Reducer, persistence, experience |
 | D05 Privacy/version/retention | Public vs authorized replay; projections, keys, dependencies, snapshots/pruning, migration authority | Accepted data classification, replay-access and historical-version policy | Memory, archives, migrations |
 | D06 Implementation boundary | Reference language/toolchain and independent verifier; small modules and CLI contracts | Accepted implementation spec after D02–D05; dependency review | Source layout and executable tests |
-| D07 Perception validity | Vocabulary, profile selection, unsupported capabilities, read/write separation, attribution vs semantic validity | Accepted profile with counterexamples and mock test criteria | Handshake and expression verification |
+| D07 Perception validity | PhenotypeState versus expression; typed capability successor, units/frames/evidence; selection/policy; historical schema compatibility | Accepted profile, exact mappings/rejections, claim/attestation boundaries and counterexamples | Negotiation and expression verification |
 | D08 Memory/synapse | Canonical/local/private partitions, consent, causal relation semantics, bounded retention | Accepted transition/effect tables without arbitrary scores | Experience components |
-| D09 Evolution | Which state can evolve/inherit; deterministic randomness or no randomness; versioning | Accepted transition constraints and replay vectors | Evolution component |
+| D09 Individual change/adaptation | What changes within one organism, what is heritable; deterministic inputs and justified adaptation measures | Accepted transition rules and replay/control vectors; no population-evolution claim from individual change | Individual transitions and D14 research |
 | D10 Reproduction/lineage | Parent-state eligibility, contributions, authorization, failure/retry and ancestry verification | Accepted inheritance/birth contract and failure vectors | Child creation and ancestry |
 | D11 Embodiment/evidence | Simultaneous bodies, body authority, witness/attestation scope, limits and safety | Accepted simulator boundaries; separate physical-operation authorization if ever requested | Simulated adapter, later real bodies |
 | D12 Anchoring/freeze/birth | Whether to anchor; storage/chain split; profile freeze, release evidence and exact birth act | Creator accepts all prior birth evidence and explicit irreversible actions | Optional adapter, release and eventual birth |
+| D13 Encounter contract | Evidence/receipt/outcome, exact eight candidate fields, policy binding, admission authority, idempotence, refusal/pending distinction, acyclic commitments, retained bytes | Creator-directed encounter concept; exact contract still requires accepted D02–D05/D07-compatible record and adversarial vectors | Encounter admission and causal-loop demonstration |
+| D14 Population/Ecology | Heritable variation, differential reproduction, environment/resource constraints, controls, measurement/uncertainty and open-endedness limits | Accepted bounded synthetic study design before experiments; no arbitrary fitness/death mechanism | Post-lineage roadmap 5E; evidence for limited evolution claims |
 
 The full-project planning task need not select these options. Its phase plan must
 assign each decision before any dependent implementation and make blocked entry
@@ -211,6 +278,14 @@ an explicit design revision instead of silently changing the total spec.
   are conceptual components until D02–D05 define their bytes and interpretations.
 - Accepted events, proposed/rejected inputs and local audit material are separate.
   D04 chooses how an accepted allegation is corrected without erasing it.
+- Machine Encounter is the first-class experience context. Refused, read-only,
+  incomplete and rejected encounters may yield no admitted event. D13 separates
+  immutable evidence from accepted-event outcomes; corrections never mutate
+  earlier hashed receipts or create invented successful experiences.
+- LLM-generated content is captured as exact accepted bytes or a retrievable,
+  integrity-checked reference. Replay never re-calls the model. A digest cannot
+  replace unavailable input bytes; failure must be scoped as unavailable or
+  unauthorized rather than silently regenerated.
 - Deterministic input closure includes rule version, dependencies and all required
   input bytes. Unrecorded wall-clock calls, model responses and platform randomness
   cannot determine replay. D03/D04 define exact signature/hash exclusions and domains.
@@ -223,6 +298,36 @@ an explicit design revision instead of silently changing the total spec.
   evidence scopes; do not impose a universal linear truth score.
 - Adapters propose inputs or expose permitted projections; they cannot bypass
   admission or reinterpret universal identity using their local IDs.
+
+## Ontogeny, phylogeny and population evidence
+
+Within-individual state change is ontogeny; adaptation requires a specified
+improvement criterion. Phylogeny records lineage. Heritable variation plus
+reproduction permits research, but a selection claim additionally needs evidence
+of differential reproductive success in a defined ecology. D14 adds matched
+controls, resource/encounter scheduling, replicated bounded runs and uncertainty
+reporting. [Population/Ecology](../../../spec/ecology.md) defines the research scope.
+
+No arbitrary fitness score, token-price objective, organism death or automatic
+extinction is implied. Population-selection evidence can use reproductive
+opportunities while retaining all participant histories. Finite experiments do
+not establish open-ended evolution or machine preferences. Ecology evidence is
+required before a profile claims demonstrated Darwinian selection; original birth
+gates are not waived and open-endedness is not silently made a birth prerequisite.
+
+## Scale and standards strategy
+
+Bound encounter bytes/depth, evidence references, computation and retained data.
+D05/D13/D14 compare replay from genesis with validated checkpoints and archival
+retrieval, including public projection versus authorized private replay. Merkle
+inclusion/consistency designs do not retain unavailable bytes or prove the latest
+head without witnesses/trust assumptions. Do not promise fifty-year operation
+from a small synthetic fixture; measure budgets and failure/recovery behavior.
+
+Evaluate MCP/A2A transport/capability exchange, DID resolution, PROV evidence
+relations, C2PA asset claims, Event Sourcing and CT/Merkle concepts as reusable
+infrastructure. None is a mandatory dependency or substitute for the encounter
+contract. See the primary-source ledger for versions and limits.
 
 ## Reset, Recovery and Compatibility
 
@@ -252,7 +357,8 @@ conditional on phase authorization and accepted decisions, not performed now.
 | MANIFESTO.md | Preserve artistic question and hypothesis language |
 | CONTRIBUTING.md | Version review/conformance rules; respect origin history and licence decisions |
 | LICENSE-DECISION.md | Close layered choices only with rights-holder acceptance |
-| docs/prior-art.md | Primary-source verification and narrow comparison; no novelty conclusion |
+| docs/prior-art.md | Link expanded review without changing earlier evidence claims |
+| docs/research/2026-09-20-encounter-prior-art.md | Primary sources, version/date limits and five-axis assessment |
 | docs/terminology.md | Maintain exact agreed vocabulary; separate metaphors and mechanisms |
 | docs/open-questions.md | Link decisions as resolved only with actual evidence |
 | docs/threat-model.md | Convert threat cases into tested controls and residual risks |
@@ -263,19 +369,22 @@ conditional on phase authorization and accepted decisions, not performed now.
 | spec/genome.md | Immutable and heritable boundaries from D02–D05 |
 | spec/event-model.md | D04 admission, rejection, ordering, correction and replay contracts |
 | spec/canonicalization.md | D03 exact byte policy and test-vector references |
-| spec/perception.md | D07 negotiation and supported/unsupported behavior |
+| spec/encounter.md | D13 first-class encounter, receipt/evidence/outcome and causal-loop demonstration |
+| spec/perception.md | D07 typed profiles, negotiation and supported/unsupported behavior |
 | spec/phenotype.md | D07 attribution and profile-specific validity |
 | spec/memory.md | D05/D08 memory classification and privacy |
 | spec/synapse.md | D08 persistent causal relationship rules |
-| spec/evolution.md | D09 explicit state changes and heritable consequences |
+| spec/evolution.md | D09 within-individual change/adaptation versus heritable effects |
+| spec/ecology.md | D14 population/selection and bounded research criteria |
 | spec/reproduction.md | D10 inheritance, new identity, failure/retry and authority |
 | spec/lineage.md | D10 verified graph semantics and unavailable ancestors |
 | spec/embodiment.md | D11 body/evidence/actuation boundaries |
-| schemas/README.md | Draft-to-profile compatibility and validator scope |
+| schemas/README.md | Historical artifact scope |
+| schemas/successor-design.md | Typed descriptor and receipt prerequisites; explicit incompatible field mappings |
 | schemas/observer.schema.json | Preserve current fields; D07 determines successor schema |
 | schemas/phenotype.schema.json | Preserve current fields; D07 determines receipt validation |
 | organisms/genesis-0001/README.md | Remain UNBORN until separately authorized verified birth |
-| docs/decisions/D01–D12 Markdown records (proposed) | Evidence, alternatives, acceptance and downstream contracts, not implicit approval |
+| docs/decisions/D01–D14 Markdown records (proposed) | Evidence, alternatives, acceptance and downstream contracts, not implicit approval |
 | Future canonical schemas and test vectors (paths chosen at D06) | Created only after required contracts are accepted |
 | Future source/CLI/adapter files (paths chosen at D06) | No speculative language/package layout fixed by this plan |
 
@@ -296,8 +405,9 @@ Future conformance families:
 | Replay | Same state/commitments across independent implementations, altered genesis, duplicate/out-of-order/conflicting inputs, unsupported versions |
 | Persistence | Interrupted append, crash/retry, unavailable dependency, valid old prefix versus witnessed head, authenticated checkpoint |
 | Perception | Three mock observers against one state, unknown/missing capabilities, denied disclosure, substitution and semantic counterexamples |
-| Experience | Consent, causal influence, private input unavailable, correction history, relationship refusal/revocation without retroactive erasure |
-| Evolution/lineage | Genesis invariant, deterministic mutation inputs, eligible inheritance, unchanged parents, partial/retried births, bad/cyclic ancestry |
+| Encounter/Experience | Acyclic receipt/event binding, exact LLM bytes, pending vs no-event, consent, duplicate/forged outcomes, private input unavailable, causal later-expression effect versus control |
+| Individual change/lineage | Genesis invariant, deterministic mutation inputs, eligible inheritance, unchanged parents, partial/retried births, bad/cyclic ancestry |
+| Population/Ecology | Matched no-selection/no-experience controls, heritable variation, actual offspring counts, resource bounds, uncertainty; no claim of open-endedness |
 | Embodiment/anchor | Forged/replayed sensor claim, concurrent bodies, bounded simulated action; optional-chain outage/reorganization without identity change |
 | Birth | Every gate in spec/GENESIS.md demonstrated; exact frozen artifacts; independent recovery/replay and creator authorization |
 
@@ -306,7 +416,9 @@ sensor authenticity, novelty and economic value cannot be inferred from this pla
 
 ## Risks and Open Questions
 
-Highest risks: a permissive schema misrepresented as validity; hidden authority
+Highest risks: generic identity scope displacing encounters; confusing individual
+change with Darwinian/open-ended evolution; digest-only LLM replay or cyclic receipt
+commitments; capability spoofing; unbounded/private history; a permissive schema misrepresented as validity; hidden authority
 choices; frozen identity before canonical byte rules; private-memory commitments
 misrepresented as public replay; attribution mistaken for phenotype fidelity;
 false freshness claims from valid prefixes; birth requirements weakened by a
@@ -328,8 +440,8 @@ work proceeds merely because an SDK exists. All birth gates remain unmet.
 | H04 | Normative constraints and data boundaries | All |
 | H05 | D02 identity/custody and D05 classification | Phases 1, 3 |
 | H06 | D03–D05, replay and recovery | Phase 1 |
-| H07 | D08 causal relations and consent | Phase 3 |
-| H08 | D10 inheritance and retry | Phase 5 |
+| H07 | D08/D13 encounter-derived causal relations and consent | Phase 3 |
+| H08 | D10 inheritance and retry; D14 distinct population research | Phase 5 and 5E |
 | H09 | Claims/evidence, D11 | Phases 3, 6 |
 | H10 | D11 body authority and actuation | Phase 6 |
 | H11 | Artistic hypotheses and non-economic success | All; Phase 0 |
@@ -351,14 +463,27 @@ work proceeds merely because an SDK exists. All birth gates remain unmet.
 | H27 | Historical initial task and real baseline | Phase 0 |
 | H28 | Longevity, delay birth until evidence | All |
 
-## Initial validation status
+## Creator-revision traceability
 
-Draft prepared for `total_spec_validate`. No workflow approval is claimed in
-this initial text. Validation findings and any corrections are recorded below
-as the workflow progresses.
+| Revision | Active design coverage |
+| --- | --- |
+| R01 | Encounter/effect loop leads Scope, product acceptance, scenarios and architecture |
+| R02 | Narrow differentiation and cited component prior art; no first claims |
+| R03 | PhenotypeState/expression separation and historical terminology mapping |
+| R04 | D13 first-class encounter, admission boundary and later causal effect |
+| R05 | Eight candidate receipt names and acyclic evidence/event/outcome binding |
+| R06 | D02/D04 authority; exact retained LLM bytes; missing input is not regenerated |
+| R07 | Historical JSON preserved; typed successor units/frames and claim/evidence scope |
+| R08 | D09 ontogeny/adaptation; D14 Population/Ecology and open-endedness limits |
+| R09 | D05/D13/D14 budgets, checkpoint/Merkle comparison, archives and privacy |
+| R10 | Expanded primary-source ledger with cutoff/version/claim boundaries |
+| R11 | Reuse evaluation for MCP/A2A/DID/PROV/C2PA/Event Sourcing/CT |
+| R12 | Linked revision workflow, updated active artifacts, draft PR; no implementation or birth |
 
-## Validation outcome
+## Revision validation status
 
-Self-review 1: 96/100 for downstream planning; no planning blocker. See
-[findings and scoped approval](total_spec_validation.md). Protocol decisions
-remain OPEN QUESTION until their separate acceptance gates pass.
+Prepared for the revision task's total_spec_validate. Original validation reports
+remain historical records of d5710fe, not approval of this revised specification.
+
+Scoped revision review: 96/100; see [validation](encounter_total_spec_validation.md).
+No unresolved protocol decision is approved by this score.

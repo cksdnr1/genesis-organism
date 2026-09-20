@@ -84,3 +84,15 @@ synthetic replay is an engineering milestone, not evidence of life or perception
     reuse permissions. Resolve licences before describing that goal as achieved.
 
 These are specification gaps and tensions, not reasons to manufacture solutions.
+
+## Encounter revision priorities
+
+The active center is Machine Encounter → Observer-Negotiated Expression →
+Experience → Synapse → later change. New D13 decides receipt/admission and
+acyclic bindings; D14 decides Population/Ecology research. D07 now includes typed
+capability successor design and phenotype-state/expression separation.
+
+[The updated total spec](features/genesis_organism/genesis_organism_total_spec.md)
+and [phase plan](features/genesis_organism/genesis_organism_phase_plan.md) retain
+roadmap 0–8 and add post-lineage 5E ecology research. Neither the original review
+nor this revision makes unresolved mechanism choices or proves evolution.

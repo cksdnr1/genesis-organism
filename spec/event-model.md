@@ -39,3 +39,18 @@ No LLM output is canonical consensus by default.
 Snapshots need an authenticated link to a validated history. Pruning must not
 masquerade as full replay; a valid older prefix does not prove that no newer
 events exist. Retention, checkpoints and recovery remain unresolved.
+
+## Encounter evidence and non-deterministic producers
+
+[Machine Encounter](encounter.md) is the primary experience source under study.
+Its receipt/evidence is not admission authority. D13 must specify an acyclic
+evidence→event→outcome graph; resultingEventRefs cannot create reciprocal digest
+dependencies. Missing, pending and resolved-no-event outcomes need distinct
+semantics; none is silently treated as accepted experience.
+
+LLM output bytes may be proposed externally and admitted under deterministic
+rules. Replay consumes retained bytes or available integrity-checked content,
+never regenerates a model answer. A digest is an integrity check, not a substitute
+for the input required by a reducer. Access/retention follow D05; unavailable
+content blocks the applicable replay claim. Bound evidence size and archive
+costs before scale; checkpoint/Merkle choices remain explicit design decisions.
