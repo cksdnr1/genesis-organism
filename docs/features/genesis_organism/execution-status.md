@@ -8,7 +8,7 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 | --- | --- | --- |
 | 1 | genesis_organism_phase_01: mono-spec completed; D01 research; PR #3 | Rights/licence/freeze choices still OPEN; research exit satisfied. |
 | 2 | genesis_organism_phase_02: mono-spec completed; encounter requirements; PR #4 | Requirements exit satisfied; D07/D08/D13 not preaccepted. |
-| 3 | genesis_organism_phase_03: D02 recommendation reviewed; PR preparation | CREATOR ACCEPTANCE PENDING; decision exit not satisfied. |
+| 3 | genesis_organism_phase_03: mono-spec documentation completed; D02 recommendation; PR #5 | CREATOR ACCEPTANCE PENDING; decision exit not satisfied. |
 | 4–38 | Not started; no fabricated completed task or runtime evidence | Phase 4 requires accepted D02; later dependencies remain in existing plan. |
 
 ## Next actual gate

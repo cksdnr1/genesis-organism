@@ -23,3 +23,8 @@ no runtime exists and this task does not establish security conformance.
 Safe-refactor review against origin/work/phase-02-encounter: Phase 3 proposal and
 workflow artifacts only. No local refactor was necessary; no security/negative
 case was dropped. Keep research completion separate from decision acceptance.
+
+Final research review: PR https://github.com/cksdnr1/genesis-organism/pull/5,
+stacked after PR #4. Mono-spec documentation deliverables are complete; Phase 3's
+creator acceptance and Phase 4 entry remain pending. No reusable agent framework
+is needed. Continue on the isolated branch only after the acceptance gate is met.
