@@ -129,6 +129,71 @@ force open-endedness proof as a birth gate. No lifecycle death is implemented.
 D12 ceremony contracts in 34 precede audit 35. Phases 36–38 are rehearsals, not
 authorization for real freeze/publication/birth. #0001 stays UNBORN.
 
+## Minimal Sufficiency and Complexity Gate
+
+**DESIGN DECISION — creator-directed.** The [Total Spec's project-wide principle](genesis_organism_total_spec.md#minimal-sufficiency--project-wide-design-principle)
+applies to entry, scope changes and exit acceptance in **every existing phase
+1–38**, including research and rehearsals. It creates no phase or D-number.
+
+Before accepting a new protocol mechanism, module, schema, dependency, adapter
+or phase expansion, reviewers MUST answer:
+
+- Which accepted requirement requires it?
+- What fails without it?
+- Can an existing mechanism satisfy the requirement?
+- What state, dependencies and failure modes does it add?
+- Can it be deferred until a demonstrated need exists?
+
+Default: **DEFER / OMIT** unnecessary complexity. Record how necessity will be
+demonstrated and the Removal Test result in the phase's existing review/exit
+evidence; no separate approval service, scoring system or workflow is needed.
+New/revised accepted D01–D14 records require a **Minimality / Complexity
+Justification** section with minimum mechanism, rejected complex alternatives,
+retained requirement, removal result and new failure modes. Historical records
+remain unchanged. The budget is non-numeric and is never a consensus field.
+
+Correctness, replay, provenance, security/privacy, negative tests, independent
+verification and historical compatibility take precedence. A gate cannot waive
+existing invariants, remove origin/history evidence or shorten the Phase 22
+causal-loop demonstration to identity plus a signed log. Preserve its
+no-experience/rejected-experience controls and observable later-expression effect.
+
+### Application within existing phases
+
+These constraints supplement each phase's existing entry and exit criteria;
+phase headings, ten-field structure and dependency declarations are unchanged.
+
+| Execution phases | Complexity gate application |
+| --- | --- |
+| 1–4, 6 | Keep origin, encounter, authority, byte and privacy decisions bounded to accepted requirements; retain evidence and adversarial cases rather than adding governance/runtime infrastructure. |
+| 5 | Minimum meaningful event vocabulary; no speculative event hierarchy. |
+| 7 | Smallest module/toolchain/dependency structure satisfying implementation requirements and independent verification. |
+| 8 | Only accepted semantics and required vectors; no placeholder fields for future use. Historical schema bytes remain intact. |
+| 9–13 | Small, separable admission, replay, persistence and verification; no distributed infrastructure absent an accepted requirement. Checkpoints remain conditional; crash recovery and independent verification remain required. |
+| 14–18 | Minimum profiles/expressions for Machine Encounter; preserve the three mock observer acceptance cases without requiring an LLM service. No universal capability ontology, unused robot descriptors or parallel receipt abstraction. Preserve idempotency, policy binding and acyclic evidence. |
+| 19–22 | Retain only information needed for demonstrated causal effect, privacy/provenance and accepted replay. No generic CRM/database or counter-only substitute; keep matched controls and causal-rule ablation. |
+| 23–24 | Smallest explicit transition rule demonstrating bounded individual adaptation under the accepted criterion; no gratuitous mutation operators. |
+| 25–27 | Only inheritance/lineage mechanisms needed by the accepted D10 experiment and invariants; no breeding platform. |
+| 28–29 | Smallest bounded population/environment testing the accepted scientific question; no artificial universe. Ecology is not required for a single-organism demonstration; niche construction remains separately scoped research. |
+| 30–31 | Prefer one bounded simulated embodiment; no hardware/vendor abstraction framework without demonstrated need. |
+| 32–33 | Skip blockchain if it adds no justified property. Optional anchoring remains optional; local commitments may suffice. |
+| 34–38 | Minimum sufficient canonical candidate state; no fabricated prior experiences, relationships, artificial personality or unearned complexity to appear sophisticated. Preserve all birth evidence, rehearsal boundaries and UNBORN status. |
+
+### Phase expansion rule
+
+No new execution phase SHOULD be introduced unless implementation or protocol
+research discovers a genuinely independent contract that cannot be safely
+specified, implemented and validated inside an existing bounded phase. A large
+task alone does not justify another phase. A new abstraction is not progress
+unless it removes ambiguity or satisfies a demonstrated requirement. Applying
+the Removal Test to phase proposals does not authorize deletion of historical
+phase records or required coverage. This revision adds or removes no phase.
+
+“The simplest mechanism that preserves the organism is preferred.”
+“Complexity is not designed into life. Complexity is earned through life.”
+Later sophistication may emerge through valid history; minimal birth state is
+not a cap on future organism complexity and introduces no new wire fields.
+
 ## Exact vocabulary and bindings
 
 The unchanged schema literals remain `schemaVersion: "0.1-experimental"`,
@@ -286,7 +351,7 @@ inputs requires available accepted bytes, not just digests and never a model rer
 - **Propagation / callbacks / events:** A successful durable admission updates replay/projections; failed writes cannot masquerade as committed events.
 - **Reset / clear / failure recovery:** Crash/retry preserves idempotence; recover from validated history/checkpoint; clear caches without erasing origin.
 - **User-visible outcome:** Archivist can inspect integrity, missing content and freshness relative to an independently known head.
-- **Tests and exit evidence:** Interrupted writes, duplicate retries, corruption, valid older prefix, missing dependencies and invalid checkpoints; state limits explicitly.
+- **Tests and exit evidence:** Interrupted writes, duplicate retries, corruption, valid older prefix and missing dependencies; invalid-checkpoint tests when checkpoints are supported, otherwise explicit unsupported-checkpoint rejection. State limits explicitly.
 - **Explicit non-goals:** No universal freshness from hashes alone, unapproved pruning, distributed storage service or history deletion.
 
 ## Phase 12 — Minimal fixture CLI
