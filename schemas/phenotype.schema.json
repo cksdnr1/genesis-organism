@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/experimental/0.1/phenotype.schema.json",
+  "title": "Expression attribution descriptor — experimental v0.1",
+  "description": "References are review-only opaque labels. Acceptance proves neither reference integrity nor semantic validity, reproducibility, authority or birth.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1-experimental"
+    },
+    "sourceStateRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "negotiationRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "expressionProfile": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "expressionProcedureRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "outputRef": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "mediaType": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2048
+    },
+    "extensions": {
+      "type": "object",
+      "maxProperties": 32,
+      "propertyNames": {
+        "type": "string",
+        "maxLength": 256,
+        "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:.+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 4096
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "sourceStateRef",
+    "negotiationRef",
+    "expressionProfile",
+    "expressionProcedureRef",
+    "outputRef",
+    "mediaType"
+  ],
+  "additionalProperties": false
+}

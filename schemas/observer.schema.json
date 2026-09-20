@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/experimental/0.1/observer.schema.json",
+  "title": "Observer capability claims — experimental v0.1",
+  "description": "Review-only self-description, not authentication, authorization or a canonical organism event.",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1-experimental"
+    },
+    "observerType": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "capabilities": {
+      "type": "object",
+      "maxProperties": 64,
+      "propertyNames": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      },
+      "additionalProperties": {
+        "type": "boolean"
+      }
+    },
+    "supportedProfiles": {
+      "type": "array",
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048
+      }
+    },
+    "extensions": {
+      "type": "object",
+      "maxProperties": 32,
+      "propertyNames": {
+        "type": "string",
+        "maxLength": 256,
+        "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:.+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "maxLength": 4096
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "observerType",
+    "capabilities"
+  ],
+  "additionalProperties": false
+}
