@@ -1,29 +1,41 @@
-# Observer-dependent phenotype
+# Phenotype State and Observer-Negotiated Expression
 
-STATUS: RESEARCH / EXPERIMENTAL. **NORMATIVE:** observer-specific expressions
-MUST remain attributable to the same canonical source state they claim to
-express. An expression MUST NOT silently redefine canonical truth.
+STATUS: RESEARCH / EXPERIMENTAL. The current interaction term is
+**Observer-Negotiated Expression**. The origin draft's **Observer-Dependent
+Phenotype** remains attributable historical terminology, not a renamed wire schema.
 
-## Three different claims
+**NORMATIVE invariant retained:** expressions MUST remain attributable to their
+canonical source state and MUST NOT silently redefine canonical truth.
 
-- **Attribution:** a receipt identifies a state, expression procedure and output.
-- **Reproducibility:** a verifier can recompute output under pinned rules and inputs.
-- **Semantic validity:** output is an allowed, faithful expression under a specified profile.
+## Conceptual separation
 
-A signed receipt or matching hash can support attribution without proving the
-other two. Shared source-state references do not prove that two phenotypes are
-semantically valid expressions of one organism. That is a central open question.
+Genome and accepted history → Canonical State → PhenotypeState under an explicit
+profile → observer negotiation → Observer-Negotiated Expression.
 
-**DESIGN DECISION — proposed:** explore a deterministic expression profile first.
-Pin the state commitment, negotiation/profile version, procedure/dependencies,
-request inputs and output commitment. Validate two different observer expressions
-against one fixture state, and reject output or state-reference substitutions.
-Non-deterministic artistic renderings, if later supported, need separate evidence
-and cannot claim bitwise reproducibility by implication.
+PhenotypeState describes traits/behavior available for expression. D07 must choose
+whether it is a derived deterministic projection or an explicitly canonical
+component; this diagram does not impose storage or hashing of an intermediate
+object. Different observer presentations cannot become competing canonical truths.
+Observer-Negotiated Expression is the permitted presentation selected using
+capabilities and access policy during a [Machine Encounter](encounter.md).
 
-The [experimental descriptor](../schemas/phenotype.schema.json) makes attribution
-fields reviewable; it contains reference strings, not cryptographic proofs.
-Reference resolution and commitment validation are deliberately not defined.
-Canonical memory and private data are not necessarily exposed through expression.
-An output digest can bind a harmful or misleading output just as well as a valid
-one; validity needs a profile-specific criterion.
+## Four different claims
+
+- Attribution binds an expression to source state, inputs and procedure.
+- Reproducibility means recomputing output under a specified deterministic profile.
+- Semantic validity means satisfying that profile's fidelity/meaning constraints.
+- Causal experience links admitted interaction to a specified later state effect.
+
+A signed digest establishes none of the others automatically. Two expressions
+sharing a state reference can still be misleading or invalid. Recorded LLM output
+bytes may be replayable input without the model itself being reproducible.
+
+A first demonstration should use three mock observers, one source state,
+profile-specific validity tests and a later expression changed by accepted
+encounter experience. Use a control with that event absent. This demonstrates a
+specified causal rule, not subjective appreciation or population evolution.
+
+The existing [phenotype.schema.json](../schemas/phenotype.schema.json) remains
+an unchanged historical expression descriptor, not a PhenotypeState schema or
+EncounterReceipt. See [successor compatibility](../schemas/successor-design.md).
+No intermediate canonical type or new receipt schema is frozen here.

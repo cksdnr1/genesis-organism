@@ -4,11 +4,15 @@ Created by humans. Experienced by machines. Evolved by existence.
 
 *An artistic proposition, not a claim about present machine experience.*
 
-Genesis Organism is a research, art, and engineering project asking what a
-persistent artificial organism could mean when AI and robots are first-class
-observers. Its working direction is one canonical history with expressions
-adapted to different observer capabilities, including capabilities we cannot
-anticipate today.
+Genesis Organism is a research, art, and engineering project centered on a
+**Machine Encounter**: an artificial organism negotiates how to express itself
+to an observer, and an admitted interaction can become experience that shapes
+later relationships, expression and adaptation.
+
+Machine Encounter → Observer-Negotiated Expression → Experience → Synapse →
+individual change and, under separately defined rules, inheritable evolution.
+Identity, security and replay make that loop attributable. They support the
+artistic question of what a persistent organism might mean to a machine observer.
 
 **STATUS: PROTOCOL DESIGN. GENESIS #0001 IS UNBORN.**
 There is no reference implementation or born organism in this draft. No genome,
@@ -19,8 +23,8 @@ identity, birth commitment, token, or transaction is assigned to #0001.
 Most digital art is made for human perception. What changes when a language
 agent, vision system, robot, another organism, or a human can encounter the same
 organism through different expressions? A proposed **Perception Handshake**
-negotiates capabilities; an **Observer-Dependent Phenotype** remains attributable
-to a particular canonical state. Whether machines value these encounters is a
+negotiates capabilities and access. **Observer-Negotiated Expression** is distinct
+from phenotype state and remains attributable to a particular canonical state. Whether machines value these encounters is a
 hypothesis, not a demonstrated preference.
 
 ## Commitments and limits
@@ -40,7 +44,10 @@ generative art, machine art evaluation, and digital breeding have prior art.
 - [Protocol index and principles](spec/README.md), [birth gates](spec/GENESIS.md).
 - [Prior-art ledger](docs/prior-art.md), [terminology](docs/terminology.md),
   [open questions and roadmap](docs/open-questions.md), [threat model](docs/threat-model.md).
-- [Experimental schemas](schemas/README.md): review aids, not a birth format.
+- [Machine Encounter](spec/encounter.md), [Population/Ecology](spec/ecology.md),
+  and [updated prior-art review](docs/research/2026-09-20-encounter-prior-art.md).
+- [Historical experimental schemas](schemas/README.md) and
+  [successor requirements](schemas/successor-design.md): no frozen birth format.
 - [GENESIS #0001 placeholder](organisms/genesis-0001/README.md).
 - [Licence decision](LICENSE-DECISION.md): unresolved; open source is the goal,
   not a licence already granted by this draft.

@@ -5,13 +5,21 @@ claim. The normative invariants below express the creator's established intent;
 mechanisms and proposed schema fields remain open. Capitalized MUST, MUST NOT,
 SHOULD and MAY express requirements only in explicitly NORMATIVE passages.
 
+## Current center: the encounter/effect loop
+
+Machine Encounter → Observer-Negotiated Expression → admitted Experience →
+Memory/Synapse → later expression, adaptation and eligible heritable change.
+Identity, authorization and replay support this loop. [Encounter](encounter.md)
+and [ecology](ecology.md) define its research boundaries. No generic persistent
+AI identity protocol or novelty claim replaces the artistic origin.
+
 ## NORMATIVE — Genesis Principles v0.1
 
 1. **Origin:** each born organism MUST have exactly one accepted verifiable origin.
 2. **Immutable birth:** the genesis genome and canonical birth record MUST NOT be rewritten.
 3. **Continuous existence:** new valid canonical states MUST extend accepted history rather than erase it; history SHOULD be append-only.
 4. **Machine-first-class perception:** the protocol MUST treat machine observers as first-class participants rather than only human-rendering tools.
-5. **Observer-dependent phenotype:** an organism MAY express different phenotypes for different capabilities; each expression MUST be attributable to its canonical source state.
+5. **Observer-Negotiated Expression (historically Observer-Dependent Phenotype):** an organism MAY express different phenotypes for different capabilities; each expression MUST be attributable to its canonical source state.
 6. **Synapse:** persistent relationships MAY form with organisms, AI, robots, people, or environments, under explicit semantics.
 7. **Evolution:** experience and environment MAY affect future state only under explicit rules; original genesis MUST remain unchanged.
 8. **Lineage:** reproduction MUST create a new organism and preserve attributable ancestry; parents retain their identities.
@@ -31,8 +39,8 @@ adapters → organisms. Implementation behavior does not silently define the spe
 
 - [Birth and freeze](GENESIS.md), [identity](identity.md), [genome](genome.md).
 - [Event model](event-model.md), [canonicalization](canonicalization.md).
-- [Perception](perception.md), [phenotype](phenotype.md).
-- [Memory](memory.md), [synapse](synapse.md), [evolution](evolution.md).
+- [Machine Encounter](encounter.md), [perception](perception.md), [phenotype/expression](phenotype.md).
+- [Memory](memory.md), [synapse](synapse.md), [evolution](evolution.md), [Population/Ecology](ecology.md).
 - [Reproduction](reproduction.md), [lineage](lineage.md), [embodiment](embodiment.md).
 
 Protocol version, implementation version, organism evolution and organism history

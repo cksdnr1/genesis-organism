@@ -38,3 +38,22 @@ ALIVE, DORMANT, and EXTINCT remain lifecycle proposals. No death transitions
 are specified. “Species”, “mutation”, and “epigenetic” require explicit semantics
 before use as protocol mechanisms. STATE != IDENTITY is a working hypothesis,
 not a solved distributed identity theorem.
+
+## Encounter revision vocabulary
+
+| Current term | Meaning and historical boundary |
+| --- | --- |
+| Machine Encounter | First-class concept connecting source state, profile/policy, expression, interaction evidence and possible admitted experience |
+| Observer-Negotiated Expression | Current term for negotiated presentation; replaces Observer-Dependent Phenotype in active design prose, not old schema bytes/history |
+| PhenotypeState | Traits/behavior under a defined profile; canonical-versus-derived representation remains D07 work |
+| EncounterReceipt | Candidate attribution/outcome descriptor; not automatic event admission or physical truth |
+| Ontogeny | Within-individual development/change |
+| Adaptation | Improved fit under a specified environment/task, requiring evidence beyond a state change |
+| Phylogeny | Lineage history; distinct from one individual's memory changes |
+| Population selection | Differential reproduction associated with heritable variation under defined ecology |
+| Open-ended evolution | Separate unverified research hypothesis; a bounded novelty counter is not proof |
+
+Earlier phenotype/expression wording above is the origin draft's vocabulary.
+Current separation is defined in [phenotype](../spec/phenotype.md) and
+[successor compatibility](../schemas/successor-design.md); no old reference field
+is silently renamed or reinterpreted.
