@@ -33,3 +33,10 @@ preserve specs, plans, reviews and results. Use actual predecessor branches as
 TARGET_BRANCH; the bundled preset's master default is not a repository fact.
 No daemon, automation queue, background worker or autonomous continuation service
 was installed or activated by this execution request.
+
+## Resume — 2026-10-08
+
+The creator accepted D02 and delegated reviewed bounded synthetic design choices;
+see [acceptance record](../../decisions/2026-10-08-synthetic-delegation.md).
+The table above records the prior stop, not the resumed state. Phase 4 now enters.
+All actual release/birth and rights-holder licensing gates remain outside delegation.
