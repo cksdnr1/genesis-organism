@@ -14,3 +14,8 @@ Focused checks: protected original bytes and D03 local link checks passed;
 12 counterexample rows manually checked against Phase 4 scope. Whitespace passed.
 No runtime tests claimed. Safe-refactor review found no necessary cleanup; original
 canonicalization research remains historical, new accepted profile is additive.
+
+PR https://github.com/cksdnr1/genesis-organism/pull/6 contains this phase's reviewed
+commit and will carry subsequent separately tracked phases. No automatic merge.
+The preset's return-to-base step is deferred to preserve the authorized sequential
+execution branch; no parallel agent/process is writing it.
