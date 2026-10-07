@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/core-v1/genome.schema.json",
+  "description": "Synthetic shape only; D03 canonical bytes/proofs and D04 semantics require separate validation.",
+  "type": "object",
+  "properties": {
+    "signal": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255
+    }
+  },
+  "required": [
+    "signal"
+  ],
+  "additionalProperties": false
+}
