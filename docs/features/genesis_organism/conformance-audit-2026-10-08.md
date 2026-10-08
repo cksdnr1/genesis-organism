@@ -289,3 +289,14 @@ workflow documents are not measured conformance or independent human approval.
 
 This audit changes documentation only. No runtime, schema, historical origin,
 Total Spec, Phase Plan, ceremony fixture or real-organism record was changed.
+
+## Later corrective evidence — 2026-10-08
+
+The findings above remain the historical audit of2090fcd. Four separate corrective
+mono-spec tasks are documented in [the remediation report](audit-remediation-2026-10-08.md).
+At b2c2b2f, live predecessor bypass A01 and tested diagnostic disagreement A02 are
+fixed; A03/A04 scope/navigation gaps are addressed. Offline supersession explicitly
+refuses absent predecessor bytes. All52 regression groups pass, original protected
+bytes remain unchanged, and actual candidate birth gates remain unestablished.
+This later evidence does not retroactively turn the original audit into a pass
+or certify complete protocol conformance or actual #0001 readiness.

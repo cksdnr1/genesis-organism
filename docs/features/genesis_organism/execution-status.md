@@ -1,5 +1,15 @@
 # Sequential phase execution status
 
+## Corrective mono-spec results — 2026-10-08
+
+[Four-task remediation evidence](audit-remediation-2026-10-08.md) records scoped
+A01–A04 corrections at b2c2b2f and final52/52 regression. Live predecessor
+verification and tested independent diagnostics are fixed; evidence/readiness
+scopes and current-profile navigation are explicit. Offline supersession refuses
+unavailable predecessor bytes. Original audit findings below describe2090fcd,
+not an unresolved claim about corrected code. No universal conformance or real
+birth-gate closure follows. GENESIS #0001 remains UNBORN / NO-GO.
+
 ## Readiness scope clarification — A03, 2026-10-08
 
 [Evidence and birth readiness](readiness-scope.md) separates workflow delivery,
