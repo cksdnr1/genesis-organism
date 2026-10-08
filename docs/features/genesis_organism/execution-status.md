@@ -1,8 +1,47 @@
 # Sequential phase execution status
 
-Date: 2026-09-21. Governing merged baseline: `0fd529ee2d8be2db6fa7a8c565ccca776f444527`.
+Updated: 2026-10-08. Governing merged baseline: `0fd529ee2d8be2db6fa7a8c565ccca776f444527`.
 Creator requested all 38 existing execution phases, individually through PlaySpec
 mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase added.
+
+## Current verified execution frontier
+
+| Execution phase | Evidence / workflow | Gate state |
+| --- | --- | --- |
+| 1 | research complete, PR3; D01-origin-governance.md | Rights-holder licensing/profile decisions OPEN; not accepted for release/birth. |
+| 2 | encounter requirements complete, PR4 | Requirements research exit satisfied. |
+| 3 | D02 proposal PR5 + dated creator acceptance below | Accepted bounded synthetic scope, not real birth authority. |
+| 4–8 | individually completed mono-spec; D03–D06 and canonical fixtures | Accepted bounded byte/event/privacy/implementation contracts. |
+| 9–13 | individually completed; JS core/store/CLI and independent Python conformance | Runtime and failure/recovery evidence in each phase result. |
+| 14–18 | individually completed; D07/D13, negotiation/expression/encounter admission/receipts | Typed synthetic successor, exact source/policy/bytes and retry controls. |
+| 19–22 | individually completed; D08 memory/synapse and causal demonstration | Actual later grammar change with no/rejected-experience and ablation controls. |
+| 23–24 | individually completed; D09 adaptation-v1 and independent vectors | Fixed label-response task evidence only; no general learning claim. |
+| 25–27 | individually completed; D10 child publication and independent full lineage | Authenticated inheritance, partial/retry and bounded ancestry evidence. |
+| 28–29 | individually completed; preregistered D14/six retained study runs | Actual accepted offspring, controls and independent verification; finite engineered result. |
+| 30–31 | individually completed; D11 and optional pure simulator | Body-independent continuity, claim-only evidence, duplicate no-action and bounded permission. |
+| 32 | own mono-spec research proposal; D12-anchoring-proposal.md | Creator acceptance PENDING; research workflow is not passed protocol decision exit. |
+| 33 | Not entered | Deliberate SKIP proposed, requires accepted D12 subset. |
+| 34 | Not entered | Requires accepted D01 tested-profile rights/authority plus D12 anchoring; ceremony acceptance obtained here. |
+| 35–38 | Not entered | Existing D01/D12/birth-evidence/rehearsal gates remain; no fabricated completion. |
+
+Tasks use genesis_organism_phase_XX; versioned spec/review/plan/review/result/pr
+artifacts live in docs/features/genesis_organism_phase_XX. Phases4–32 are in stacked
+draft PR6, branch work/synthetic-phases, base work/phase-03-authority. PRs3–5 remain
+open; nothing is automatically merged. Execution is direct authorized Codex work,
+not a registered Novis automation queue/worker completion claim.
+
+Latest full validation: `npm test`41 groups; Python schema_vectors.py6 and
+successor_schema_vectors.py2 checks. Independent canonical/lineage comparisons,
+causal controls, durable publication failure injection, fixed population controls
+and simulated continuity are included. Exact runtime claims/limits are in individual
+result files. Original total spec/phase graph, ORIGIN.md, spec/GENESIS.md, historical
+observer/phenotype schemas and #0001 placeholder bytes remain unchanged from baseline.
+
+Next creator decision: accept/reject the concrete D12 SKIP recommendation. D01
+licensing/rights and D12 ceremony remain separate decisions. No further phase entry
+is inferred from task completion, a PR or a test score. GENESIS #0001 remains UNBORN.
+
+## Historical stop — 2026-09-21 (superseded by acceptance below)
 
 | Execution phase | Task / deliverable state | Protocol gate state |
 | --- | --- | --- |
@@ -11,7 +50,7 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 | 3 | genesis_organism_phase_03: mono-spec documentation completed; D02 recommendation; PR #5 | CREATOR ACCEPTANCE PENDING; decision exit not satisfied. |
 | 4–38 | Not started; no fabricated completed task or runtime evidence | Phase 4 requires accepted D02; later dependencies remain in existing plan. |
 
-## Next actual gate
+## Historical next gate — now superseded for synthetic D02
 
 See [D02 proposal](../../decisions/D02-identity-authority.md). A pending user
 question asks whether bounded synthetic D02–D11/D13–D14 decisions may be selected
