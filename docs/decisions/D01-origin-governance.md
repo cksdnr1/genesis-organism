@@ -66,3 +66,13 @@ Necessity is demonstrated by distinct unresolved decisions in the table, not a s
 Research review checks source scope, origin ancestry, immutable evidence and
 absence of fabricated grants or birth facts. All rights selections remain OPEN.
 Correct later findings through attributed revisions; never rewrite published origin.
+
+## Subsequent tested-profile acceptance — 2026-10-08
+
+The creator accepted the [layered proposal](D01-licensing-proposal.md) and
+confirmed rights authority for covered project-authored contributions; see
+[dated record](2026-10-08-rights-and-rehearsal-acceptance.md) and
+[active mapping](../../LICENSE.md). D01 is accepted for the public synthetic
+tested profile after text/mapping/notice checks. Earlier OPEN wording above is
+historical. Real organism/artwork/naming decisions and actual ceremony authority
+remain separate; no original birth gate is waived.

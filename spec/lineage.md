@@ -18,3 +18,12 @@ A fork can record upstream provenance without claiming to be the same organism
 or an authorized continuation. Open lineage is a verification goal, not an
 assumption that every third party will preserve records or that a licence can
 force truthful claims.
+
+## Accepted bounded verification — 2026-10-08
+
+[D10](../docs/decisions/D10-reproduction.md) distinguishes canonical history
+validity from direct-parent evidence and complete ancestry verification. Its bounded
+resolver must report missing/private ancestors unavailable, reject cycles/tampering
+and preserve exact selected-state commitments. No generation formula is defined.
+Synthetic Phase27 will independently verify these contracts; repository forks
+and deployment copies remain distinct from offspring.
