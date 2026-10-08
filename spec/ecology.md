@@ -82,3 +82,11 @@ Birth keeps the existing spec/GENESIS.md gates. Ecology evidence is additionally
 required before any selected profile claims demonstrated Darwinian selection;
 otherwise explicitly leave that claim unproven. This clarification neither waives
 original birth requirements nor asserts that open-ended evolution is a birth gate.
+
+## Preregistered synthetic study — 2026-10-08
+
+[D14](../docs/decisions/D14-population-study.md) accepts two roots, a fixed
+four-opportunity resource, exact target2 response gate, neutral/no-experience/
+experience comparisons and two deterministic order checks. Phase29 must count
+only accepted verified children and retain failures. No result exists by this
+decision alone. Niche construction/open-endedness remain outside the experiment.

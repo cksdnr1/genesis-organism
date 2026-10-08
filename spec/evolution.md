@@ -41,3 +41,8 @@ rule. The four-category cue/response criterion distinguishes changed output from
 limited measured task fit. Existing origin/rule meanings remain unchanged.
 This finite label-conditioned rule is not general learning or population evolution.
 Implementation and independent vectors are Phase24; D10/D14 are not preaccepted.
+
+Later accepted [D10](../docs/decisions/D10-reproduction.md) and
+[D14](../docs/decisions/D14-population-study.md) separately define synthetic
+inheritance and a preregistered fixed selection study. Neither individual change
+nor an accepted study design alone constitutes evidence of population evolution.
