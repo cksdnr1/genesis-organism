@@ -1,5 +1,17 @@
 # Sequential phase execution status
 
+## Post-merge audit — 2026-10-08
+
+PR6 was explicitly authorized and merged as e6d0e66 into work/phase-03-authority;
+stacked PR3–5 remain open, so this is not a default-branch integration claim.
+[Fresh full audit](post-merge-conformance-audit-2026-10-08.md):52/52 regression
+groups pass at that merge, but twelve broader signed negatives expose three
+additional JS/Python diagnostic disagreements (PM-01). Phase13/18 rejection-class
+conformance remains incomplete. All38 local workflow tasks freshly read completed;
+that does not close Phase38's original all-real-birth-gates entry. Original bytes
+and the Phase22 causal milestone remain; actual #0001 remains UNBORN / NO-GO.
+Earlier PR-draft/50-test/closure statements below retain their historical context.
+
 ## Corrective mono-spec results — 2026-10-08
 
 [Four-task remediation evidence](audit-remediation-2026-10-08.md) records scoped

@@ -1,0 +1,187 @@
+{
+  "revision": "e6d0e6633fd657216549fd64f1031a6d96fd7b87",
+  "protectedFiles": [
+    "ORIGIN.md",
+    "spec/GENESIS.md",
+    "schemas/observer.schema.json",
+    "schemas/phenotype.schema.json",
+    "organisms/genesis-0001/README.md",
+    "docs/features/genesis_organism/genesis_organism_total_spec.md",
+    "docs/features/genesis_organism/genesis_organism_phase_plan.md"
+  ],
+  "originalPlanPhases": 38,
+  "workflowArtifacts": 228,
+  "handoffRows": 29,
+  "revisionRows": 12,
+  "decisionMinimalityRecords": [
+    "D01-origin-governance.md",
+    "D02-identity-authority.md",
+    "D03-canonical-bytes.md",
+    "D04-events.md",
+    "D05-privacy-retention.md",
+    "D06-implementation.md",
+    "D07-perception.md",
+    "D08-memory-synapse.md",
+    "D09-adaptation.md",
+    "D10-reproduction.md",
+    "D11-simulated-embodiment.md",
+    "D12-synthetic-ceremony.md",
+    "D13-encounters.md",
+    "D14-population-study.md"
+  ],
+  "phaseTasks": [
+    {
+      "task": "genesis_organism_phase_01",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_02",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_03",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_04",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_05",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_06",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_07",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_08",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_09",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_10",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_11",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_12",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_13",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_14",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_15",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_16",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_17",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_18",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_19",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_20",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_21",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_22",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_23",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_24",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_25",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_26",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_27",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_28",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_29",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_30",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_31",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_32",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_33",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_34",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_35",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_36",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_37",
+      "status": "completed"
+    },
+    {
+      "task": "genesis_organism_phase_38",
+      "status": "completed"
+    }
+  ],
+  "unborn": true
+}
