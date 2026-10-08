@@ -41,6 +41,13 @@ Next creator decisions: D01 licensing/rights and D12 ceremony remain open.
 D12 SKIP is accepted only for the current synthetic profile. No further phase entry
 is inferred from task completion, a PR or a test score. GENESIS #0001 remains UNBORN.
 
+Concrete review proposals prepared2026-10-08:
+[D01 layered licensing/rights](../../decisions/D01-licensing-proposal.md) and
+[D12 synthetic ceremony](../../decisions/D12-ceremony-proposal.md). Both are
+PROPOSED, not grants/acceptances or completed future phases. They make the two
+remaining creator decisions reviewable before Phase34 entry. No runtime or
+protected historical bytes were changed by preparing them.
+
 ## Historical stop — 2026-09-21 (superseded by acceptance below)
 
 | Execution phase | Task / deliverable state | Protocol gate state |
