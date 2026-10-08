@@ -4,13 +4,15 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { createHash, createPrivateKey, createPublicKey, sign, verify, randomUUID } from 'node:crypto';
-import { canonical, parseCanonical, requireThat } from '../src/bytes.mjs';
+import { canonical, parseCanonical, requireThat, digest } from '../src/bytes.mjs';
+import { validateOrigin } from '../src/admission.mjs';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
 export const PROFILE = 'ceremony-rehearsal-v1';
 export const AUTHORITY = 'd75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a';
 export const LIST = 'fixtures/ceremony-v1/artifacts.json';
 export const ORIGIN = 'fixtures/adaptation-v1/origin.json';
+export const REHEARSAL_ORIGIN = '37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc';
 export const MAX_RAW = 32 * 1024 * 1024;
 export const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export const hex = value => typeof value === 'string' && /^[0-9a-f]{64}$/.test(value);
@@ -228,6 +230,100 @@ export function checkRelease(root, manifest, freeze, release, prior = null) {
   requireThat(release.body.manifestRef === checked.manifestRef && release.body.freezeRef === checked.freezeRef, 'invalid', 'release bindings');
   checkArchive(root, 'archive-a', manifest, freeze, prior); checkArchive(root, 'archive-b', manifest, freeze, prior);
   return { ...checked, releaseRef: reference('release', release) };
+}
+
+export function checkBirth(root, manifest, freeze, release, birth, prior = null) {
+  const checked = checkRelease(root, manifest, freeze, release, prior);
+  checkProof('birth', birth, ['profile', 'manifestRef', 'releaseRef', 'originRef', 'authority']);
+  const state = validateOrigin(parseCanonical(checkArchive(root, 'archive-a', manifest, freeze, prior).get(ORIGIN)));
+  requireThat(state.organism === REHEARSAL_ORIGIN && state.authority === AUTHORITY && state.sequence === 0 && state.signal === 0 && state.rules === 'adaptation-v1', 'unauthorized', 'only pinned public synthetic origin');
+  requireThat(birth.body.manifestRef === checked.manifestRef && birth.body.releaseRef === checked.releaseRef && birth.body.originRef === state.organism, 'invalid', 'birth bindings');
+  return { ...checked, birthRef: reference('birth', birth), originRef: state.organism, stateCommitment: digest('state', state) };
+}
+function journalRecord(root) {
+  root = guardRoot(root);
+  const allowed = ['REHEARSAL', 'pending', 'archive-a', 'archive-b', 'accepted', 'conflicts', 'LOCK'];
+  for (const name of fs.readdirSync(root)) {
+    requireThat(allowed.includes(name), 'invalid', 'unknown rehearsal root member');
+    const info = fs.lstatSync(path.join(root, name));
+    requireThat(!info.isSymbolicLink() && (['REHEARSAL', 'LOCK'].includes(name) ? info.isFile() : info.isDirectory()), 'invalid', 'root member type');
+  }
+  const members = name => {
+    try {
+      const names = fs.readdirSync(path.join(root, name));
+      requireThat(names.length <= (name === 'accepted' ? 1 : 256), 'limit', 'journal member budget'); return names;
+    } catch (error) { if (error.code === 'ENOENT') return []; throw error; }
+  };
+  let pendingTotal = 0;
+  for (const name of members('pending')) {
+    requireThat(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.test(name), 'invalid', 'unknown pending diagnostic');
+    const info = fs.lstatSync(path.join(root, 'pending', name)); pendingTotal += info.size;
+    requireThat(info.isFile() && !info.isSymbolicLink() && pendingTotal <= MAX_RAW, 'limit', 'pending evidence budget');
+  }
+  const conflicts = members('conflicts');
+  for (const name of conflicts) {
+    requireThat(/^[0-9a-f]{64}\.json$/.test(name), 'invalid', 'conflict name');
+    const envelope = parseCanonical(readWithin(root, `conflicts/${name}`, 65536));
+    checkProof('birth', envelope, ['profile', 'manifestRef', 'releaseRef', 'originRef', 'authority']);
+    requireThat(name === `${reference('birth', envelope)}.json`, 'invalid', 'conflict reference');
+  }
+  requireThat(conflicts.length === 0, 'conflict', 'retained birth conflict hold');
+  const names = members('accepted');
+  if (names.length === 0) return null;
+  requireThat(/^[0-9a-f]{64}\.json$/.test(names[0]), 'invalid', 'accepted origin name');
+  const envelope = parseCanonical(readWithin(root, `accepted/${names[0]}`, 65536));
+  checkProof('birth', envelope, ['profile', 'manifestRef', 'releaseRef', 'originRef', 'authority']);
+  requireThat(hex(envelope.body.originRef) && names[0] === `${envelope.body.originRef}.json`, 'invalid', 'accepted origin binding');
+  return envelope;
+}
+function lockRecord(root) {
+  const lock = parseCanonical(readWithin(root, 'LOCK', 65536)); exact(lock, ['profile', 'pid']);
+  requireThat(lock.profile === PROFILE && Number.isSafeInteger(lock.pid) && lock.pid > 0 && lock.pid <= 2147483647, 'invalid', 'lock owner evidence');
+  return lock;
+}
+function acquireLock(root) {
+  const bytes = canonical({ profile: PROFILE, pid: process.pid });
+  let fd;
+  try { fd = fs.openSync(path.join(root, 'LOCK'), 'wx', 0o600); }
+  catch (error) { if (error.code === 'EEXIST') requireThat(false, 'conflict', 'writer lock held; explicit recovery required'); throw error; }
+  try { fs.writeFileSync(fd, bytes); fs.fsyncSync(fd); } finally { fs.closeSync(fd); }
+  sync(root); return bytes;
+}
+export function acceptBirth(root, manifest, freeze, release, birth, fault = () => {}, prior = null) {
+  root = guardRoot(root); const checked = checkBirth(root, manifest, freeze, release, birth, prior);
+  const ownedLock = acquireLock(root); fault('after-lock', 'LOCK');
+  // Any exception after acquisition preserves the lock; never infer safe takeover.
+  const existing = journalRecord(root);
+  let status = 'accepted';
+  if (existing) {
+    if (!canonical(existing).equals(canonical(birth))) {
+      publish(root, `conflicts/${checked.birthRef}.json`, canonical(birth), fault);
+      requireThat(false, 'conflict', 'origin/candidate already bound; conflict retained');
+    }
+    status = 'duplicate';
+  } else publish(root, `accepted/${checked.originRef}.json`, canonical(birth), fault);
+  requireThat(readWithin(root, 'LOCK', 65536).equals(ownedLock), 'conflict', 'lock ownership changed');
+  fs.unlinkSync(path.join(root, 'LOCK')); sync(root); fault('after-unlock', 'LOCK');
+  return { status, ...checked };
+}
+export function checkJournal(root, manifest, freeze, release, birth, prior = null) {
+  root = guardRoot(root);
+  requireThat(!fs.existsSync(path.join(root, 'LOCK')), 'conflict', 'writer lock held');
+  const checked = checkBirth(root, manifest, freeze, release, birth, prior), existing = journalRecord(root);
+  if (!existing) return { status: 'empty', ...checked };
+  requireThat(canonical(existing).equals(canonical(birth)), 'conflict', 'different accepted binding');
+  return { status: 'accepted', ...checked };
+}
+export function recoverBirthLock(root, manifest, freeze, release, birth, prior = null) {
+  root = guardRoot(root);
+  if (!fs.existsSync(path.join(root, 'LOCK'))) { checkJournal(root, manifest, freeze, release, birth, prior); return 'not-held'; }
+  const lock = lockRecord(root); let absent = false;
+  try { process.kill(lock.pid, 0); } catch (error) { absent = error.code === 'ESRCH'; }
+  requireThat(absent, 'conflict', 'writer alive or absence not proven');
+  checkBirth(root, manifest, freeze, release, birth, prior); const existing = journalRecord(root);
+  requireThat(!existing || canonical(existing).equals(canonical(birth)), 'conflict', 'cannot recover inconsistent journal');
+  requireThat(canonical(lockRecord(root)).equals(canonical(lock)), 'conflict', 'lock changed during recovery');
+  fs.unlinkSync(path.join(root, 'LOCK')); sync(root); return 'recovered';
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

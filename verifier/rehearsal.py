@@ -9,13 +9,14 @@ import stat
 import sys
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from cryptography.exceptions import InvalidSignature
-from verify import Invalid, canonical, exact, hex_value, need, parse, read_file
+from verify import Invalid, canonical, exact, hex_value, need, parse, read_file, origin_state, digest
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = "ceremony-rehearsal-v1"
 AUTHORITY = "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a"
 LIST = "fixtures/ceremony-v1/artifacts.json"
 ORIGIN = "fixtures/adaptation-v1/origin.json"
+REHEARSAL_ORIGIN = "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc"
 MAX_RAW = 32 * 1024 * 1024
 
 
@@ -178,12 +179,50 @@ def check_release(root, manifest, freeze, release, prior=None):
     return dict(result, releaseRef=reference("release", release))
 
 
+def check_birth(root, manifest, freeze, release, birth, prior=None):
+    result = check_release(root, manifest, freeze, release, prior)
+    check_proof("birth", birth, ("profile", "manifestRef", "releaseRef", "originRef", "authority"))
+    state = origin_state(parse(archive_files(root, "archive-a", manifest, freeze, prior)[ORIGIN]))
+    need(state["organism"] == REHEARSAL_ORIGIN and state["authority"] == AUTHORITY and state["sequence"] == 0 and state["signal"] == 0 and state["rules"] == "adaptation-v1", "only pinned synthetic origin")
+    need(birth["body"]["manifestRef"] == result["manifestRef"] and birth["body"]["releaseRef"] == result["releaseRef"] and birth["body"]["originRef"] == state["organism"], "birth bindings")
+    return dict(result, birthRef=reference("birth", birth), originRef=state["organism"], stateCommitment=digest("state", state))
+
+
+def check_journal(root, manifest, freeze, release, birth, prior=None):
+    root = guard_root(root)
+    result = check_birth(root, manifest, freeze, release, birth, prior)
+    need(not os.path.lexists(root / "LOCK"), "writer lock held")
+    allowed = {"REHEARSAL", "pending", "archive-a", "archive-b", "accepted", "conflicts", "LOCK"}
+    for entry in root.iterdir():
+        need(entry.name in allowed and not entry.is_symlink(), "unknown/symlinked root member")
+        need(entry.is_file() if entry.name in ("REHEARSAL", "LOCK") else entry.is_dir(), "root member type")
+    pending = list((root / "pending").iterdir()) if (root / "pending").exists() else []
+    need(len(pending) <= 256, "pending member budget")
+    total = 0
+    for entry in pending:
+        need(re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", entry.name) and entry.is_file() and not entry.is_symlink(), "pending evidence")
+        total += entry.stat().st_size; need(total <= MAX_RAW, "pending byte budget")
+    conflicts = list((root / "conflicts").iterdir()) if (root / "conflicts").exists() else []
+    need(not conflicts, "retained conflict hold")
+    accepted = list((root / "accepted").iterdir()) if (root / "accepted").exists() else []
+    need(len(accepted) <= 1, "single-origin journal")
+    if accepted:
+        name = birth["body"]["originRef"] + ".json"
+        need(accepted[0].name == name and not accepted[0].is_symlink(), "accepted origin filename")
+        existing = parse(read_local(root, "accepted/" + name, 65536))
+        need(canonical(existing) == canonical(birth), "accepted birth bytes")
+    return dict(result, status="accepted" if accepted else "empty")
+
+
 if __name__ == "__main__":
     try:
         bundle = json.loads(read_file(Path(sys.argv[1])))
         result = check_freeze(bundle["manifest"], bundle["freeze"], bundle.get("prior"))
         if len(sys.argv) > 2:
-            result = check_release(sys.argv[2], bundle["manifest"], bundle["freeze"], bundle["release"], bundle.get("prior"))
+            if "birth" in bundle:
+                result = check_journal(sys.argv[2], bundle["manifest"], bundle["freeze"], bundle["release"], bundle["birth"], bundle.get("prior"))
+            else:
+                result = check_release(sys.argv[2], bundle["manifest"], bundle["freeze"], bundle["release"], bundle.get("prior"))
         else:
             git_artifacts(bundle["manifest"])
         print(json.dumps(dict(result, artifacts=len(bundle["manifest"]["artifacts"])), sort_keys=True))

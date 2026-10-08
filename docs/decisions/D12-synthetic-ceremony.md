@@ -127,3 +127,18 @@ Removal of raw bytes, independent/negative checks or evidence boundaries breaks
 those requirements. Arbitrary future fields, timestamp ordering, witness/chain
 adapters and real credentials are omitted. The trials must justify every retained
 mechanism; finite rehearsal does not prove real durability or legal identity.
+
+## Bounded mechanical realization — Phases36–38
+
+The existing public adaptation origin is pinned to organism commitment
+`37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc`,
+not a #0001 identifier. Rehearsal acceptance cannot bind a different origin.
+One accepted file suffices for the one-candidate experiment; no registry/index.
+Private owned roots are outside the entire resolved repository. Exact root names
+are REHEARSAL,pending,archive-a,archive-b,accepted,conflicts,LOCK. Pending UUID
+diagnostics are bounded to256 entries/32MiB; they cannot count as acceptance.
+LOCK has canonical profile/pid, a local operational record outside signed organism
+history. Six process-interruption boundaries and explicit OS-proven dead-writer
+recovery are defined in Phase38 spec. No timeout takeover or conflict deletion.
+These are delegated mechanical choices for the accepted experiment, not new
+canonical fields, lifecycle semantics, phases or real ceremony authorization.

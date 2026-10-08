@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import { execFileSync, spawnSync } from 'node:child_process';
+import { execFileSync, spawnSync, spawn } from 'node:child_process';
 import { canonical } from '../src/bytes.mjs';
-import { ROOT, PROFILE, AUTHORITY, manifestFor, reference, fixtureSign, checkFreeze, readArtifacts, gitBlob, initializeRehearsal, publish, readRehearsal, writeArchive, checkArchive, checkRelease } from '../tools/rehearsal.mjs';
+import { ROOT, PROFILE, AUTHORITY, REHEARSAL_ORIGIN, manifestFor, reference, fixtureSign, checkFreeze, readArtifacts, gitBlob, initializeRehearsal, publish, readRehearsal, writeArchive, checkArchive, checkRelease, checkBirth, acceptBirth, checkJournal, recoverBirthLock } from '../tools/rehearsal.mjs';
 
 const revision = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
 const freezeFor = manifest => fixtureSign('freeze', { profile: PROFILE, manifestRef: reference('manifest', manifest), authority: AUTHORITY });
@@ -150,4 +150,126 @@ test('archive publication interrupts fail closed, retain evidence and retry with
   fs.writeFileSync(path.join(root, 'REHEARSAL'), 'partial initialization');
   assert.throws(() => readRehearsal(root, 'archive-a/manifest.json'));
   fs.writeFileSync(path.join(root, 'REHEARSAL'), marker); // test-owned fixture restoration
+});
+
+const birthFor = (manifest, release) => fixtureSign('birth', { profile: PROFILE, manifestRef: reference('manifest', manifest), releaseRef: reference('release', release), originRef: REHEARSAL_ORIGIN, authority: AUTHORITY });
+function prepared(t) {
+  const root = scratch(t), { manifest, freeze } = frozen();
+  writeArchive(root, 'archive-a', manifest, freeze); writeArchive(root, 'archive-b', manifest, freeze);
+  const release = releaseFor(manifest, freeze), birth = birthFor(manifest, release);
+  return { root, bundle: { manifest, freeze, release, birth } };
+}
+const args = (root, b) => [root, b.manifest, b.freeze, b.release, b.birth];
+function copyTrial(t, template) {
+  const root = scratch(t);
+  for (const name of ['archive-a', 'archive-b']) fs.cpSync(path.join(template, name), path.join(root, name), { recursive: true });
+  return root;
+}
+const childScript = `
+import fs from 'node:fs';
+import { acceptBirth } from './tools/rehearsal.mjs';
+const [root,file,boundary] = process.argv.slice(1), b=JSON.parse(fs.readFileSync(file));
+try {
+  const result=acceptBirth(root,b.manifest,b.freeze,b.release,b.birth,(point,relative)=>{
+    if(point===boundary && (point==='after-lock'||point==='after-unlock'||relative.startsWith('accepted/')))process.kill(process.pid,'SIGKILL');
+  });
+  console.log(JSON.stringify(result));
+} catch(error) { console.error(error.message); process.exitCode=1; }
+`;
+function childInput(t, bundle) {
+  const parent = fs.mkdtempSync(path.join(os.tmpdir(), 'genesis-birth-input-'));
+  t.after(() => fs.rmSync(parent, { recursive: true }));
+  const file = path.join(parent, 'bundle.json'); fs.writeFileSync(file, JSON.stringify(bundle)); return file;
+}
+
+test('synthetic birth admission is independently replayed once; bad evidence and conflicting binding fail', t => {
+  const { root, bundle } = prepared(t), a = args(root, bundle);
+  for (const mutate of [
+    b => { b.birth.signature = '0'.repeat(128); },
+    b => { b.birth.body.authority = '0'.repeat(64); },
+    b => { b.birth = fixtureSign('birth', { ...b.birth.body, originRef: '0'.repeat(64) }); },
+    b => { b.birth = fixtureSign('birth', { ...b.birth.body, releaseRef: '0'.repeat(64) }); },
+    b => { b.release = null; },
+  ]) {
+    const bad = structuredClone(bundle); mutate(bad);
+    assert.throws(() => acceptBirth(...args(root, bad)));
+    assert.equal(offline(bad, root).status, 1);
+    assert.equal(fs.existsSync(path.join(root, 'accepted')), false);
+  }
+  assert.equal(checkJournal(...a).status, 'empty');
+  const accepted = acceptBirth(...a), duplicate = acceptBirth(...a);
+  assert.equal(accepted.status, 'accepted'); assert.equal(duplicate.status, 'duplicate');
+  assert.equal(accepted.birthRef, duplicate.birthRef);
+  assert.equal(accepted.stateCommitment, '50d6db5f20c01c34bb94634b0acbbe1eac8bc57d5f20d2a0fe79906eb623fed7');
+  assert.deepEqual(checkJournal(...a), accepted);
+  const independent = offline(bundle, root); assert.equal(independent.status, 0, independent.stderr);
+  assert.deepEqual(JSON.parse(independent.stdout), { ...accepted, artifacts: bundle.manifest.artifacts.length });
+  assert.equal(fs.readdirSync(path.join(root, 'accepted')).length, 1);
+  const corrupt = copyTrial(t, root);
+  fs.mkdirSync(path.join(corrupt, 'accepted'));
+  fs.writeFileSync(path.join(corrupt, 'accepted', `${REHEARSAL_ORIGIN}.json`), '{partial');
+  assert.throws(() => checkJournal(...args(corrupt, bundle)));
+  assert.equal(offline(bundle, corrupt).status, 1);
+  fs.writeFileSync(path.join(root, 'unknown'), 'unexpected');
+  assert.throws(() => checkJournal(...a)); assert.equal(offline(bundle, root).status, 1);
+  fs.unlinkSync(path.join(root, 'unknown')); // adversarial fixture only
+  const conflict = copyTrial(t, root), changed = structuredClone(bundle);
+  changed.manifest.candidate = 'rehearsal-conflicting'; changed.freeze = freezeFor(changed.manifest);
+  changed.release = releaseFor(changed.manifest, changed.freeze); changed.birth = birthFor(changed.manifest, changed.release);
+  for (const name of ['archive-a', 'archive-b']) {
+    fs.writeFileSync(path.join(conflict, name, 'manifest.json'), canonical(changed.manifest));
+    fs.writeFileSync(path.join(conflict, name, 'freeze.json'), canonical(changed.freeze));
+  }
+  fs.mkdirSync(path.join(conflict, 'accepted'));
+  fs.writeFileSync(path.join(conflict, 'accepted', `${REHEARSAL_ORIGIN}.json`), canonical(bundle.birth));
+  assert.throws(() => acceptBirth(...args(conflict, changed)));
+  assert.equal(fs.readdirSync(path.join(conflict, 'conflicts')).length, 1);
+  assert.deepEqual(fs.readFileSync(path.join(conflict, 'accepted', `${REHEARSAL_ORIGIN}.json`)), canonical(bundle.birth));
+  assert.throws(() => checkJournal(...args(conflict, changed)));
+  assert.equal(offline(changed, conflict).status, 1);
+});
+
+test('real child termination at six birth boundaries retains evidence and requires dead-writer recovery', t => {
+  const { root: template, bundle } = prepared(t), input = childInput(t, bundle);
+  const live = copyTrial(t, template);
+  fs.writeFileSync(path.join(live, 'LOCK'), canonical({ profile: PROFILE, pid: process.pid }));
+  assert.throws(() => recoverBirthLock(...args(live, bundle)));
+  assert.throws(() => acceptBirth(...args(live, bundle)));
+  assert.equal(offline(bundle, live).status, 1);
+  const partial = copyTrial(t, template); fs.writeFileSync(path.join(partial, 'LOCK'), '{partial');
+  assert.throws(() => recoverBirthLock(...args(partial, bundle)));
+  assert.equal(fs.readFileSync(path.join(partial, 'LOCK')).toString(), '{partial');
+  for (const boundary of ['after-lock', 'after-write', 'after-fsync', 'after-link', 'after-dir-sync', 'after-unlock']) {
+    const root = copyTrial(t, template);
+    const result = spawnSync(process.execPath, ['--input-type=module', '-e', childScript, root, input, boundary], { encoding: 'utf8' });
+    assert.equal(result.signal, 'SIGKILL', boundary);
+    if (boundary !== 'after-unlock') {
+      assert.equal(fs.existsSync(path.join(root, 'LOCK')), true);
+      assert.throws(() => checkJournal(...args(root, bundle)));
+      assert.equal(offline(bundle, root).status, 1);
+    }
+    assert.equal(recoverBirthLock(...args(root, bundle)), boundary === 'after-unlock' ? 'not-held' : 'recovered');
+    const retry = acceptBirth(...args(root, bundle));
+    assert.ok(['accepted', 'duplicate'].includes(retry.status));
+    assert.equal(acceptBirth(...args(root, bundle)).status, 'duplicate');
+    assert.equal(fs.readdirSync(path.join(root, 'accepted')).length, 1);
+    assert.equal(offline(bundle, root).status, 0);
+    if (['after-write', 'after-fsync', 'after-link', 'after-dir-sync'].includes(boundary)) assert.ok(fs.readdirSync(path.join(root, 'pending')).length >= 1);
+  }
+});
+
+test('concurrent synthetic birth retries cannot publish a second origin', async t => {
+  const { root, bundle } = prepared(t), input = childInput(t, bundle);
+  const launch = () => new Promise(resolve => {
+    const child = spawn(process.execPath, ['--input-type=module', '-e', childScript, root, input, 'none']);
+    let stdout = '', stderr = '';
+    child.stdout.on('data', data => { stdout += data; }); child.stderr.on('data', data => { stderr += data; });
+    child.on('close', code => resolve({ code, stdout, stderr }));
+  });
+  const results = await Promise.all([launch(), launch()]);
+  assert.equal(results.filter(r => r.code === 0 && JSON.parse(r.stdout).status === 'accepted').length, 1);
+  for (const r of results) if (r.code !== 0) assert.match(r.stderr, /writer lock held/);
+  assert.equal(acceptBirth(...args(root, bundle)).status, 'duplicate');
+  assert.equal(fs.readdirSync(path.join(root, 'accepted')).length, 1);
+  assert.equal(offline(bundle, root).status, 0);
 });
