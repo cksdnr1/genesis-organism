@@ -187,3 +187,5 @@ source68f; source2a91's complete Git bundle is separately retained/verified and 
 live full67 tests pass. No claim that a source68f restore tested later child code.
 
 The two proposed archive locations may share one operator/custodian. No requirement for two people, independent witness or blockchain is invented; record shared-control/failure-domain limits explicitly.
+
+Retained child TEST tar.gz preserves the required empty pending/conflicts directories (Git expanded trees cannot retain them); see child evidence/README.md for complete-layout reproduction.

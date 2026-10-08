@@ -46,3 +46,5 @@ cancelled/skipped (parent evidence/npm-test-2a91f18.log). Independent final TEST
 snapshots unchanged. Public retained package/context/js-result under evidence/ bind
 that source. No actual candidate/key adoption or lifecycle action. Later report-only
 commits preserve tested source without inventing additional test runs.
+
+Retained child TEST tar.gz preserves the required empty pending/conflicts directories (Git expanded trees cannot retain them); see child evidence/README.md for complete-layout reproduction.
