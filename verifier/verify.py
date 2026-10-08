@@ -176,7 +176,12 @@ def evidence_id(evidence, states):
     need(evidence["version"] == "evidence-v1", "evidence version", "unsupported")
     need(type(evidence["nonce"]) is str and re.fullmatch(r"[a-z0-9-]{1,128}", evidence["nonce"]) is not None, "nonce")
     need(any(canonical(state) == canonical(evidence["sourceState"]) for state in states), "unverified source")
-    expected = expression_result(evidence["sourceState"], evidence["observer"], evidence["policy"])
+    try:
+        expected = expression_result(evidence["sourceState"], evidence["observer"], evidence["policy"])
+    except Invalid:
+        # Submitted evidence uses the boolean expression-fidelity boundary;
+        # standalone negotiation keeps its contextual permission/version errors.
+        raise Invalid("invalid", "expression/policy fidelity") from None
     need(canonical(expected) == canonical(evidence["expression"]), "expression fidelity")
     interaction = evidence["interaction"]
     exact(interaction, ("motif", "message"))
