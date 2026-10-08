@@ -89,6 +89,37 @@ function offline(bundle, root) {
   } finally { fs.rmSync(parent, { recursive: true }); }
 }
 
+test('supersession rejects unverified predecessor bytes even with valid successor proof', t => {
+  const first = manifestFor(revision, 'rehearsal-audit-prior');
+  const current = manifestFor(revision, 'rehearsal-audit-successor');
+  const makeBundle = manifest => {
+    const prior = { manifest, failure: { profile: PROFILE, manifestRef: reference('manifest', manifest), reason: 'fixture-failure' }, births: [] };
+    const successor = { ...current, supersedes: reference('manifest', manifest) };
+    return { manifest: successor, freeze: freezeFor(successor), prior };
+  };
+  for (const mutate of [
+    manifest => { manifest.revision = '0'.repeat(40); },
+    manifest => { manifest.artifacts[0].sha256 = '0'.repeat(64); },
+    manifest => { manifest.artifacts.push({ path: 'zz-missing-predecessor.json', sha256: '0'.repeat(64) }); },
+    manifest => { manifest.artifacts = manifest.artifacts.filter(item => item.path !== 'README.md'); },
+  ]) {
+    const prior = structuredClone(first); mutate(prior);
+    const bundle = makeBundle(prior);
+    // The successor proof and current Git artifacts are independently valid.
+    assert.equal(readArtifacts(bundle.manifest).size, current.artifacts.length);
+    assert.throws(() => checkFreeze(bundle.manifest, bundle.freeze, bundle.prior));
+    assert.equal(python(bundle).status, 1);
+  }
+  const bundle = makeBundle(first);
+  assert.equal(checkFreeze(bundle.manifest, bundle.freeze, bundle.prior).manifestRef, reference('manifest', bundle.manifest));
+  assert.equal(python(bundle).status, 0);
+  const root = scratch(t);
+  const missingOfflineEvidence = offline(bundle, root);
+  assert.equal(missingOfflineEvidence.status, 1);
+  assert.match(missingOfflineEvidence.stderr, /unavailable predecessor artifact evidence/);
+  assert.doesNotMatch(missingOfflineEvidence.stderr, /No such file.*git/);
+});
+
 test('two local archives restore independently offline; timestamps and optional skip do not affect refs', t => {
   const root = scratch(t), { manifest, freeze } = frozen();
   assert.equal(writeArchive(root, 'archive-a', manifest, freeze), manifest.artifacts.length);

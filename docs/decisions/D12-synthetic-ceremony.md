@@ -142,3 +142,19 @@ history. Six process-interruption boundaries and explicit OS-proven dead-writer
 recovery are defined in Phase38 spec. No timeout takeover or conflict deletion.
 These are delegated mechanical choices for the accepted experiment, not new
 canonical fields, lifecycle semantics, phases or real ceremony authorization.
+
+## A01 correction — 2026-10-08
+
+The audit found that prior manifest shape/reference checks did not verify its
+selected raw bytes. Live supersession now additionally verifies the predecessor
+against retained Git blobs, hashes and its explicit selection list in both JS and
+Python. Unknown revisions, altered/missing artifacts and selection mismatch fail.
+No prior/context/hash fields change. Supplied births=[] is local trusted context,
+never independent proof of global absence of prior acceptance.
+
+The current offline archive contains only current-candidate bytes. Offline Python
+supersession therefore explicitly refuses unavailable predecessor artifact evidence
+before invoking Git; it never treats hashes as retained content. Nonsuperseding
+offline restore remains supported without Git. Fully offline supersession needs a
+future explicitly reviewed retention contract and is not claimed by this fixture.
+This corrects an implementation gap without weakening the original evidence rule.

@@ -79,6 +79,7 @@ def check_freeze(manifest, freeze, prior=None):
         need(manifest["supersedes"] == reference("manifest", prior["manifest"]), "supersedes binding")
         need(prior["failure"] == {"profile": PROFILE, "manifestRef": manifest["supersedes"], "reason": "fixture-failure"}, "retained failure evidence")
         need(type(prior["births"]) is list and len(prior["births"]) == 0, "accepted prior cannot be superseded")
+        git_artifacts(prior["manifest"])
     return {"manifestRef": reference("manifest", manifest), "freezeRef": reference("freeze", freeze)}
 
 
@@ -217,6 +218,11 @@ def check_journal(root, manifest, freeze, release, birth, prior=None):
 if __name__ == "__main__":
     try:
         bundle = json.loads(read_file(Path(sys.argv[1])))
+        # Offline archives contain the current candidate only. Never substitute
+        # prior hashes for unavailable predecessor bytes or silently invoke Git.
+        if len(sys.argv) > 2:
+            need(bundle["manifest"]["supersedes"] is None,
+                 "unavailable predecessor artifact evidence for offline supersession", "unavailable")
         result = check_freeze(bundle["manifest"], bundle["freeze"], bundle.get("prior"))
         if len(sys.argv) > 2:
             if "birth" in bundle:

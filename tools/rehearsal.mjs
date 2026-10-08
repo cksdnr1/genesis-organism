@@ -106,6 +106,9 @@ export function checkFreeze(manifest, freeze, prior = null) {
     requireThat(prior.manifest.supersedes === null && prior.manifest.candidate !== manifest.candidate, 'invalid', 'bounded failed-candidate supersession');
     requireThat(manifest.supersedes === reference('manifest', prior.manifest) && prior.failure.profile === PROFILE && prior.failure.manifestRef === manifest.supersedes && prior.failure.reason === 'fixture-failure', 'invalid', 'retained failure evidence');
     requireThat(Array.isArray(prior.births) && prior.births.length === 0, 'conflict', 'accepted prior cannot be superseded');
+    // A predecessor reference/shape is not evidence that its selected bytes exist.
+    // Supersession requires retained Git artifacts; no digest-only fallback.
+    readArtifacts(prior.manifest);
   }
   return { manifestRef: reference('manifest', manifest), freezeRef: reference('freeze', freeze) };
 }
