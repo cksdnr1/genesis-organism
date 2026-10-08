@@ -90,3 +90,19 @@ four-opportunity resource, exact target2 response gate, neutral/no-experience/
 experience comparisons and two deterministic order checks. Phase29 must count
 only accepted verified children and retain failures. No result exists by this
 decision alone. Niche construction/open-endedness remain outside the experiment.
+
+## Bounded result — Phase29, 2026-10-08
+
+The [retained report](../experiments/results/population-v1/report.json) and six
+archives record the preregistered runs. In each fixed order, selection without
+experience produced two inherited2 children from parent2 and none from parent0;
+neutral produced four children split0/2 equally. With admitted target2 experience,
+both parents produced two inherited2 children. Every counted child has verified
+consent/birth/lineage, independently checked in Python; identical retry adds none.
+
+This is limited selection under an engineered fixed response/resource rule,
+with a no-experience comparison separating individual change from initial variation.
+The two schedules are deterministic order checks, not independent statistical
+samples. No natural ecology, long-term generalization, organism-driven niches or
+open-ended evolution is established. Finite experiments do not establish
+open-ended evolution. GENESIS #0001 remains UNBORN.
