@@ -30,4 +30,17 @@ Independent implementation review completed: implementation-review.md and indepe
 
 Reviewed source candidate `c4ab35222e00a8a3c0b5441a63c638b134982be9`, branch work/conformance-remediation. Git owner committed source/contracts/tests before this run; no source changes occurred during or after it. `npm test` completed exit0: **56/56 pass**, failures/cancellations/skips0, **139332.061333ms**. Includes current197-artifact freeze/archive and independent rehearsal/SIGKILL checks, both new FIFO groups, compound diagnostics, exact PM-01, concurrency/fsync, ancestry, reproduction, population and simulation. Expected negative Git `not a tree object` output did not affect success. Final schema suite6/6, successor2/2 and independent lineage4nodes/3edges all exit0. Evidence: IC02 evidence/final-suite.log, final-schema.log, final-successor.log, final-lineage.json and final-validation.json.
 
-Independent reviewer verified candidate197 sorted unique selection/supplement, original D04/D06/GENESIS/unborn bytes and specREADME prefix preserved. Its source-ready adversarial reviews are separately attributed; finite tests do not prove universal conformance. Current final updates are evidence/docs only, so a later final document commit SHA must not be mislabeled as the tested source SHA. Actual draft PR creation remains Git-owner work; neither this source owner nor these tests authorize merging the repair PR or actual birth.
+Independent reviewer verified candidate197 sorted unique selection/supplement, original D04/D06/GENESIS/unborn bytes and specREADME prefix preserved. Its source-ready adversarial reviews are separately attributed; finite tests do not prove universal conformance. Current final updates are evidence/docs only, so a later final document commit SHA must not be mislabeled as the tested source SHA. At the final-test checkpoint actual draft PR creation remained Git-owner work; neither this source owner nor these tests authorize merging the repair PR or actual birth.
+
+## Draft publication and task completion
+
+Git owner published [DRAFT PR10](https://github.com/cksdnr1/genesis-organism/pull/10)
+from work/conformance-remediation into work/phase-03-authority. Fresh gh pr view
+confirms OPEN/isDraft=true, evidence head e31317cec47d03e21c32361ca88e20308f04decf.
+Tested source remains c4ab35222e00a8a3c0b5441a63c638b134982be9; e31317c only adds
+reviewed evidence/docs. These subsequent link/status notes are docs only.
+Supported `playspec complete --task genesis_organism_nonregular_input_refusal --expected-phase pr_prepare --no-copy --quiet`
+completed after real draft publication. Fresh `playspec get-task` confirms status
+completed. This records scoped repair deliverables, not original phase/birth acceptance. Current explicit shared-branch
+ownership overrides inherited master-switch instructions. Repair PR merge remains
+unauthorized; original all-phase/birth gates are not closed. GENESIS #0001 UNBORN.

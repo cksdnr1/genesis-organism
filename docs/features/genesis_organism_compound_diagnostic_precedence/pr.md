@@ -18,4 +18,6 @@ New compound regression fails before correction; focused conformance/admission/e
 
 ## Risks / follow-ups
 
-Finite diagnostics/observed runtime only; same-class message strings need not match. No accepted state divergence or security bypass is asserted. New fix PR is draft only and merge not authorized. Git owner requirements_auditor publishes combined corrections after final source review/full suite; PR link pending. No reusable agent policy expansion warranted. GENESIS #0001 remains UNBORN.
+Finite diagnostics/observed runtime only; same-class message strings need not match. No accepted state divergence or security bypass is asserted. New fix PR is draft only and merge not authorized. Git owner requirements_auditor publishes combined corrections after final source review/full suite; [DRAFT PR10](https://github.com/cksdnr1/genesis-organism/pull/10) published into work/phase-03-authority. No reusable agent policy expansion warranted. GENESIS #0001 remains UNBORN.
+
+Publication: [DRAFT PR10](https://github.com/cksdnr1/genesis-organism/pull/10), evidence head e31317c, tested source c4ab352. Final link/status-only docs do not change tested source. No repair merge or birth authorization.

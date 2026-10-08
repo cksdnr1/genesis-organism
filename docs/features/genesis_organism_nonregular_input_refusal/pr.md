@@ -21,4 +21,6 @@ Add O_NONBLOCK to existing O_RDONLY|O_NOFOLLOW byte reads in src/store.mjs, src/
 
 ## Risks / follow-ups
 
-Observed POSIX/macOS only; no general regular/network/device IO timeout, Windows or hostile-administrator guarantee. Node ceremony limit/Python invalid context preserved. GENESIS #0001 remains UNBORN. No reusable general agent guidance justified beyond these task-specific evidence/portability notes. Git publication belongs to requirements_auditor; draft combined PR link pending. No new fix-PR merge authorized.
+Observed POSIX/macOS only; no general regular/network/device IO timeout, Windows or hostile-administrator guarantee. Node ceremony limit/Python invalid context preserved. GENESIS #0001 remains UNBORN. No reusable general agent guidance justified beyond these task-specific evidence/portability notes. Git publication belongs to requirements_auditor; [DRAFT PR10](https://github.com/cksdnr1/genesis-organism/pull/10) published into work/phase-03-authority. No new fix-PR merge authorized.
+
+Publication: [DRAFT PR10](https://github.com/cksdnr1/genesis-organism/pull/10), evidence head e31317c, tested source c4ab352. Final link/status-only docs do not change tested source. No repair merge or birth authorization.
