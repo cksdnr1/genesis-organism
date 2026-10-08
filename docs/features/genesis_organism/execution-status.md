@@ -8,7 +8,7 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 
 | Execution phase | Evidence / workflow | Gate state |
 | --- | --- | --- |
-| 1 | research complete, PR3; D01-origin-governance.md | Rights-holder licensing/profile decisions OPEN; not accepted for release/birth. |
+| 1 | research complete, PR3; subsequent dated D01 acceptance | Tested public synthetic scope accepted and layered licences applied; real organism/art/naming decisions remain separate. |
 | 2 | encounter requirements complete, PR4 | Requirements research exit satisfied. |
 | 3 | D02 proposal PR5 + dated creator acceptance below | Accepted bounded synthetic scope, not real birth authority. |
 | 4–8 | individually completed mono-spec; D03–D06 and canonical fixtures | Accepted bounded byte/event/privacy/implementation contracts. |
@@ -21,32 +21,36 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 | 30–31 | individually completed; D11 and optional pure simulator | Body-independent continuity, claim-only evidence, duplicate no-action and bounded permission. |
 | 32 | own mono-spec proposal + dated creator acceptance | D12 current synthetic-profile SKIP accepted; decision exit satisfied. |
 | 33 | own mono-spec deliberate skip; no anchoring adapter | Accepted SKIP recorded; core-only23 groups pass without optional simulator. |
-| 34 | Not entered | Requires accepted D01 tested-profile rights/authority plus D12 anchoring; ceremony acceptance obtained here. |
-| 35–38 | Not entered | Existing D01/D12/birth-evidence/rehearsal gates remain; no fabricated completion. |
+| 34 | own completed mono-spec; accepted D12 exact ceremony | Public fixture key, separate proof domains, archive/retry/hold contract; no real authority. |
+| 35 | own completed mono-spec; all-original-gate audit | Independent12-view later-expression gap closed; actual #0001 NO-GO, synthetic rehearsal prerequisites audited. |
+| 36 | own completed mono-spec;194artifact freeze atb9c2972 | Exact Git bytes/proofs independently reproduced; tamper/unavailable/attribution/supersession controls. |
+| 37 | own completed mono-spec; offline local archive trial ata9f5e69 | Two copies, four write-boundary faults, timestamp/skip/negative checks; no witness/durability claim. |
+| 38 | runtime/rehearsal verified atc3a918f; final PR step pending |195artifact successor closes test-input omission;50 groups pass, six real SIGKILL recoveries and one-origin retry/concurrency evidence. |
 
 Tasks use genesis_organism_phase_XX; versioned spec/review/plan/review/result/pr
-artifacts live in docs/features/genesis_organism_phase_XX. Phases4–33 are in stacked
+artifacts live in docs/features/genesis_organism_phase_XX. Phases4–38 are in stacked
 draft PR6, branch work/synthetic-phases, base work/phase-03-authority. PRs3–5 remain
 open; nothing is automatically merged. Execution is direct authorized Codex work,
 not a registered Novis automation queue/worker completion claim.
 
-Latest full validation: `npm test`41 groups; Python schema_vectors.py6 and
+Latest full validation: `npm test`50 groups atc3a918f; Python schema_vectors.py6 and
 successor_schema_vectors.py2 checks. Independent canonical/lineage comparisons,
 causal controls, durable publication failure injection, fixed population controls
 and simulated continuity are included. Exact runtime claims/limits are in individual
 result files. Original total spec/phase graph, ORIGIN.md, spec/GENESIS.md, historical
 observer/phenotype schemas and #0001 placeholder bytes remain unchanged from baseline.
 
-Next creator decisions: D01 licensing/rights and D12 ceremony remain open.
-D12 SKIP is accepted only for the current synthetic profile. No further phase entry
-is inferred from task completion, a PR or a test score. GENESIS #0001 remains UNBORN.
+Current D01 tested-profile rights and D12 synthetic ceremony are creator-accepted;
+see2026-10-08-rights-and-rehearsal-acceptance.md. D12 SKIP remains accepted only for
+this profile. Actual #0001 remains NO-GO/UNBORN: no actual candidate, key attribution,
+freeze, public release, operational archive/rights or birth acceptance is fabricated.
 
-Concrete review proposals prepared2026-10-08:
+Historical proposals prepared2026-10-08:
 [D01 layered licensing/rights](../../decisions/D01-licensing-proposal.md) and
 [D12 synthetic ceremony](../../decisions/D12-ceremony-proposal.md). Both are
-PROPOSED, not grants/acceptances or completed future phases. They make the two
-remaining creator decisions reviewable before Phase34 entry. No runtime or
-protected historical bytes were changed by preparing them.
+originally PROPOSED; their original wording remains historical. The dated acceptance
+and active LICENSE.md mapping now supersede that pending state for the tested
+scope. Runtime ceremony evidence is in36–38; all protected historical bytes remain.
 
 ## Historical stop — 2026-09-21 (superseded by acceptance below)
 

@@ -29,6 +29,13 @@ machine appreciation, learned adaptation, biological life or population evolutio
 See the [Phase 22 report](docs/features/genesis_organism_phase_22/result.md) and
 [accepted synthetic decisions](docs/decisions/2026-10-08-synthetic-delegation.md).
 
+Additional bounded experiments cover explicit individual adaptation, authenticated
+child lineage, controlled population selection and simulated body continuity.
+[Synthetic ceremony evidence and recovery](docs/features/genesis_organism_phase_38/runbook.md)
+separate fixture freeze, offline archives and retry-safe acceptance. These are
+rehearsals; [the birth audit](docs/features/genesis_organism_phase_35/birth-evidence.md)
+remains **NO-GO for actual GENESIS #0001**.
+
 ## The question
 
 Most digital art is made for human perception. What changes when a language
@@ -60,8 +67,10 @@ generative art, machine art evaluation, and digital breeding have prior art.
 - [Historical experimental schemas](schemas/README.md) and
   [successor requirements](schemas/successor-design.md): no frozen birth format.
 - [GENESIS #0001 placeholder](organisms/genesis-0001/README.md).
-- [Licence decision](LICENSE-DECISION.md): unresolved; open source is the goal,
-  not a licence already granted by this draft.
+- [Layered licensing](LICENSE.md): project-authored prose CC BY4.0;
+  software and synthetic conformance material Apache-2.0. Real organism records,
+  artwork and naming remain separately scoped; [decision history](LICENSE-DECISION.md)
+  and [third-party notices](THIRD-PARTY-NOTICES.md) preserve those boundaries.
 
 The path is conception → research/design → schemas → reference implementation
 → candidate → freeze → commitment → release → optional anchoring → birth.
