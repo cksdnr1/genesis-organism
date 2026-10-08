@@ -59,3 +59,11 @@ memory, credentials or sensor traces are included in this conception draft.
 
 See [encounter](../spec/encounter.md), [successor design](../schemas/successor-design.md)
 and [ecology](../spec/ecology.md). All are proposed controls, not implemented guarantees.
+
+## Simulated embodiment boundary — 2026-10-08
+
+[D11](decisions/D11-simulated-embodiment.md) fixes body-proof versus event authority,
+signed-claim versus reality, head/ordinal replay checks, duplicate no-action and
+explicit bounded local actuation. Physical/hardware attestation remains unsupported;
+requesting it fails unavailable. Phase31 supplies scoped implementation evidence;
+this decision alone provides no hardware safety guarantee.
