@@ -1,9 +1,11 @@
 """Independent synthetic D12 checker. Never invokes JS or archived executables."""
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import subprocess
+import stat
 import sys
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PublicKey
 from cryptography.exceptions import InvalidSignature
@@ -96,11 +98,94 @@ def git_artifacts(manifest):
     return files
 
 
+MARKER = b"genesis-organism synthetic ceremony rehearsal v1\n"
+
+
+def guard_root(root):
+    root = Path(root).absolute()
+    resolved = root.resolve()
+    need(resolved != ROOT.resolve() and ROOT.resolve() not in resolved.parents, "rehearsal inside repository")
+    need(not root.is_symlink() and root.is_dir(), "rehearsal root")
+    need(read_local(root, "REHEARSAL", 128) == MARKER, "synthetic marker")
+    return root
+
+
+def read_local(root, relative, maximum=MAX_RAW):
+    check_path(relative)
+    target = root
+    for segment in relative.split("/")[:-1]:
+        target = target / segment
+        info = target.lstat()
+        need(stat.S_ISDIR(info.st_mode) and not stat.S_ISLNK(info.st_mode), "symlinked ancestor")
+    fd = os.open(root / relative, os.O_RDONLY | os.O_NOFOLLOW)
+    try:
+        info = os.fstat(fd)
+        need(stat.S_ISREG(info.st_mode) and info.st_size <= maximum, "regular bounded file")
+        chunks, count = [], 0
+        while count <= info.st_size:
+            chunk = os.read(fd, min(65536, info.st_size + 1 - count))
+            if not chunk:
+                break
+            chunks.append(chunk); count += len(chunk)
+        need(count == info.st_size, "file changed during read")
+        return b"".join(chunks)
+    finally:
+        os.close(fd)
+
+
+def archive_files(root, name, manifest, freeze, prior=None):
+    root = guard_root(root); need(name in ("archive-a", "archive-b"), "archive name")
+    check_freeze(manifest, freeze, prior)
+    expected = {"manifest.json", "freeze.json"} | {"files/" + item["path"] for item in manifest["artifacts"]}
+    directories = {""}
+    for filename in expected:
+        parts = filename.split("/")
+        directories.update("/".join(parts[:i]) for i in range(1, len(parts)))
+    found, count = set(), 0
+
+    def walk(relative):
+        nonlocal count
+        current = root / name / relative
+        info = current.lstat(); need(not stat.S_ISLNK(info.st_mode), "archive symlink")
+        if stat.S_ISDIR(info.st_mode):
+            need(relative in directories, "extra archive directory")
+            for child in current.iterdir():
+                count += 1; need(count <= 1024, "archive entry budget"); check_path(child.name)
+                walk((relative + "/" if relative else "") + child.name)
+        else:
+            need(stat.S_ISREG(info.st_mode) and relative in expected, "extra/nonregular archive member")
+            found.add(relative)
+
+    walk(""); need(found == expected, "incomplete archive")
+    need(read_local(root, name + "/manifest.json", 65536) == canonical(manifest), "archive manifest")
+    need(read_local(root, name + "/freeze.json", 65536) == canonical(freeze), "archive freeze")
+    files, total = {}, 0
+    for item in manifest["artifacts"]:
+        data = read_local(root, name + "/files/" + item["path"])
+        total += len(data); need(total <= MAX_RAW, "raw archive budget")
+        need(hashlib.sha256(data).hexdigest() == item["sha256"], "archive raw hash")
+        files[item["path"]] = data
+    need(parse(files[LIST]) == [item["path"] for item in manifest["artifacts"]], "selection mismatch")
+    return files
+
+
+def check_release(root, manifest, freeze, release, prior=None):
+    result = check_freeze(manifest, freeze, prior)
+    check_proof("release", release, ("profile", "manifestRef", "freezeRef", "authority"))
+    need(release["body"]["manifestRef"] == result["manifestRef"] and release["body"]["freezeRef"] == result["freezeRef"], "release bindings")
+    for name in ("archive-a", "archive-b"):
+        archive_files(root, name, manifest, freeze, prior)
+    return dict(result, releaseRef=reference("release", release))
+
+
 if __name__ == "__main__":
     try:
         bundle = json.loads(read_file(Path(sys.argv[1])))
         result = check_freeze(bundle["manifest"], bundle["freeze"], bundle.get("prior"))
-        files = git_artifacts(bundle["manifest"])
-        print(json.dumps(dict(result, artifacts=len(files)), sort_keys=True))
+        if len(sys.argv) > 2:
+            result = check_release(sys.argv[2], bundle["manifest"], bundle["freeze"], bundle["release"], bundle.get("prior"))
+        else:
+            git_artifacts(bundle["manifest"])
+        print(json.dumps(dict(result, artifacts=len(bundle["manifest"]["artifacts"])), sort_keys=True))
     except (Invalid, OSError, ValueError, KeyError, TypeError, IndexError, subprocess.SubprocessError) as error:
         print(str(error), file=sys.stderr); sys.exit(1)

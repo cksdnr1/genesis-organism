@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
-import { createHash, createPrivateKey, createPublicKey, sign, verify } from 'node:crypto';
+import { createHash, createPrivateKey, createPublicKey, sign, verify, randomUUID } from 'node:crypto';
 import { canonical, parseCanonical, requireThat } from '../src/bytes.mjs';
 
 export const ROOT = fileURLToPath(new URL('../', import.meta.url));
@@ -106,6 +106,128 @@ export function checkFreeze(manifest, freeze, prior = null) {
     requireThat(Array.isArray(prior.births) && prior.births.length === 0, 'conflict', 'accepted prior cannot be superseded');
   }
   return { manifestRef: reference('manifest', manifest), freezeRef: reference('freeze', freeze) };
+}
+
+const marker = Buffer.from('genesis-organism synthetic ceremony rehearsal v1\n');
+function outsideRepository(directory) {
+  const absolute = path.resolve(directory);
+  const repository = fs.realpathSync(ROOT);
+  const parent = fs.realpathSync(path.dirname(absolute));
+  const resolved = path.join(parent, path.basename(absolute));
+  requireThat(resolved !== repository && !resolved.startsWith(repository + path.sep), 'unauthorized', 'rehearsal must be outside repository');
+  return absolute;
+}
+function directory(root, relative) {
+  checkPath(relative); let current = root;
+  for (const part of relative.split('/')) {
+    current = path.join(current, part);
+    try { fs.mkdirSync(current, { mode: 0o700 }); sync(path.dirname(current)); } catch (error) { if (error.code !== 'EEXIST') throw error; }
+    const info = fs.lstatSync(current);
+    requireThat(info.isDirectory() && !info.isSymbolicLink(), 'invalid', 'regular directory required');
+  }
+}
+function readWithin(root, relative, maximum = MAX_RAW) {
+  checkPath(relative);
+  const parts = relative.split('/'); let current = root;
+  for (const part of parts.slice(0, -1)) {
+    current = path.join(current, part); const info = fs.lstatSync(current);
+    requireThat(info.isDirectory() && !info.isSymbolicLink(), 'invalid', 'symlinked ancestor');
+  }
+  const fd = fs.openSync(path.join(root, relative), fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW);
+  try {
+    const info = fs.fstatSync(fd);
+    requireThat(info.isFile() && info.size <= maximum, 'limit', 'regular bounded file required');
+    const bytes = Buffer.alloc(info.size + 1); let count = 0;
+    while (count < bytes.length) { const n = fs.readSync(fd, bytes, count, bytes.length - count, null); if (!n) break; count += n; }
+    requireThat(count === info.size, 'invalid', 'file changed during read'); return bytes.subarray(0, count);
+  } finally { fs.closeSync(fd); }
+}
+function sync(directoryName) {
+  const fd = fs.openSync(directoryName, fs.constants.O_RDONLY);
+  try { fs.fsyncSync(fd); } finally { fs.closeSync(fd); }
+}
+export function initializeRehearsal(root) {
+  root = outsideRepository(root);
+  fs.mkdirSync(root, { mode: 0o700 }); // Never adopt an existing directory.
+  const fd = fs.openSync(path.join(root, 'REHEARSAL'), 'wx', 0o600);
+  try { fs.writeFileSync(fd, marker); fs.fsyncSync(fd); } finally { fs.closeSync(fd); }
+  sync(root); sync(path.dirname(root)); return root;
+}
+export function guardRoot(root) {
+  root = outsideRepository(root);
+  const info = fs.lstatSync(root);
+  requireThat(info.isDirectory() && !info.isSymbolicLink(), 'invalid', 'rehearsal root');
+  requireThat(readWithin(root, 'REHEARSAL', 128).equals(marker), 'invalid', 'synthetic marker required');
+  return root;
+}
+export function readRehearsal(root, relative, maximum = MAX_RAW) {
+  return readWithin(guardRoot(root), relative, maximum);
+}
+export function publish(root, relative, bytes, fault = () => {}) {
+  root = guardRoot(root); checkPath(relative);
+  requireThat(bytes instanceof Uint8Array && bytes.length <= MAX_RAW, 'limit', 'publication byte budget');
+  const parent = path.posix.dirname(relative);
+  if (parent !== '.') directory(root, parent);
+  directory(root, 'pending');
+  const pending = path.join(root, 'pending', randomUUID());
+  const fd = fs.openSync(pending, 'wx', 0o600);
+  try {
+    fs.writeFileSync(fd, bytes); fault('after-write', relative);
+    fs.fsyncSync(fd); fault('after-fsync', relative);
+  } finally { fs.closeSync(fd); }
+  let status = 'created';
+  try { fs.linkSync(pending, path.join(root, relative)); }
+  catch (error) {
+    if (error.code !== 'EEXIST') throw error;
+    requireThat(readWithin(root, relative).equals(Buffer.from(bytes)), 'conflict', 'existing evidence differs'); status = 'duplicate';
+  }
+  fault('after-link', relative);
+  sync(path.dirname(path.join(root, relative))); fault('after-dir-sync', relative);
+  fs.unlinkSync(pending); sync(path.join(root, 'pending'));
+  return status;
+}
+const archiveName = name => requireThat(['archive-a', 'archive-b'].includes(name), 'invalid', 'archive name');
+export function writeArchive(root, name, manifest, freeze, fault, prior = null) {
+  root = guardRoot(root); archiveName(name); checkFreeze(manifest, freeze, prior);
+  const files = readArtifacts(manifest);
+  publish(root, `${name}/manifest.json`, canonical(manifest), fault);
+  publish(root, `${name}/freeze.json`, canonical(freeze), fault);
+  for (const [file, bytes] of files) publish(root, `${name}/files/${file}`, bytes, fault);
+  return checkArchive(root, name, manifest, freeze, prior).size;
+}
+export function checkArchive(root, name, manifest, freeze, prior = null) {
+  root = guardRoot(root); archiveName(name); checkFreeze(manifest, freeze, prior);
+  const expected = new Set(['manifest.json', 'freeze.json', ...manifest.artifacts.map(item => `files/${item.path}`)]);
+  const directories = new Set(['']);
+  for (const file of expected) { const parts = file.split('/'); for (let i = 1; i < parts.length; i++) directories.add(parts.slice(0, i).join('/')); }
+  let entries = 0; const found = new Set();
+  function walk(relative) {
+    const info = fs.lstatSync(path.join(root, name, relative));
+    requireThat(!info.isSymbolicLink(), 'invalid', 'archive symlink');
+    if (info.isDirectory()) {
+      requireThat(directories.has(relative), 'invalid', 'extra archive directory');
+      for (const child of fs.readdirSync(path.join(root, name, relative))) {
+        requireThat(++entries <= 1024, 'limit', 'archive member budget'); checkPath(child);
+        walk(relative ? `${relative}/${child}` : child);
+      }
+    } else { requireThat(info.isFile() && expected.has(relative), 'invalid', 'extra/nonregular archive member'); found.add(relative); }
+  }
+  walk(''); requireThat(found.size === expected.size, 'unavailable', 'incomplete archive');
+  requireThat(readWithin(root, `${name}/manifest.json`, 65536).equals(canonical(manifest)) && readWithin(root, `${name}/freeze.json`, 65536).equals(canonical(freeze)), 'invalid', 'archive record mismatch');
+  const files = new Map(); let total = 0;
+  for (const item of manifest.artifacts) {
+    const bytes = readWithin(root, `${name}/files/${item.path}`); total += bytes.length;
+    requireThat(total <= MAX_RAW, 'limit', 'raw archive budget');
+    requireThat(sha(bytes) === item.sha256, 'invalid', 'archive raw hash'); files.set(item.path, bytes);
+  }
+  checkSelection(manifest, files); return files;
+}
+export function checkRelease(root, manifest, freeze, release, prior = null) {
+  const checked = checkFreeze(manifest, freeze, prior);
+  checkProof('release', release, ['profile', 'manifestRef', 'freezeRef', 'authority']);
+  requireThat(release.body.manifestRef === checked.manifestRef && release.body.freezeRef === checked.freezeRef, 'invalid', 'release bindings');
+  checkArchive(root, 'archive-a', manifest, freeze, prior); checkArchive(root, 'archive-b', manifest, freeze, prior);
+  return { ...checked, releaseRef: reference('release', release) };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
