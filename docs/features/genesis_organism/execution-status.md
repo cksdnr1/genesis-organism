@@ -1,5 +1,16 @@
 # Sequential phase execution status
 
+## PM-01 correction — 2026-10-08
+
+[PM-01 task evidence](../genesis_organism_pm01/result.md) records the contextual
+Python fidelity-boundary correction at580b929: all12 retained negative candidates
+reject with matching literal codes; standalone version/permission diagnostics
+remain. Full committed-source regression53/53 passes, with196 selected artifacts
+including the required retained test corpus. Original failed audit/input bytes
+and historical195/194 manifests are preserved. PM-01 no longer blocks agreement
+for this tested corpus; universal diagnostic/protocol conformance is not claimed.
+Actual birth gates remain unestablished and #0001 UNBORN / NO-GO.
+
 ## Post-merge audit — 2026-10-08
 
 PR6 was explicitly authorized and merged as e6d0e66 into work/phase-03-authority;
