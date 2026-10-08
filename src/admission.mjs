@@ -12,7 +12,7 @@ function envelope(e) {
 export function validateOrigin(origin) {
   envelope(origin); const b = origin.body;
   exact(b,['profile','rules','birth','creator','authority','genome']);
-  requireThat(b.profile === 'synthetic-v1' && ['core-v1', 'encounter-v1'].includes(b.rules), 'unsupported', 'profile or rules');
+  requireThat(b.profile === 'synthetic-v1' && ['core-v1', 'encounter-v1', 'adaptation-v1'].includes(b.rules), 'unsupported', 'profile or rules');
   requireThat(typeof b.birth === 'string' && /^[a-z0-9-]{1,128}$/.test(b.birth), 'invalid', 'birth discriminator');
   requireThat(typeof b.creator === 'string' && Buffer.byteLength(b.creator) > 0 && Buffer.byteLength(b.creator) <= 256, 'invalid', 'creator claim');
   requireThat(isKey(b.authority), 'invalid', 'authority encoding');
@@ -47,8 +47,9 @@ export function classify(states, events, candidate) {
     requireThat(b.sequence === parent.sequence+1,'invalid','sequence mismatch');
     requireThat(verifyProof('event',b,candidate.signature,parent.authority),'invalid','event proof');
     requireThat(b.kind !== 'rotate-v1' || b.data.authority !== parent.authority,'invalid','noop rotation');
+    requireThat(parent.rules !== 'adaptation-v1' || b.kind !== 'signal-v1', 'unsupported', 'direct adaptation override');
     if (b.kind === 'experience-v1') {
-      requireThat(parent.rules === 'encounter-v1', 'unsupported', 'experience rules');
+      requireThat(['encounter-v1', 'adaptation-v1'].includes(parent.rules), 'unsupported', 'experience rules');
       const evidence = b.data.evidence;
       const identity = validateEvidence(evidence, states.slice(0, states.indexOf(parent) + 1));
       const prior = events.find(event => event.body.kind === 'experience-v1' && encounterKey(event.body.data.evidence) === encounterKey(evidence));
@@ -56,6 +57,7 @@ export function classify(states, events, candidate) {
         requireThat(digest('encounter', prior.body.data.evidence) === identity, 'invalid', 'encounter nonce reuse');
         return { status: 'duplicate', reference: digest('event', prior.body) };
       }
+      if (parent.rules === 'adaptation-v1') requireThat(digest('state', evidence.sourceState) === digest('state', parent), 'invalid', 'stale adaptation source');
     }
     const reference=digest('event',b);
     if (events.some(e => digest('event',e.body) === reference)) return {status:'duplicate',reference};

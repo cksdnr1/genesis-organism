@@ -70,3 +70,12 @@ compatibility, causality and verifiability; removing them breaks those requireme
 No dependency added. New failure modes are stale evidence rejection, self-claimed
 labels, overfitting/forgetting under changed targets and unsupported successor
 versions. Tests show necessary behavior; they cannot establish broad adaptation.
+
+## Implementation clarification — Phase24, 2026-10-08
+
+Inspection found the historical evidence schema references a source-state schema
+whose rules literal is encounter-v1. Add adaptation-v1/evidence.schema.json with
+unchanged wire fields/procedure and the successor state reference; observer/policy
+refs stay explicitly historical. This additional schema document is necessary for
+validating the accepted successor, not a new event/evidence protocol or future-use
+abstraction. Old schema bytes and meanings remain intact.

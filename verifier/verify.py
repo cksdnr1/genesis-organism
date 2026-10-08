@@ -121,7 +121,7 @@ def origin_state(envelope):
     exact(envelope, ("body", "signature"))
     body = envelope["body"]
     exact(body, ("profile", "rules", "birth", "creator", "authority", "genome"))
-    need(body["profile"] == "synthetic-v1" and body["rules"] in ("core-v1", "encounter-v1"), "profile/rules", "unsupported")
+    need(body["profile"] == "synthetic-v1" and body["rules"] in ("core-v1", "encounter-v1", "adaptation-v1"), "profile/rules", "unsupported")
     need(type(body["birth"]) is str and re.fullmatch(r"[a-z0-9-]{1,128}", body["birth"]) is not None, "birth discriminator")
     need(type(body["creator"]) is str and 0 < len(body["creator"].encode()) <= 256, "creator claim")
     exact(body["genome"], ("signal",))
@@ -213,14 +213,17 @@ def classify(states, references, envelope, events):
     need(body["sequence"] == parent["sequence"] + 1, "sequence mismatch")
     proof("event", envelope, parent["authority"])
     need(body["kind"] != "rotate-v1" or body["data"]["authority"] != parent["authority"], "noop rotation")
+    need(parent["rules"] != "adaptation-v1" or body["kind"] != "signal-v1", "direct adaptation override", "unsupported")
     if body["kind"] == "experience-v1":
-        need(parent["rules"] == "encounter-v1", "experience rules", "unsupported")
+        need(parent["rules"] in ("encounter-v1", "adaptation-v1"), "experience rules", "unsupported")
         evidence = body["data"]["evidence"]
         identity = evidence_id(evidence, states[:states.index(parent)+1])
         prior = next((event for event in events if event["body"]["kind"] == "experience-v1" and encounter_key(event["body"]["data"]["evidence"]) == encounter_key(evidence)), None)
         if prior is not None:
             need(digest("encounter", prior["body"]["data"]["evidence"]) == identity, "nonce reuse")
             return "duplicate", digest("event", prior["body"])
+        if parent["rules"] == "adaptation-v1":
+            need(digest("state", evidence["sourceState"]) == digest("state", parent), "stale adaptation source")
     reference = digest("event", body)
     outcome = "duplicate" if reference in references else "accepted" if parent is states[-1] else "conflict"
     return outcome, reference
@@ -271,6 +274,8 @@ def verify_directory(directory, expected_head=None):
             state["signal"] = event["body"]["data"]["value"]
         elif event["body"]["kind"] == "rotate-v1":
             state["authority"] = event["body"]["data"]["authority"]
+        elif event["body"]["kind"] == "experience-v1" and state["rules"] == "adaptation-v1":
+            state["signal"] = event["body"]["data"]["evidence"]["interaction"]["motif"]
         states.append(state)
         references.add(reference)
         events.append(event)
