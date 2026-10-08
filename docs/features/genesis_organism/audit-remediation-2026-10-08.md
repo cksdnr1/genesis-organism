@@ -77,8 +77,22 @@ freeze/tag/release/birth/deploy/mint/on-chain operation or historical rewrite.
 
 ## Local workflow completion
 
-Implementation and final validation complete. Publication/CLI finalization is
-recorded below after refreshing PR and task states.
+PR6 was freshly verified OPEN/draft with head6a452875395595f6c66369df8e0d0c9d94f218c1,
+base work/phase-03-authority and no registered hosted checks. Branch push and PR
+body update succeeded before the final CLI step. Supported `playspec complete`
+then finalized each task, and fresh `playspec get-task --json` confirmed:
+
+| Task | Local status |
+| --- | --- |
+| genesis_organism_audit_a01 | completed |
+| genesis_organism_audit_a02 | completed |
+| genesis_organism_audit_a03 | completed |
+| genesis_organism_audit_a04 | completed |
+
+This final evidence-only update follows the tested implementation commit; no
+runtime/contract/selected artifact bytes changed after b2c2b2f. Final GitHub head
+will include this additive completion record. Review scores and task status do
+not establish actual birth readiness or independent human approval.
 
 These are direct local PlaySpec mono-spec tasks, not Novis queue/registry jobs.
 Their completion must not be reported as a background worker/phase-chain merge.
