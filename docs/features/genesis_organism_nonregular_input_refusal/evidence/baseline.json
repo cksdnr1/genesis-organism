@@ -1,0 +1,33 @@
+{
+  "head": "2cb27d0af10b6ad95471295999db5c0a014fe660",
+  "cases": [
+    {
+      "name": "node-replay",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "node-inspect",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "python-history",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "node-append-source",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "node-init-source",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "node-ceremony",
+      "timeout_seconds": 0.5
+    },
+    {
+      "name": "python-ceremony",
+      "timeout_seconds": 0.5
+    }
+  ]
+}

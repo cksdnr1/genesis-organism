@@ -1,0 +1,467 @@
+{
+  "head": "656d1a3e65edc19d8349f0d77d1f0d7e7388817e",
+  "reports": [
+    {
+      "source": "docs/features/genesis_organism/post-merge-audit/diagnostic-results.json",
+      "source_sha256": "2cf962da12fb957922fd9f2330e2f33368b3d0eeea86f1e49dae2bd0454dadf2",
+      "results": [
+        {
+          "name": "observer-version",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-ld5zxmyt"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-ld5zxmyt"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unknown-capability",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-0g0vu6dc"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-0g0vu6dc"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "private-disclosure",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-8nr1srga"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-8nr1srga"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "attested-capability",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-eprgtqsk"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-eprgtqsk"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "empty-policy",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-8kci20pb"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-8kci20pb"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unsupported-policy-profile",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-6hlfxxy5"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-6hlfxxy5"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unsupported-policy-version",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-itd225fx"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-itd225fx"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unsupported-evidence-version",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-o4tnycc9"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"unsupported\",\"message\":\"evidence version\"}\n",
+              "code": "unsupported"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-o4tnycc9"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"unsupported\", \"message\": \"evidence version\"}\n",
+              "code": "unsupported"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "missing-policy",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-ozq2jwsw"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"closed shape\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-ozq2jwsw"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"closed shape\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "invalid-message",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-4ztcvbtt"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"retained message bytes\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-4ztcvbtt"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"retained message\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unsupported-frame",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-u81pdxuw"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-u81pdxuw"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"expression/policy fidelity\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        },
+        {
+          "name": "unauthenticated-source",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-_hqs9mhj"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"unverified source state\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-_hqs9mhj"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"unverified source\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        }
+      ]
+    },
+    {
+      "source": "docs/features/genesis_organism/pr8-critical-audit/compound-results.json",
+      "source_sha256": "12fef7e6f3deef49e7e7df421c7bdd97d6d3d794b7976085bcba651a7aac7fa0",
+      "results": [
+        {
+          "name": "wrong-organism-and-unknown-kind",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-b9cwxu89"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"unsupported\",\"message\":\"event kind\"}\n",
+              "code": "unsupported"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-b9cwxu89"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"wrong organism\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": false
+        },
+        {
+          "name": "unknown-profile-and-malformed-signature",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-x3eehor2"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"signature encoding\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-x3eehor2"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"unsupported\", \"message\": \"profile\"}\n",
+              "code": "unsupported"
+            }
+          ],
+          "no_write": true,
+          "agreement": false
+        },
+        {
+          "name": "wrong-organism-and-unknown-kind-and-malformed-signature",
+          "outcomes": [
+            {
+              "command": [
+                "node",
+                "src/cli.mjs",
+                "replay",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-21uybvic"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\":\"invalid\",\"message\":\"signature encoding\"}\n",
+              "code": "invalid"
+            },
+            {
+              "command": [
+                ".venv/bin/python",
+                "verifier/verify.py",
+                "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/historical-independent-21uybvic"
+              ],
+              "exit": 1,
+              "stdout": "",
+              "stderr": "{\"error\": \"invalid\", \"message\": \"wrong organism\"}\n",
+              "code": "invalid"
+            }
+          ],
+          "no_write": true,
+          "agreement": true
+        }
+      ]
+    }
+  ]
+}

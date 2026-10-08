@@ -1,0 +1,914 @@
+{
+  "auditedRevision": "e6d0e6633fd657216549fd64f1031a6d96fd7b87",
+  "cases": 12,
+  "disagreements": 3,
+  "results": [
+    {
+      "name": "observer-version",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "future"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "aa5d61385016c79a945a629615b98b9b9f9cf734bb5931f8b1d6e247f5766809dd0167cd2fc8b6dae89eaaeb6a291f1d187255ac9c56456f2015444522930906"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "unsupported",
+      "rejected": true,
+      "match": false
+    },
+    {
+      "name": "unknown-capability",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  },
+                  "future": {
+                    "supported": true,
+                    "evidence": "claimed"
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "56de9909075e4f072bd83b76f128eb5b3ba29ac32f333981047e886dbbe09ccf2458cd83e9c2123800034288fe98e0de0e247beec79a4f6c7a775ea71078290e"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "unsupported",
+      "rejected": true,
+      "match": false
+    },
+    {
+      "name": "private-disclosure",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "private",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "fcfad6650416507ae1a2e6765e96815faec1196fe5e30972f77763f48d0c50ab11b022f48e52fdbf24dbc3ec74894ee72b6cd1572dfd17b86b795749b10a5e06"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "unauthorized",
+      "rejected": true,
+      "match": false
+    },
+    {
+      "name": "attested-capability",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "attested",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "e031e3bf54a68fae546ecb77db9ffd996c0ca0bd7cc270b4e95998a8d5d0a8061c3cf72fded78388c1902400ced0c6c2516d7cb9da3c79857b75eb85b40cc504"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "empty-policy",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "71fe43fc0f7adc8fe372f3ce555c680cd310b7a0cf99bb8d7321da80d410b676e16500e387effef121186f58021fbee8637583a7fdd504b3908089cead473a03"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-policy-profile",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "future"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "25cd5f789421fda570dd5bb4450479ac097ed31b3df3084f3df0b13326f033747149a61e705b4bcc11fe0dcc17a22e6ff5111c9b9c12814594344798da659701"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-policy-version",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "future"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "6562635e556cbddeded3adb1aeb764243ed1e4ba27e0fe9706d207939ccdd4f9ef8c1918b5077ef2cd6d2b89de363cf7aab778389e35b498395d6a8f22b00300"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-evidence-version",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "future"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "36c23a3b2049d72d0e46cbe09896197095c22081f060b99f0d8778d64f757d2f691cab03df08f9c79ea9a1df8ffcc13de81377ce4e64d49ee228dcecb766bf0b"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "unsupported",
+      "pyStatus": 1,
+      "pyCode": "unsupported",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "missing-policy",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "8819df2d996e0dc9331b19c7b11ccb42913fa5513025254a37662abedb0f588bdf9fdd9f3cd2aa0407faa444a5d8a25b886f139eeb0e1ecaf50a1af867c0e40b"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "invalid-message",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": 17,
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "78e7f1355b262cdfa5fa82bd2e3a6d6f8872e5afb32ff301841734137739b1add87e4611f86fee774f161bd8d206dd58d48f51f962a116a53f5065536014d309"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-frame",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  },
+                  "spatial": {
+                    "supported": true,
+                    "evidence": "claimed",
+                    "frame": "future",
+                    "unit": "mm"
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 0
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "8795e2da1ef9ec5463f26063469ce1e7377e43cf53e8af20b5c4df3c368f85f95fdf7b247188fcabbb864611fbf86a7295d3e1d8c140293edd0929390ed07707"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unauthenticated-source",
+      "candidate": {
+        "body": {
+          "data": {
+            "evidence": {
+              "expression": {
+                "output": {
+                  "kind": "symbols-v1",
+                  "signal": 0,
+                  "symbols": [
+                    0,
+                    255
+                  ]
+                },
+                "selection": {
+                  "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+                  "observerProfileCommitment": "bd25c669863ea1bf9673ba35cd7003bb4dbf7ce82682933f7d6c958d7a89b549",
+                  "procedure": "expression-v1",
+                  "profile": "symbols-v1",
+                  "sourceStateRef": "2160ebed97b6209a5ef899b31db75377882b64291bef7d9c281a895dc4497eb0",
+                  "version": "negotiation-v1"
+                }
+              },
+              "interaction": {
+                "message": "PUBLIC SYNTHETIC CAPTURED INPUT",
+                "motif": 2
+              },
+              "nonce": "visit-one",
+              "observer": {
+                "capabilities": {
+                  "symbols": {
+                    "evidence": "claimed",
+                    "supported": true
+                  }
+                },
+                "observerType": "language-mock",
+                "subject": "mock-one",
+                "version": "observer-v1"
+              },
+              "policy": {
+                "allow": [
+                  "text-v1",
+                  "symbols-v1",
+                  "path-v1"
+                ],
+                "disclosure": "public-synthetic",
+                "version": "policy-v1"
+              },
+              "sourceState": {
+                "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+                "head": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+                "profile": "synthetic-v1",
+                "rules": "encounter-v1",
+                "sequence": 0,
+                "signal": 1
+              },
+              "version": "evidence-v1"
+            }
+          },
+          "kind": "experience-v1",
+          "organism": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "previous": "29ebc0f5b28d67ed88b4481203100a168d1b037c5636d95ac6bdc20c29105299",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "03efbf45d24f71e4b60395b61b5de15ac802d26e9cc147cef39cb26a96534ae5721d8f6f812108904005ca644846a6d98969826400bbfa8084392e6ee016a908"
+      },
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "scope": "independent finite working-tree IC02 review",
+  "compounds": [
+    {
+      "name": "event-outerextra-profile",
+      "class": "invalid",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "kind": "signal-v1",
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "profile": "future",
+          "sequence": 1
+        },
+        "signature": "8ae2b11a2991f95c67f19ccf23cd484a65e7491593347a5c0318b0a5c194fea2a4f0fe2f21a5224ee8bd6fca2d6b724aa2fd791fcb5acef1e01ca76c9175bf0d",
+        "extra": true
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-missingkind-profile",
+      "class": "invalid",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "profile": "future",
+          "sequence": 1
+        },
+        "signature": "ba128a20e1af5aa84d7f2518408e1c4aac9c92aaa31ed3bda079569caf68513298fbd15088d338ecb625caec402e5afe18d0977a2bb17d33e71c770268f3e20d"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-badsequence-profile",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "kind": "signal-v1",
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "profile": "future",
+          "sequence": 0
+        },
+        "signature": "68a6f912953b174d8da06fc9bb323db862c60d3a502ab455bfe4aa13a80852e8c6b31e0e8f5a6f35d2268c7ec69fbd423b3d80acddf0bfa4a8f9c966d65d2509"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-kind-null-data",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "data": null,
+          "kind": "future",
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "4aeb7f282b52af04dc90caf39581f040604af895e125a8f2777008efc78fc8bd016b0c7f5cf11319799f061c0f2fdcb254b4a044d30d9780aaf81ba229ed080d"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-profile-wrongorg",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "kind": "signal-v1",
+          "organism": "0000000000000000000000000000000000000000000000000000000000000000",
+          "previous": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "profile": "future",
+          "sequence": 1
+        },
+        "signature": "6363bfe4dfc92335294449a57ce1f2db30004e9554cc81f85e9935e984e91851fbc3530b7a97b77fd70fe6f54b303d0fb3b08e0fe77dbc1ad6a06ddce701c50a"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-kind-unknownparent",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "kind": "future",
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": "0000000000000000000000000000000000000000000000000000000000000000",
+          "profile": "synthetic-v1",
+          "sequence": 1
+        },
+        "signature": "d44b84b15ee207036bea8317da748882d7924139f26df8fc4f28f29fc6fa48c925977f7c131ab52a148d00073bef8c091447fbb790f5aeabc31b1f214bd5e80f"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "event-profile-badref-badsig",
+      "class": "invalid",
+      "candidate": {
+        "body": {
+          "data": {
+            "value": 42
+          },
+          "kind": "signal-v1",
+          "organism": "2143807fead6f79e4c783f9bdc2a082fb9537faf4c719346ccc33fe40a180741",
+          "previous": false,
+          "profile": "future",
+          "sequence": 1
+        },
+        "signature": "broken"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "origin-missingbirth-profile",
+      "class": "invalid",
+      "candidate": {
+        "body": {
+          "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+          "creator": "PUBLIC SYNTHETIC TEST FIXTURE",
+          "genome": {
+            "signal": 0
+          },
+          "profile": "future",
+          "rules": "core-v1"
+        },
+        "signature": "9737b5eb1473c43edc9db7d15b574215fba17acf0f6d838cbb67d3a80f0fbe1aeff6b608ddb2c3f717a952e0fb870c710f3090b71bdf8f6cad91d0ced35abd09"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "origin-outerextra-rules",
+      "class": "invalid",
+      "candidate": {
+        "body": {
+          "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+          "birth": "fixture-core-001",
+          "creator": "PUBLIC SYNTHETIC TEST FIXTURE",
+          "genome": {
+            "signal": 0
+          },
+          "profile": "synthetic-v1",
+          "rules": "future"
+        },
+        "signature": "f5ff2b6cbcbcfd1680d60aa883d8b07e4c977c0238274737dd9582179f847ff7feb0fdba707d8a1a020669651c1c17e2a1ddda03662a46065a909464440da500",
+        "extra": true
+      },
+      "noWrite": true
+    },
+    {
+      "name": "origin-profile-badauthority",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "authority": false,
+          "birth": "fixture-core-001",
+          "creator": "PUBLIC SYNTHETIC TEST FIXTURE",
+          "genome": {
+            "signal": 0
+          },
+          "profile": "future",
+          "rules": "core-v1"
+        },
+        "signature": "0139ac870f2ab6035ebc77f0918db80e60afe67d442fed62e7a0702e96936e0caf84953854617d8e546c6077b848377cb21b8129c1865702251f73d949f94001"
+      },
+      "noWrite": true
+    },
+    {
+      "name": "origin-rules-nullgenome",
+      "class": "unsupported",
+      "candidate": {
+        "body": {
+          "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+          "birth": "fixture-core-001",
+          "creator": "PUBLIC SYNTHETIC TEST FIXTURE",
+          "genome": null,
+          "profile": "synthetic-v1",
+          "rules": "future"
+        },
+        "signature": "2cce442d43276cd4d695e99334154169a5f7250ea9b19b407764c5cecf918c6369e6e76e4315c5557d2910925b78f270daa6e8d32c4107796cf01cc8312f870d"
+      },
+      "noWrite": true
+    }
+  ],
+  "validSignedSignal200Agreement": true,
+  "badProofDuplicateNoWrite": true,
+  "retainedPM01": [
+    {
+      "name": "observer-version",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unknown-capability",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "private-disclosure",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "attested-capability",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "empty-policy",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unsupported-policy-profile",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unsupported-policy-version",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unsupported-evidence-version",
+      "class": "unsupported",
+      "noWrite": true
+    },
+    {
+      "name": "missing-policy",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "invalid-message",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unsupported-frame",
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "unauthenticated-source",
+      "class": "invalid",
+      "noWrite": true
+    }
+  ],
+  "harnessCorrection": "Initial run used wrong literal case label evidence-version; corrected to actual unsupported-evidence-version before final PM01 result. Source/oracle unchanged."
+}

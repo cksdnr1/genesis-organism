@@ -30,3 +30,12 @@ The creator requested that this initial draft stop before commit, push, tag,
 release, deployment, or minting. The proposed first commit message is
 `genesis: declare the protocol origin`; explicit creator approval is still
 required before executing it.
+# Current contribution rights — 2026-10-08
+
+See [active layered scope](LICENSE.md). Prospective contributors must identify
+the applicable documentation/software layer, confirm authority to submit their
+material under that layer's terms, and preserve third-party notices. Maintainers
+review rights before accepting external material; no retroactive permission is
+inferred. Organism/artwork/naming exclusions remain. The initial-stage instructions
+below are historical context; current creator-authorized execution is recorded
+in the dated decision records. No contribution or merge alone authorizes birth.

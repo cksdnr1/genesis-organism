@@ -27,3 +27,10 @@ holders, resolve inbound contributions and external assets, then add exact
 licence texts and applicable notices. Do not impose a custom ancestry condition
 while casually calling the result an established open-source licence. Technical
 lineage verification and attribution obligations need separate treatment.
+# Current acceptance — 2026-10-08
+
+The creator accepted the layered scope in [LICENSE.md](LICENSE.md), with exact
+texts under LICENSES and third-party exclusions in THIRD-PARTY-NOTICES.md.
+See [dated acceptance](docs/decisions/2026-10-08-rights-and-rehearsal-acceptance.md).
+The original options below are retained as historical decision evidence.
+Artwork, real organism records and naming remain separately unresolved.

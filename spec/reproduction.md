@@ -16,3 +16,11 @@ whether parent-side events are required and how partial acceptance is handled.
 No distributed atomicity is assumed. No generation-number formula is chosen.
 
 Fixtures in earlier phases are not offspring and do not authorize a #0001 birth.
+
+## Accepted synthetic contract — 2026-10-08
+
+[D10](../docs/decisions/D10-reproduction.md) accepts a bounded 1..4-parent profile:
+exact selected states, common signed consent body, integer inheritance and a new
+origin bound to immutable lineage evidence. Parent histories are unchanged.
+Missing consent or partial publication is not an accepted offspring. Phase26/27
+must implement and independently verify it; no real birth is authorized.

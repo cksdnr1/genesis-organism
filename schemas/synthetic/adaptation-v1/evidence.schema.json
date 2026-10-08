@@ -1,0 +1,203 @@
+{
+  "type": "object",
+  "properties": {
+    "version": {
+      "const": "evidence-v1"
+    },
+    "nonce": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]{1,128}$",
+      "maxLength": 128
+    },
+    "sourceState": {
+      "$ref": "state.schema.json"
+    },
+    "observer": {
+      "$ref": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/encounter-v1/observer.schema.json"
+    },
+    "policy": {
+      "$ref": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/encounter-v1/policy.schema.json"
+    },
+    "expression": {
+      "type": "object",
+      "properties": {
+        "selection": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "const": "negotiation-v1"
+            },
+            "sourceStateRef": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "observerProfileCommitment": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "accessPolicyCommitment": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$",
+              "maxLength": 64
+            },
+            "profile": {
+              "enum": [
+                "text-v1",
+                "symbols-v1",
+                "path-v1"
+              ]
+            },
+            "procedure": {
+              "const": "expression-v1"
+            }
+          },
+          "required": [
+            "version",
+            "sourceStateRef",
+            "observerProfileCommitment",
+            "accessPolicyCommitment",
+            "profile",
+            "procedure"
+          ],
+          "additionalProperties": false
+        },
+        "output": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "text-v1"
+                },
+                "signal": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 255
+                },
+                "text": {
+                  "type": "string",
+                  "maxLength": 10
+                }
+              },
+              "required": [
+                "kind",
+                "signal",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "symbols-v1"
+                },
+                "signal": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 255
+                },
+                "symbols": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 255
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "signal",
+                "symbols"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "path-v1"
+                },
+                "signal": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 255
+                },
+                "frame": {
+                  "const": "fixture-plane-v1"
+                },
+                "unit": {
+                  "const": "mm"
+                },
+                "points": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "maxItems": 2,
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 255
+                    }
+                  }
+                }
+              },
+              "required": [
+                "kind",
+                "signal",
+                "frame",
+                "unit",
+                "points"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "selection",
+        "output"
+      ],
+      "additionalProperties": false
+    },
+    "interaction": {
+      "type": "object",
+      "properties": {
+        "motif": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "message": {
+          "type": "string",
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "motif",
+        "message"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "version",
+    "nonce",
+    "sourceState",
+    "observer",
+    "policy",
+    "expression",
+    "interaction"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/adaptation-v1/evidence.schema.json"
+}

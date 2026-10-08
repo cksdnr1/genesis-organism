@@ -1,0 +1,3 @@
+# Independent verifier and schema/vector tooling only; Node core has no packages.
+cryptography==50.0.2
+jsonschema==4.26.0
