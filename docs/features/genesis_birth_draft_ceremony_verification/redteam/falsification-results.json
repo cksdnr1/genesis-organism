@@ -1,0 +1,253 @@
+{
+  "scope": "independent PUBLIC TEST consistency/failure checks; no actual creator permission or physical operations",
+  "baseline": {
+    "scope": "draft TEST mechanics only; GENESIS #0001 UNBORN/NO-GO",
+    "manifestRef": "b84367579c54ccd808d64e4be0f6428c6f33d65cd36ead0606f6847e4784b4fa",
+    "freezeRef": "692d5c70c9b8d8d4c1c3fcc5f50f2f7c0839e301fd4f4e9597048564e7e2d99c",
+    "releaseRef": "ab0881eb0ce49c0f91fd0b0926a26011f11d5686529f377827979838cf42b139",
+    "birthRef": "f0b5df54cb2a1afe691c91fb46edfb2ec978f2e263edc23b86903b2e9cbb5cb5",
+    "journalStatus": "accepted",
+    "artifacts": 7
+  },
+  "checkerSha256": "095e3a425efd3a2c808b64efd4767eae3218ab94f745b9894aa05374fd16b7a0",
+  "cases": [
+    {
+      "case": "positive-reversed-archive-order",
+      "expectedAccept": true,
+      "pythonAccept": true,
+      "jsAccept": true,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": {
+        "scope": "draft TEST mechanics only; GENESIS #0001 UNBORN/NO-GO",
+        "manifestRef": "b84367579c54ccd808d64e4be0f6428c6f33d65cd36ead0606f6847e4784b4fa",
+        "freezeRef": "692d5c70c9b8d8d4c1c3fcc5f50f2f7c0839e301fd4f4e9597048564e7e2d99c",
+        "releaseRef": "61d6297343d343708846e37775a3be2042e97d953424f5d0bd919c57deb1f992",
+        "birthRef": "632d73730167f0c095e6fe6e79ec148b9f08e37b596263f891b6b3eacedbc63b",
+        "journalStatus": "accepted",
+        "artifacts": 7
+      },
+      "jsDiagnostic": ""
+    },
+    {
+      "case": "rounded-fraction-self-consistent",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: noninteger JSON number",
+      "jsDiagnostic": "invalid: integer lexical token required"
+    },
+    {
+      "case": "decimal-alias-self-consistent",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: noninteger JSON number",
+      "jsDiagnostic": "invalid: integer lexical token required"
+    },
+    {
+      "case": "exponent-alias-self-consistent",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: noninteger JSON number",
+      "jsDiagnostic": "invalid: integer lexical token required"
+    },
+    {
+      "case": "restored-false-valid-proofs",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: archive assertion/hash binding",
+      "jsDiagnostic": "invalid: archive retrieval binding"
+    },
+    {
+      "case": "unknown-report-field-valid-proofs",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: closed shape",
+      "jsDiagnostic": "invalid: closed record"
+    },
+    {
+      "case": "wrong-public-location-valid-proofs",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: publication package binding",
+      "jsDiagnostic": "invalid: public package binding"
+    },
+    {
+      "case": "wrong-issued-nonce",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: issued possession nonce/context",
+      "jsDiagnostic": "unauthorized: issued TEST challenge mismatch"
+    },
+    {
+      "case": "cross-domain-birth-proof",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: draft proof",
+      "jsDiagnostic": "invalid: draft proof"
+    },
+    {
+      "case": "untrusted-authority",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: PUBLIC TEST authority only",
+      "jsDiagnostic": "unauthorized: externally pinned TEST context required"
+    },
+    {
+      "case": "untrusted-binding",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: trusted binding ref",
+      "jsDiagnostic": "unauthorized: TEST binding context"
+    },
+    {
+      "case": "source-byte-corruption",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: regular exact-size package file",
+      "jsDiagnostic": "invalid: package size"
+    },
+    {
+      "case": "missing-dependency",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: complete exact package tree",
+      "jsDiagnostic": "unavailable: missing package file"
+    },
+    {
+      "case": "extra-empty-directory",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: unexpected package directory",
+      "jsDiagnostic": "invalid: extra package directory"
+    },
+    {
+      "case": "source-symlink",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: symlink package member",
+      "jsDiagnostic": "invalid: package symlink"
+    },
+    {
+      "case": "unrelated-release-retrieval",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: retrieved exact signed release",
+      "jsDiagnostic": "invalid: signed release retrieval"
+    },
+    {
+      "case": "unknown-prior-supersession",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: prior raw artifacts absent",
+      "jsDiagnostic": "unavailable: predecessor raw evidence not supplied"
+    },
+    {
+      "case": "held-lock",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: held LOCK",
+      "jsDiagnostic": "conflict: writer lock held; verifier cannot recover"
+    },
+    {
+      "case": "retained-pending",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: held diagnostic/conflict",
+      "jsDiagnostic": "conflict: retained pending/conflict hold"
+    },
+    {
+      "case": "retained-conflict",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: held diagnostic/conflict",
+      "jsDiagnostic": "conflict: retained pending/conflict hold"
+    },
+    {
+      "case": "second-accepted-origin",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: multiple accepted origins",
+      "jsDiagnostic": "conflict: multiple accepted origins"
+    },
+    {
+      "case": "duplicate-report-key",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: duplicate JSON key",
+      "jsDiagnostic": "invalid: duplicate/member key"
+    },
+    {
+      "case": "fifo-no-writer",
+      "expectedAccept": false,
+      "pythonAccept": false,
+      "jsAccept": false,
+      "agreement": true,
+      "readOnly": true,
+      "pythonDetail": "Invalid: regular bounded file",
+      "jsDiagnostic": "invalid: regular file required"
+    }
+  ]
+}

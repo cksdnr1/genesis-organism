@@ -1,0 +1,19 @@
+{
+  "scope": "independent raw evidence verification only; same-host synthetic restore",
+  "reportSha256": "6d0584e4c649c215cbcd9005965aca3bcfa91f524e9a547e221eb54f543a7562",
+  "sourceRevision": "68f4d395f471995c90be58c25b88f592aadf2f96",
+  "evidenceFilesVerified": 34,
+  "restoredTests": {
+    "tests": 61,
+    "pass": 61,
+    "fail": 0
+  },
+  "loaderChecks": 4,
+  "claimsNotEstablished": [
+    "actual candidate adoption/key",
+    "real external archive/publication",
+    "different-host portability",
+    "long-term availability"
+  ],
+  "inspectionNote": "Initial log assertion assumed TAP # prefix; inspected actual Node spec reporter \u2139 prefix and corrected reader, not a runtime failure."
+}

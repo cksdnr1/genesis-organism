@@ -50,3 +50,22 @@ adoption, key association/possession, rights scope, operational evidence and
 concrete act approvals are absent. This does not prevent completing all remaining
 reversible preparation or recommending a separately authorized conditional
 sequence when its applicable prerequisites have been verified.
+
+A narrowly bounded TEST-only read-only checker of the proposed ceremony is
+justified before adoption: byte vectors alone cannot test omitted raw artifacts,
+prerequisite/reference mismatch, wrong-domain proofs, archive/publication graph
+or retained supersession/journal evidence. Such an experiment consumes synthetic
+records only, labels its result draft-contract evidence and preserves original
+rehearsal semantics. It does not justify a signer, writer, acceptance engine,
+actual-profile runtime, lock service, network operation or new framework. Its own
+bounded spec/plan and independent negative checks are required before coding.
+
+Additional recovery evidence was actually produced after this review: public
+runtime/dependency bytes and a complete source bundle were retained and restored
+into fresh owned local scratch. The measured318,589,589 runtime bytes exceed the
+small source budget, confirming that separate retention is necessary. Copied
+Node/Python and restored exact wheel versions pass network-denied schema/causal
+checks with zero original Homebrew library loads; raw inventory has zero
+mismatches. See runtime-restore-report.md/results.json for performed evidence,
+preserved failed setup attempt and same-host/OS dependency limits. This improves
+recoverability evidence without inventing actual candidate adoption/archives.
