@@ -6,7 +6,7 @@ export class ProtocolError extends Error {
 export function requireThat(ok, code, message) { if (!ok) throw new ProtocolError(code, message); }
 const MAX_BYTES = 65536;
 const HASH_KINDS = new Set(['origin', 'event', 'state', 'observer', 'policy', 'expression-input', 'expression-output', 'encounter', 'interaction', 'reproduction']);
-const PROOF_KINDS = new Set(['origin', 'event', 'reproduction']);
+const PROOF_KINDS = new Set(['origin', 'event', 'reproduction', 'body']);
 const prefix = kind => Buffer.from(`genesis-organism/synthetic-v1/${kind}\0`, 'ascii');
 
 export function canonical(value) {

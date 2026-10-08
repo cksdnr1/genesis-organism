@@ -86,3 +86,10 @@ body state, hardware/vendor abstraction, witness service or dependency. New risk
 public test keys, simulated claims mistaken for truth, unavailable attestation,
 stale proposals and caller loss of transient body position. Explicit labels/limits
 and fail-closed tests demonstrate necessity; they do not establish physical safety.
+
+## Implementation ordering clarification — Phase31, 2026-10-08
+
+Normal canonical classification of an otherwise authorized signed divergent
+successor remains conflict, taking precedence over local stale-request wording.
+Other stale/ordinal misuse is invalid. The adapter never resolves or silently drops
+a canonical fork; an outer durable core retains conflict evidence under D04/D06.
