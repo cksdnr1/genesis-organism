@@ -34,3 +34,13 @@ Reproduction inputs are literal candidate objects in independent-results.json an
 ## Final conditions and limits
 
 Source diff and finite independent probes support the bounded correction. Existing focused18/18 tests pass in source owner's evidence; exact-candidate full suite remains required before draft PR. Git owner must commit reviewed source including supplement, then runtime owner tests that exact HEAD because ceremony selects Git blobs. Later evidence/docs SHA may differ only with clear attribution and unchanged tested source. No automatic merge, real birth readiness or universal conformance follows. No source revision request remains from this review.
+
+## Final combined evidence review
+
+Final recommendation: validated scoped repair ready for draft PR; no unresolved implementation/review blocker. Actual draft-PR publication remains Git-owner work, and merge is not authorized.
+
+Independently reviewed both updated child result/pr documents and exact-source evidence for `c4ab35222e00a8a3c0b5441a63c638b134982be9`. Runtime owner confirmed actual tool exit0; final-suite.log records56/56 pass,0 fail/cancel/skip,139332.061333ms. Reviewer checked the log summary and all4 log SHA256 values against final-validation.json, all11 selected source/test/contract hashes against both live files and committed Git blobs, and all6 preserved original decision/spec/unborn paths against audit merge2cb27d0. No source drift occurred. Schema6/6, successor2/2 and independent lineage4nodes/3edges evidence agree. Full suite was peer-executed, not redundantly rerun by reviewer.
+
+Independently confirmed current ceremony selection has197 unique sorted paths and includes the accepted dated supplement. Original D04/D06/GENESIS/unborn bytes are unchanged; specREADME preserves its original prefix. Thus the exact-HEAD full rehearsal suite tests the intended corrected code/governing supplement. Prior working-tree/pending statements are clearly labeled historical checkpoints; final source SHA is distinguished from later evidence-only documentation commits. Metadata-only system-Python package lookup failure and successful .venv metadata retry are disclosed without misreporting test failure or rerun.
+
+This closes the two observed bounded repair obligations on tested source/host. It does not certify every malformed input, every platform/regular filesystem availability, all original38 phases or actual birth readiness. Original Phase38 entry and #0001 UNBORN/NO-GO remain. No new D-number, execution phase, profile, dependency, runtime framework or automatic repair merge is justified.

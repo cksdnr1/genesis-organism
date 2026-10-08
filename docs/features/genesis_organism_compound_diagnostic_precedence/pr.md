@@ -14,7 +14,7 @@ Separate reviewer approved an attributable dated supplement under bounded synthe
 
 ## Validation
 
-New compound regression fails before correction; focused conformance/admission/encounter/replay18/18 passes afterward, including PM-01 and standalone context maps. Eight event/four origin compounds exercise literal classes, library/actual CLI failure, no writes/absent init target and valid state/commitment controls. IC01 reader regression2/2 still passes. Independent additional falsification and exact-candidate full npm suite pending; no all-suite claim yet.
+New compound regression fails before correction; focused conformance/admission/encounter/replay18/18 passes afterward, including PM-01 and standalone context maps. Eight event/four origin compounds exercise literal classes, library/actual CLI failure, no writes/absent init target and valid state/commitment controls. IC01 reader regression2/2 still passes. Independent additional11 compounds, signed signal200, bad-proof duplicate and exact12PM-01 controls pass. Exact candidate c4ab352 full npm suite exit0:56/56, no fail/cancel/skip,139332.061333ms;197-artifact archive/inclusion and independent ceremony checks pass. Final schemas6+2 and lineage4/3 pass.
 
 ## Risks / follow-ups
 

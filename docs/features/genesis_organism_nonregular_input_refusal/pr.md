@@ -17,7 +17,7 @@ Add O_NONBLOCK to existing O_RDONLY|O_NOFOLLOW byte reads in src/store.mjs, src/
 - New CLI/rehearsal regression groups: pre-fix exit1; corrected exit0,2/2 pass.
 - Store/CLI/lineage focused suites:11/11 pass; schemas6+2; independent lineage4 nodes/3 edges.
 - Separate reviewer:14 actual FIFO refusals with no-write/no-stdout plus regular append/replay/ceremony controls; accepted scoped source/test review.
-- Full npm test pending final combined repair candidate after IC02. Exact committed-source ceremony evidence remains pending; see result.md.
+- Exact source candidate c4ab352: npm test exit0,56/56 pass, no fail/cancel/skip,139332.061333ms;197 selected artifacts including accepted clarification and independent ceremony checks pass. Final schemas6+2 and lineage4/3 pass; see result.md.
 
 ## Risks / follow-ups
 
