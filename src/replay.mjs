@@ -15,7 +15,7 @@ export function verifiedHistory(origin, events) {
     const previous = states.at(-1);
     const next = { ...previous, sequence: event.body.sequence, head: outcome.reference };
     if (event.body.kind === 'signal-v1') next.signal = event.body.data.value;
-    else next.authority = event.body.data.authority;
+    else if (event.body.kind === 'rotate-v1') next.authority = event.body.data.authority;
     states.push(next);
     accepted.push(event);
   }

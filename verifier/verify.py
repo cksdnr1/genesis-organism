@@ -90,7 +90,7 @@ def parse(data):
 
 
 def digest(kind, body):
-    need(kind in ("origin", "event", "state"), "hash domain", "unsupported")
+    need(kind in ("origin", "event", "state", "observer", "policy", "expression-input", "expression-output", "encounter", "interaction"), "hash domain", "unsupported")
     return hashlib.sha256(f"genesis-organism/synthetic-v1/{kind}\0".encode() + canonical(body)).hexdigest()
 
 
@@ -121,7 +121,7 @@ def origin_state(envelope):
     exact(envelope, ("body", "signature"))
     body = envelope["body"]
     exact(body, ("profile", "rules", "birth", "creator", "authority", "genome"))
-    need(body["profile"] == "synthetic-v1" and body["rules"] == "core-v1", "profile/rules", "unsupported")
+    need(body["profile"] == "synthetic-v1" and body["rules"] in ("core-v1", "encounter-v1"), "profile/rules", "unsupported")
     need(type(body["birth"]) is str and re.fullmatch(r"[a-z0-9-]{1,128}", body["birth"]) is not None, "birth discriminator")
     need(type(body["creator"]) is str and 0 < len(body["creator"].encode()) <= 256, "creator claim")
     exact(body["genome"], ("signal",))
@@ -133,7 +133,63 @@ def origin_state(envelope):
             "signal": body["genome"]["signal"]}
 
 
-def classify(states, references, envelope):
+def expression_result(state, observer, policy):
+    exact(observer, ("version", "observerType", "subject", "capabilities"))
+    need(observer["version"] == "observer-v1", "observer version", "unsupported")
+    need(type(observer["observerType"]) is str and 0 < len(observer["observerType"].encode()) <= 128, "observer type")
+    need(type(observer["subject"]) is str and re.fullmatch(r"[a-z0-9-]{1,64}", observer["subject"]) is not None, "subject")
+    claims = observer["capabilities"]
+    need(type(claims) is dict, "capability map")
+    names = ("text", "symbols", "spatial")
+    profiles = ("text-v1", "symbols-v1", "path-v1")
+    for name, claim in claims.items():
+        need(name in names, "capability kind", "unsupported")
+        exact(claim, ("supported", "evidence", "frame", "unit") if name == "spatial" else ("supported", "evidence"))
+        need(type(claim["supported"]) is bool and claim["evidence"] == "claimed", "capability claim")
+        if name == "spatial":
+            need(claim["frame"] == "fixture-plane-v1" and claim["unit"] == "mm", "frame/unit")
+    exact(policy, ("version", "allow", "disclosure"))
+    need(policy["version"] == "policy-v1", "policy version")
+    need(policy["disclosure"] == "public-synthetic", "disclosure", "unauthorized")
+    allowed = policy["allow"]
+    need(type(allowed) is list and len(allowed) <= 3 and all(type(item) is str and item in profiles for item in allowed), "allowed profiles")
+    need(len(set(allowed)) == len(allowed), "duplicate allowed profile")
+    profile = next((profile for name, profile in zip(names, profiles) if claims.get(name, {}).get("supported") is True and profile in allowed), None)
+    need(profile is not None, "no permitted expression")
+    selection = {"version": "negotiation-v1", "sourceStateRef": digest("state", state),
+                 "observerProfileCommitment": digest("observer", observer),
+                 "accessPolicyCommitment": digest("policy", policy), "profile": profile,
+                 "procedure": "expression-v1"}
+    signal = state["signal"]
+    if profile == "text-v1":
+        output = {"kind": profile, "signal": signal, "text": f"signal:{signal}"}
+    elif profile == "symbols-v1":
+        output = {"kind": profile, "signal": signal, "symbols": [signal, 255-signal]}
+    else:
+        output = {"kind": profile, "signal": signal, "frame": "fixture-plane-v1", "unit": "mm", "points": [[0, 0], [signal, 0]]}
+    return {"selection": selection, "output": output}
+
+
+def evidence_id(evidence, states):
+    canonical(evidence)
+    exact(evidence, ("version", "nonce", "sourceState", "observer", "policy", "expression", "interaction"))
+    need(evidence["version"] == "evidence-v1", "evidence version")
+    need(type(evidence["nonce"]) is str and re.fullmatch(r"[a-z0-9-]{1,128}", evidence["nonce"]) is not None, "nonce")
+    need(any(canonical(state) == canonical(evidence["sourceState"]) for state in states), "unverified source")
+    expected = expression_result(evidence["sourceState"], evidence["observer"], evidence["policy"])
+    need(canonical(expected) == canonical(evidence["expression"]), "expression fidelity")
+    interaction = evidence["interaction"]
+    exact(interaction, ("motif", "message"))
+    need(integer_range(interaction["motif"], 0, 3), "motif")
+    need(type(interaction["message"]) is str and len(interaction["message"].encode()) <= 256, "retained message")
+    return digest("encounter", evidence)
+
+
+def encounter_key(evidence):
+    return evidence["sourceState"]["organism"], evidence["observer"]["subject"], evidence["nonce"]
+
+
+def classify(states, references, envelope, events):
     canonical(envelope)
     exact(envelope, ("body", "signature"))
     body = envelope["body"]
@@ -148,6 +204,8 @@ def classify(states, references, envelope):
     elif body["kind"] == "rotate-v1":
         exact(body["data"], ("authority",))
         need(hex_value(body["data"]["authority"], 64), "authority encoding")
+    elif body["kind"] == "experience-v1":
+        exact(body["data"], ("evidence",))
     else:
         raise Invalid("unsupported", "event kind")
     parent = next((state for state in states if state["head"] == body["previous"]), None)
@@ -155,6 +213,14 @@ def classify(states, references, envelope):
     need(body["sequence"] == parent["sequence"] + 1, "sequence mismatch")
     proof("event", envelope, parent["authority"])
     need(body["kind"] != "rotate-v1" or body["data"]["authority"] != parent["authority"], "noop rotation")
+    if body["kind"] == "experience-v1":
+        need(parent["rules"] == "encounter-v1", "experience rules", "unsupported")
+        evidence = body["data"]["evidence"]
+        identity = evidence_id(evidence, states[:states.index(parent)+1])
+        prior = next((event for event in events if event["body"]["kind"] == "experience-v1" and encounter_key(event["body"]["data"]["evidence"]) == encounter_key(evidence)), None)
+        if prior is not None:
+            need(digest("encounter", prior["body"]["data"]["evidence"]) == identity, "nonce reuse")
+            return "duplicate", digest("event", prior["body"])
     reference = digest("event", body)
     outcome = "duplicate" if reference in references else "accepted" if parent is states[-1] else "conflict"
     return outcome, reference
@@ -188,6 +254,7 @@ def verify_directory(directory, expected_head=None):
     origin = parse(origin_bytes)
     states = [origin_state(origin)]
     references = set()
+    events = []
     total_bytes = len(origin_bytes)
     event_names = sorted(name for name in names if re.fullmatch(r"\d{6}\.json", name, flags=re.ASCII))
     need(len(event_names) <= 512, "history event budget", "limit")
@@ -197,18 +264,19 @@ def verify_directory(directory, expected_head=None):
         total_bytes += len(event_bytes)
         need(total_bytes <= 4 * 1024 * 1024, "history byte budget", "limit")
         event = parse(event_bytes)
-        outcome, reference = classify(states, references, event)
+        outcome, reference = classify(states, references, event, events)
         need(outcome == "accepted", "nonlinear canonical history", "conflict" if outcome == "conflict" else "invalid")
         state = dict(states[-1], sequence=sequence, head=reference)
         if event["body"]["kind"] == "signal-v1":
             state["signal"] = event["body"]["data"]["value"]
-        else:
+        elif event["body"]["kind"] == "rotate-v1":
             state["authority"] = event["body"]["data"]["authority"]
         states.append(state)
         references.add(reference)
+        events.append(event)
     for name in names:
         if name.startswith("conflict-"):
-            outcome, reference = classify(states, references, parse(read_file(directory / name)))
+            outcome, reference = classify(states, references, parse(read_file(directory / name)), events)
             need(outcome == "conflict" and name == f"conflict-{reference}.json", "invalid conflict evidence")
             raise Invalid("conflict", "signed divergent successor retained")
     state = states[-1]
