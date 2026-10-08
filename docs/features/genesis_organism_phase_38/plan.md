@@ -11,6 +11,10 @@
    checks and protected-byte comparison. Record all38 tasks' actual statuses.
 6. Update final evidence/runbook/status and PR6, push without automatic merge.
 
+Final review correction: explicitly include the retained Phase36 freeze fixture
+needed by later tests in the current artifact list and assert it. Preserve prior
+194artifact snapshots. Pin corrected implementation revision before final trial.
+
 No automatic journal/lock/conflict reset. One private synthetic candidate only;
 no canonical state updates or new protocol machinery. Public fixture signer and
 exact source revision stay explicit. Rollback new corrective commits; never

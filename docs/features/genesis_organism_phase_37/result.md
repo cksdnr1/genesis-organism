@@ -23,3 +23,9 @@ a privileged adversary racing ancestor replacement. Failure evidence is separate
 from accepted records. Independent checker executes live reviewed code, not any
 archived script. Removing raw bytes/negatives/independence would break recovery
 evidence, so they remain. No service/dependency/actual release/birth; #0001 UNBORN.
+
+Subsequent Phase38 review: this194artifact snapshot restored/checks all selected
+raw bytes, but its source/test snapshot omitted the Phase36 freeze fixture needed
+by later archive/birth tests. The current list adds it explicitly (195paths).
+The prior measured archive/hash/recovery results remain valid; do not retrospectively
+claim that the old archive alone contained every later test input.

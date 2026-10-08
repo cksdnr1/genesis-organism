@@ -55,3 +55,10 @@ Full Node suite, both schema scripts, independent causal/lineage checks, protect
 bytes and all38 CLI task statuses are required before final completion. If a test
 fails, preserve evidence, correct additively and rerun affected checks. Real
 freeze/release/birth remain separate future authorizations; no actual recommendation.
+
+Selection correction found during final review: later archive/birth tests read
+the retained Phase36 freeze.json, which did not exist when the original194path
+list was frozen. Add that historical test fixture explicitly to the current list
+(195paths) and assert inclusion. Do not change old committed list bytes or prior
+194artifact reports; current revision binds the successor list. This satisfies
+the existing complete-test-input requirement without new fields or abstraction.

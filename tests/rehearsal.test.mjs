@@ -19,6 +19,7 @@ function python(bundle) {
 
 test('synthetic freeze binds exact Git bytes and independently reproduces references', () => {
   const manifest = manifestFor(revision), freeze = freezeFor(manifest);
+  assert.ok(manifest.artifacts.some(item => item.path === 'docs/features/genesis_organism_phase_36/freeze.json'), 'retain historical freeze fixture needed by archive/birth tests');
   const checked = checkFreeze(manifest, freeze);
   assert.equal(readArtifacts(manifest).size, manifest.artifacts.length);
   const independent = python({ manifest, freeze });
