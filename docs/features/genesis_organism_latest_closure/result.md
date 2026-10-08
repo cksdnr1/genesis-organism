@@ -1,5 +1,9 @@
 # Latest conformance evidence closure — result
 
+CURRENT STATUS: local PlaySpec mono-spec completed; draft PR8 open. Original
+Phase37/38 and actual birth boundaries remain open. Earlier observations below
+are retained in order, including their then-pending steps.
+
 Implementation and focused checks complete; final committed regression and draftPR
 pending. Actual source tested b9946300facbf4c7997c3eba8826ced6f171b7eb.
 
@@ -71,3 +75,19 @@ Reusable guidance is repository-local: check.mjs usage and remaining-gates.md.
 No global agent rule/skill/prompt update needed. No master branch exists; preserve
 the review branch instead of inventing a branch or switching the workspace away
 from the artifacts under review. Draft PR creation is pending below, not a merge.
+
+## Reviewable delivery
+
+Draft PR: https://github.com/cksdnr1/genesis-organism/pull/8
+Base work/phase-03-authority; head work/latest-conformance-audit. Commit a2f9cdd
+contains executable audit; fe33e5f adds final evidence only. Current196 selected
+raw artifacts and runtime match tested a2f9cdd. No hosted CI result is inferred
+from local tests. PR3–5 are untouched; this PR is not a merge authorization.
+
+Scoped task goals completed: reproducible finite verification and explicit gate
+handoff. Full TotalSpec/PhasePlan satisfaction is still NOT established. Existing
+unsupported/external/candidate-specific boundaries remain exactly as recorded.
+
+Supported CLI freshly confirms task genesis_organism_latest_closure status=completed, currentPhase=null.
+This is local PlaySpec completion, not Novis automation queue/registry completion,
+independent human review or real #0001 gate acceptance.
