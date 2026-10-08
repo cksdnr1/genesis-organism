@@ -138,7 +138,7 @@ function readWithin(root, relative, maximum = MAX_RAW) {
     current = path.join(current, part); const info = fs.lstatSync(current);
     requireThat(info.isDirectory() && !info.isSymbolicLink(), 'invalid', 'symlinked ancestor');
   }
-  const fd = fs.openSync(path.join(root, relative), fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW);
+  const fd = fs.openSync(path.join(root, relative), fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
   try {
     const info = fs.fstatSync(fd);
     requireThat(info.isFile() && info.size <= maximum, 'limit', 'regular bounded file required');

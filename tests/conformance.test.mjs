@@ -142,3 +142,68 @@ test('retained PM-01 negatives have literal envelope codes and no admission effe
   assert.throws(() => negotiate(state, { ...observer(), capabilities: { future: { supported: true, evidence: 'claimed' } } }, policy()), error => error.code === 'unsupported');
   assert.throws(() => express(state, observer(), { ...policy(), disclosure: 'private' }), error => error.code === 'unauthorized');
 });
+
+test('compound origin and event faults follow reviewed structural dispatch precedence', context => {
+  const parent = fs.mkdtempSync(path.join(os.tmpdir(), 'genesis-compound-'));
+  context.after(() => fs.rmSync(parent, { recursive: true, force: true }));
+  const origin = fixture('origin.json'), original = history()[0];
+  const { states } = verifiedHistory(origin, []);
+  const inventory = directory => fs.readdirSync(directory).sort().map(name => [name, fs.readFileSync(path.join(directory, name)).toString('hex')]);
+  const node = (...args) => spawnSync(process.execPath, [path.join(root, 'src/cli.mjs'), ...args], { encoding: 'utf8', timeout: 3000 });
+  function rejected(result, expected, name) {
+    assert.ifError(result.error); assert.equal(result.status, 1, name); assert.equal(result.stdout, '', name);
+    assert.equal(JSON.parse(result.stderr).error, expected, name);
+  }
+  const events = [
+    ['wrong-organism-unknown-kind', 'unsupported', b => { b.organism = '0'.repeat(64); b.kind = 'future'; }],
+    ['unknown-profile-malformed-signature', 'invalid', b => { b.profile = 'future'; }, 'broken'],
+    ['triple-fault', 'invalid', b => { b.organism = '0'.repeat(64); b.kind = 'future'; }, 'broken'],
+    ['malformed-reference-unknown-kind', 'invalid', b => { b.organism = 'broken'; b.kind = 'future'; }],
+    ['invalid-sequence-unknown-kind', 'invalid', b => { b.sequence = 0; b.kind = 'future'; }],
+    ['unknown-profile-malformed-reference', 'unsupported', b => { b.profile = 'future'; b.previous = 'broken'; }],
+    ['unknown-kind-bad-proof', 'unsupported', b => { b.kind = 'future'; }, '0'.repeat(128)],
+    ['known-kind-bad-proof', 'invalid', () => {}, '0'.repeat(128)],
+  ];
+  for (const [name, expected, mutate, signature] of events) {
+    const body = structuredClone(original.body); mutate(body); const candidate = signed('event', body);
+    if (signature !== undefined) candidate.signature = signature;
+    const outcome = classify(states, [], candidate);
+    assert.equal(outcome.status, 'rejected', name); assert.equal(outcome.code, expected, name);
+    const directory = path.join(parent, name); initialize(directory, canonical(origin)); const before = inventory(directory);
+    assert.throws(() => append(directory, canonical(candidate)), error => error.code === expected, name);
+    assert.deepEqual(inventory(directory), before, name);
+    const source = path.join(parent, name + '.json'); fs.writeFileSync(source, canonical(candidate));
+    rejected(node('append', directory, source), expected, name); assert.deepEqual(inventory(directory), before, name);
+    // Deliberate verifier injection is only into this owned fixture after no-write controls.
+    fs.writeFileSync(path.join(directory, '000001.json'), canonical(candidate)); const injected = inventory(directory);
+    for (const result of [node('inspect', directory), node('replay', directory), python(directory)]) rejected(result, expected, name);
+    assert.deepEqual(inventory(directory), injected, name);
+  }
+  const origins = [
+    ['origin-profile-malformed-signature', 'invalid', b => { b.profile = 'future'; }, 'broken'],
+    ['origin-rules-malformed-signature', 'invalid', b => { b.rules = 'future'; }, 'broken'],
+    ['origin-profile-bad-proof', 'unsupported', b => { b.profile = 'future'; }, '0'.repeat(128)],
+    ['origin-profile-bad-genome', 'unsupported', b => { b.profile = 'future'; b.genome = null; }],
+  ];
+  for (const [name, expected, mutate, signature] of origins) {
+    const body = structuredClone(origin.body); mutate(body); const candidate = signed('origin', body);
+    if (signature !== undefined) candidate.signature = signature;
+    assert.throws(() => validateOrigin(candidate), error => error.code === expected, name);
+    const source = path.join(parent, name + '.json'); fs.writeFileSync(source, canonical(candidate));
+    const uncreated = path.join(parent, name + '-uncreated'); rejected(node('init-fixture', uncreated, source), expected, name);
+    assert.equal(fs.existsSync(uncreated), false, name);
+    const directory = path.join(parent, name); fs.mkdirSync(directory);
+    fs.writeFileSync(path.join(directory, 'SYNTHETIC'), 'genesis-organism synthetic-v1\n'); fs.writeFileSync(path.join(directory, 'origin.json'), canonical(candidate));
+    const before = inventory(directory);
+    for (const result of [node('replay', directory), python(directory)]) rejected(result, expected, name);
+    assert.deepEqual(inventory(directory), before, name);
+  }
+  const valid = path.join(parent, 'valid');
+  assert.equal(node('init-fixture', valid, path.join(root, 'fixtures/core-v1/origin.json')).status, 0);
+  assert.deepEqual(JSON.parse(python(valid).stdout), load(valid));
+  assert.equal(node('append', valid, path.join(root, 'fixtures/core-v1/000001.json')).status, 0);
+  assert.deepEqual(JSON.parse(python(valid).stdout), load(valid));
+  const duplicateWithBadProof = { ...original, signature: '0'.repeat(128) }, before = inventory(valid);
+  assert.throws(() => append(valid, canonical(duplicateWithBadProof)), error => error.code === 'invalid');
+  assert.deepEqual(inventory(valid), before, 'duplicate-looking invalid proof has no effect');
+});

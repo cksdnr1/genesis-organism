@@ -109,3 +109,12 @@ refuses absent evidence. Local copies are not external witnesses or global final
 See [execution evidence versus birth readiness](../docs/features/genesis_organism/readiness-scope.md).
 These experimental acceptances and local test results do not waive any original
 birth requirement. **GENESIS #0001 remains UNBORN / NO-GO.**
+
+## D04/D06 diagnostic clarification — 2026-10-08
+
+The accepted [compound diagnostic supplement](../docs/decisions/2026-10-08-diagnostic-precedence-clarification.md)
+clarifies outer origin/event structural encoding, version/kind dispatch and context
+precedence for bounded synthetic conformance. Original D04/D06 text and failed
+historical vectors remain unchanged; successful canonical bytes/state/proof semantics
+and D13 contextual expression-fidelity diagnostics are unchanged. This is neither
+a new profile nor actual birth acceptance.

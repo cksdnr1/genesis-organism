@@ -106,6 +106,12 @@ def integer_range(value, minimum, maximum):
     return type(value) is int and minimum <= value <= maximum
 
 
+def envelope_shape(envelope):
+    canonical(envelope)
+    exact(envelope, ("body", "signature"))
+    need(hex_value(envelope["signature"], 128), "signature encoding")
+
+
 def proof(kind, envelope, key):
     need(hex_value(key, 64) and hex_value(envelope["signature"], 128), "proof encoding")
     try:
@@ -117,8 +123,7 @@ def proof(kind, envelope, key):
 
 
 def origin_state(envelope):
-    canonical(envelope)
-    exact(envelope, ("body", "signature"))
+    envelope_shape(envelope)
     body = envelope["body"]
     exact(body, ("profile", "rules", "birth", "creator", "authority", "genome"))
     need(body["profile"] == "synthetic-v1" and body["rules"] in ("core-v1", "encounter-v1", "adaptation-v1"), "profile/rules", "unsupported")
@@ -195,13 +200,11 @@ def encounter_key(evidence):
 
 
 def classify(states, references, envelope, events):
-    canonical(envelope)
-    exact(envelope, ("body", "signature"))
+    envelope_shape(envelope)
     body = envelope["body"]
     exact(body, ("profile", "organism", "sequence", "previous", "kind", "data"))
     need(body["profile"] == "synthetic-v1", "profile", "unsupported")
     need(hex_value(body["organism"], 64) and hex_value(body["previous"], 64), "reference encoding")
-    need(body["organism"] == states[0]["organism"], "wrong organism")
     need(integer_range(body["sequence"], 1, 1000000), "sequence")
     if body["kind"] == "signal-v1":
         exact(body["data"], ("value",))
@@ -213,6 +216,7 @@ def classify(states, references, envelope, events):
         exact(body["data"], ("evidence",))
     else:
         raise Invalid("unsupported", "event kind")
+    need(body["organism"] == states[0]["organism"], "wrong organism")
     parent = next((state for state in states if state["head"] == body["previous"]), None)
     need(parent is not None, "unknown parent")
     need(body["sequence"] == parent["sequence"] + 1, "sequence mismatch")
@@ -235,7 +239,7 @@ def classify(states, references, envelope, events):
 
 
 def read_file(filename):
-    descriptor = os.open(filename, os.O_RDONLY | os.O_NOFOLLOW)
+    descriptor = os.open(filename, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
     try:
         info = os.fstat(descriptor)
         need(stat.S_ISREG(info.st_mode), "regular file required")

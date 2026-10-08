@@ -1,0 +1,33 @@
+✖ compound origin and event faults follow reviewed structural dispatch precedence (322.711875ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 425.317792
+
+✖ failing tests:
+
+test at tests/conformance.test.mjs:146:1
+✖ compound origin and event faults follow reviewed structural dispatch precedence (322.711875ms)
+  AssertionError [ERR_ASSERTION]: wrong-organism-unknown-kind
+  + actual - expected
+  
+  + 'invalid'
+  - 'unsupported'
+  
+      at rejected (file:///Users/chanwook.lee/PJ/genesis-organism/tests/conformance.test.mjs:155:12)
+      at TestContext.<anonymous> (file:///Users/chanwook.lee/PJ/genesis-organism/tests/conformance.test.mjs:179:102)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'unsupported',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

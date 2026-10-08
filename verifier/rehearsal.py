@@ -119,7 +119,7 @@ def read_local(root, relative, maximum=MAX_RAW):
         target = target / segment
         info = target.lstat()
         need(stat.S_ISDIR(info.st_mode) and not stat.S_ISLNK(info.st_mode), "symlinked ancestor")
-    fd = os.open(root / relative, os.O_RDONLY | os.O_NOFOLLOW)
+    fd = os.open(root / relative, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
     try:
         info = os.fstat(fd)
         need(stat.S_ISREG(info.st_mode) and info.st_size <= maximum, "regular bounded file")

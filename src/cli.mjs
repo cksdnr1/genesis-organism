@@ -3,7 +3,7 @@ import { isKey, ProtocolError, requireThat } from './bytes.mjs';
 import { initialize, load, append } from './store.mjs';
 
 function inputBytes(filename) {
-  const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW);
+  const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
   try {
     const stat = fs.fstatSync(descriptor);
     requireThat(stat.isFile(), 'invalid', 'regular input file required');
