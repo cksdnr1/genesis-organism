@@ -148,3 +148,9 @@ identity, and two local archives are not independent witnesses.
 Accept this bounded **synthetic-only** ceremony proposal and delegate its exact
 mechanical record/vector choices within Phase34, or identify changes. Acceptance
 does not close D01 or waive Phase35, and does not authorize an actual ceremony.
+
+## Subsequent acceptance — 2026-10-08
+
+Creator acceptance is recorded in2026-10-08-rights-and-rehearsal-acceptance.md.
+The exact bounded Phase34 contract is D12-synthetic-ceremony.md. The proposal's
+original pending wording above is historical; actual ceremony remains unauthorized.
