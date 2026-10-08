@@ -1,0 +1,9 @@
+# IC-02 — compound-invalid diagnostic contract and parity
+
+PlaySpec mono-spec task source for separately scoped follow-up. Required outcome: reviewed contract/fix and independent regression evidence; preserve current no-source-change boundary until that work is authorized.
+
+Confirmed bounded Phase13 rejection-class mismatch: wrong-organism + unsupported-kind returns Node unsupported / Python invalid; unsupported-profile + malformed-signature-encoding returns Node invalid / Python unsupported. Exact independently generated candidates and no-write results: runtime/probe.py and probe-results.json; historical exact three cases independently rechecked in historical-recheck-results.json. All reject, no canonical-state divergence or authority bypass demonstrated.
+
+D04/D06 specify high-level admission order/stable classes but do not uniquely close every simultaneous structural/profile/context fault. First review and explicitly select precedence or any permitted contextual diagnostic set within existing D04/D06 through an attributable accepted clarification. Do not treat Node or Python as the oracle, change historical bytes, globally flatten failures, invent a required literal by convenience or share reducers. Future source correction limited to independent validator ordering/diagnostic boundaries and exact retained compound regression vectors.
+
+Acceptance: literal signed wrong-organism/unknown-kind case; malformed-proof/unsupported-profile case; third multiple-fault control; proof-first duplicate, source/policy/fidelity contextual classes and standalone negotiation diagnostics remain correct. Compare actual CLI/library classes, exit/no-success, no-write snapshots and unchanged accepted state/commitments. Canonical success and individual single-fault corpus must remain unchanged. Original failed PM-01 corpus is retained and continues matching. No new phase/D15/profile/state/schema/dependency or real birth action. This audit specifies follow-up only.

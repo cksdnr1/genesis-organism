@@ -1,0 +1,31 @@
+✔ literal canonical corpus, numeric keys, Unicode and closed byte domains (3.3825ms)
+✔ producer type, Unicode, depth, node, member and byte budgets (2.94325ms)
+✔ origin proof, exact shape and reference match fixed independent fixtures (2.593ms)
+✔ admission distinguishes valid retry, invalid proof, sibling conflict and rotation (3.247708ms)
+✔ actual CLI initializes, appends, deduplicates, inspects and verifies expected head (1501.818541ms)
+✔ independently authored verifier matches exact state, hash and every prefix (463.225834ms)
+✔ cross-language literal byte corpus and strict Unicode/number parsing (988.575625ms)
+✔ cross-language rejection of altered/unsupported/gapped/symlink/fork histories (997.715ms)
+✔ strict encodings reject trailing newline, even under otherwise valid signatures (0.53875ms)
+✔ signed negative encounter corpus matches explicit independent diagnostic classes (643.591416ms)
+✔ retained PM-01 negatives have literal envelope codes and no admission effects (1013.7475ms)
+✔ encounter evidence is acyclic; actual receipt refs, pending and refusal differ (7.999458ms)
+✔ proof-first stable nonce prevents exact/rebased double experience and changed reuse (261.921167ms)
+✔ source/policy/expression/missing-message and old-core proposals reject without effect (3.753792ms)
+✔ actual concurrent encounter retries admit once; signed separate sibling holds (269.60225ms)
+✔ independent encounter fixture and rejection of a duplicate in stored canonical history (123.677416ms)
+✔ fixed replay known-answer, immutable inputs, repeat and every valid prefix (9.37225ms)
+✔ replay rejects invalid history without a partial success or option fallback (3.57925ms)
+✔ durable initialize, append, restart, verified duplicate and orphan temp (214.720083ms)
+✔ missing, partial, oversized, symlink and invalid conflict files fail closed (288.343208ms)
+✔ valid signed sibling persists evidence and holds load/admission (71.109209ms)
+✔ fsync failure reports IO uncertainty and verified retry recovers (60.166791ms)
+✔ real concurrent writers deduplicate or retain conflict without overwrite (294.156208ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4213.74625

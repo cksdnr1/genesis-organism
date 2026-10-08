@@ -1,0 +1,36 @@
+{
+  "cases": 13,
+  "no_write_failures": 0,
+  "fifo": [
+    {
+      "args": [
+        "node",
+        "src/cli.mjs",
+        "replay",
+        "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/independent-runtime-0wu6mv5t/fifo"
+      ],
+      "timeout": 1,
+      "seconds": 1.005
+    },
+    {
+      "args": [
+        ".venv/bin/python",
+        "verifier/verify.py",
+        "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/independent-runtime-0wu6mv5t/fifo"
+      ],
+      "timeout": 1,
+      "seconds": 1.004
+    }
+  ],
+  "input_fifo": {
+    "args": [
+      "node",
+      "src/cli.mjs",
+      "append",
+      "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/independent-runtime-0wu6mv5t/control",
+      "/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/independent-runtime-0wu6mv5t/input-fifo"
+    ],
+    "timeout": 1,
+    "seconds": 1.005
+  }
+}
