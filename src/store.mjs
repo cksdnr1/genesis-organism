@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { canonical, parseCanonical, ProtocolError, requireThat } from './bytes.mjs';
 import { classify, validateOrigin } from './admission.mjs';
 import { replay, verifiedHistory } from './replay.mjs';
+import { validateChild } from './reproduction.mjs';
 
 const marker = 'genesis-organism synthetic-v1\n';
 const protectedDirectory = fileURLToPath(new URL('../organisms/genesis-0001', import.meta.url));
@@ -129,5 +130,35 @@ export function append(directory, eventBytes) {
       throw new ProtocolError('conflict', 'signed divergent successor retained');
     }
     throw new ProtocolError(outcome.code || 'invalid', outcome.reason || 'candidate rejected');
+  });
+}
+
+export function loadChild(directory, resolve) {
+  return operation(() => {
+    const absolute = guard(directory);
+    const originBytes = readBounded(path.join(absolute, 'origin.json'));
+    const packet = parseCanonical(readBounded(path.join(absolute, 'lineage.json')));
+    requireThat(canonical(packet.origin).equals(originBytes), 'invalid', 'lineage origin mismatch');
+    const lineage = validateChild(packet, resolve);
+    return { history: load(directory), lineage };
+  });
+}
+
+export function publishChild(directory, packet, resolve) {
+  return operation(() => {
+    validateChild(packet, resolve);
+    const absolute = protectedTarget(directory);
+    const originBytes = canonical(packet.origin), lineageBytes = canonical(packet);
+    try { fs.lstatSync(absolute); }
+    catch (error) {
+      if (error.code !== 'ENOENT') throw error;
+      initialize(absolute, originBytes);
+    }
+    guard(absolute);
+    requireThat(readBounded(path.join(absolute, 'origin.json')).equals(originBytes), 'invalid', 'different existing child origin');
+    load(absolute);
+    if (!publish(absolute, 'lineage.json', lineageBytes)) requireThat(readBounded(path.join(absolute, 'lineage.json')).equals(lineageBytes), 'invalid', 'different existing lineage');
+    syncDirectory(absolute);
+    return loadChild(absolute, resolve);
   });
 }

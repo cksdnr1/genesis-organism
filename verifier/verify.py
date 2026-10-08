@@ -90,7 +90,7 @@ def parse(data):
 
 
 def digest(kind, body):
-    need(kind in ("origin", "event", "state", "observer", "policy", "expression-input", "expression-output", "encounter", "interaction"), "hash domain", "unsupported")
+    need(kind in ("origin", "event", "state", "observer", "policy", "expression-input", "expression-output", "encounter", "interaction", "reproduction"), "hash domain", "unsupported")
     return hashlib.sha256(f"genesis-organism/synthetic-v1/{kind}\0".encode() + canonical(body)).hexdigest()
 
 
