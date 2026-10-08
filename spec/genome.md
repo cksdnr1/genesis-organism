@@ -17,3 +17,11 @@ components sandboxed and version-pinned?
 Before schema freeze, define each field's meaning, bounds and validation;
 separate content digests from retrieval hints. Do not accept opaque executable
 payloads as a substitute for defined transition semantics.
+
+## Bounded synthetic state boundary — 2026-10-08
+
+[D09](../docs/decisions/D09-adaptation.md) distinguishes the immutable birth
+genome.signal from the replay-derived current signal. Only current verified signal
+is an eligible inheritance input, pending D10's separate consent/birth contract.
+No additional HeritableState wrapper, copied memory or private-data semantics are
+required by this experiment. This defines no final genome for GENESIS #0001.

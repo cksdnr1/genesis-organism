@@ -30,5 +30,14 @@ score, token-price criterion, organism death or automatic extinction is assumed.
 A limited experiment can support a limited adaptation/selection result; it cannot
 prove open-ended evolution. That remains a separately defined research question.
 
-No mutation rule, heritable trait, selection function or ecological runtime is
-implemented by this revision. D09/D10/D14 are still required decision gates.
+The original planning revision implemented no mutation rule, heritable trait,
+selection function or ecological runtime. D09/D10/D14 remain explicit gates.
+
+## Accepted bounded synthetic successor — 2026-10-08
+
+[D09](../docs/decisions/D09-adaptation.md) now accepts adaptation-v1: a fresh,
+authorized encounter motif sets the current signal under an explicit successor
+rule. The four-category cue/response criterion distinguishes changed output from
+limited measured task fit. Existing origin/rule meanings remain unchanged.
+This finite label-conditioned rule is not general learning or population evolution.
+Implementation and independent vectors are Phase24; D10/D14 are not preaccepted.
