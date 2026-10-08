@@ -19,13 +19,13 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 | 25–27 | individually completed; D10 child publication and independent full lineage | Authenticated inheritance, partial/retry and bounded ancestry evidence. |
 | 28–29 | individually completed; preregistered D14/six retained study runs | Actual accepted offspring, controls and independent verification; finite engineered result. |
 | 30–31 | individually completed; D11 and optional pure simulator | Body-independent continuity, claim-only evidence, duplicate no-action and bounded permission. |
-| 32 | own mono-spec research proposal; D12-anchoring-proposal.md | Creator acceptance PENDING; research workflow is not passed protocol decision exit. |
-| 33 | Not entered | Deliberate SKIP proposed, requires accepted D12 subset. |
+| 32 | own mono-spec proposal + dated creator acceptance | D12 current synthetic-profile SKIP accepted; decision exit satisfied. |
+| 33 | own mono-spec deliberate skip; no anchoring adapter | Accepted SKIP recorded; core-only23 groups pass without optional simulator. |
 | 34 | Not entered | Requires accepted D01 tested-profile rights/authority plus D12 anchoring; ceremony acceptance obtained here. |
 | 35–38 | Not entered | Existing D01/D12/birth-evidence/rehearsal gates remain; no fabricated completion. |
 
 Tasks use genesis_organism_phase_XX; versioned spec/review/plan/review/result/pr
-artifacts live in docs/features/genesis_organism_phase_XX. Phases4–32 are in stacked
+artifacts live in docs/features/genesis_organism_phase_XX. Phases4–33 are in stacked
 draft PR6, branch work/synthetic-phases, base work/phase-03-authority. PRs3–5 remain
 open; nothing is automatically merged. Execution is direct authorized Codex work,
 not a registered Novis automation queue/worker completion claim.
@@ -37,8 +37,8 @@ and simulated continuity are included. Exact runtime claims/limits are in indivi
 result files. Original total spec/phase graph, ORIGIN.md, spec/GENESIS.md, historical
 observer/phenotype schemas and #0001 placeholder bytes remain unchanged from baseline.
 
-Next creator decision: accept/reject the concrete D12 SKIP recommendation. D01
-licensing/rights and D12 ceremony remain separate decisions. No further phase entry
+Next creator decisions: D01 licensing/rights and D12 ceremony remain open.
+D12 SKIP is accepted only for the current synthetic profile. No further phase entry
 is inferred from task completion, a PR or a test score. GENESIS #0001 remains UNBORN.
 
 ## Historical stop — 2026-09-21 (superseded by acceptance below)

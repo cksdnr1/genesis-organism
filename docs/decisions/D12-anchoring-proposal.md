@@ -88,3 +88,10 @@ accepted publication/interoperability/security experiment, with evidence.
 
 Completing a mono-spec research workflow, passing code tests or merging a PR does
 not close any of these gates. No original birth requirement is waived.
+
+## Subsequent creator acceptance — 2026-10-08
+
+The creator has now accepted this proposal's current synthetic-profile SKIP subset;
+see [dated acceptance](2026-10-08-anchoring-skip-acceptance.md). The pending language
+above preserves the proposal's pre-acceptance state. D01 rights/licence and D12
+ceremony remain open; no actual freeze/release/birth is authorized.

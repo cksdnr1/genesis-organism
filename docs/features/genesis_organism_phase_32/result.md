@@ -16,3 +16,8 @@ Review preserves Minimal Sufficiency, local trust/availability limits, existing
 negative/security/independent tests, historical schemas/origin and #0001 UNBORN.
 Prose-only change: no extra runtime tests or architecture needed. No future-proofing
 abstraction added; witness/Merkle/chain/archive-service mechanisms explicitly deferred.
+
+Subsequent creator response “진행해” accepted the concrete SKIP subset; see
+../../decisions/2026-10-08-anchoring-skip-acceptance.md. Phase32 decision exit is now
+satisfied; the original pending report above records the earlier research outcome.
+Phase33 records deliberate skip. D01/ceremony/real actions remain separate gates.
