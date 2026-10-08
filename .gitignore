@@ -1,1 +1,4 @@
 /.playspec/
+/.venv/
+__pycache__/
+*.pyc

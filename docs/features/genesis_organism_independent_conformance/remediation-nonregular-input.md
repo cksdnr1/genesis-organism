@@ -1,0 +1,9 @@
+# IC-01 — bounded nonregular input refusal
+
+PlaySpec mono-spec task source for separately scoped follow-up. Required outcome: reviewed contract/fix and independent regression evidence; preserve current no-source-change boundary until that work is authorized.
+
+Confirmed at audited HEAD 656d1a3e65edc19d8349f0d77d1f0d7e7388817e by runtime/probe.py and probe-results.json. Existing Node store/Python history readers and Node CLI append source open read-only before descriptor regular-file checks. FIFO without writer waits through the measured window; no-byte writer handshake releases to invalid/no stdout/no-write. This is local availability/refusal robustness, not a remote exploit, authorization bypass, invented SLA or measured infinite duration.
+
+Future scoped correction belongs to existing Phase11–13/D06, not this audit. Review src/store.mjs readBounded, src/cli.mjs inputBytes and verifier/verify.py read_file plus any actually reused equivalents. Select the smallest platform-supported bounded/nonblocking open with descriptor validation; preserve no-follow, regular-file-only, byte bounds, race handling, safe error diagnostics and descriptor cleanup. A pre-open path check alone is insufficient if it introduces a type-change race. No new service/dependency/database/timeout architecture is justified.
+
+Acceptance: actual Node replay/inspect, Python verifier, and Node append/init source paths reject owned FIFO without a counterpart within a bounded test harness; report contractual behavior without arbitrary latency guarantee. Keep regular-file positives, symlink/directory/oversize/corruption negatives, no stdout-success and before/after directory hashes. Test writer-handshake diagnostic and process cleanup. No canonical bytes, state rules, accepted history, historical oracle or #0001 change. Independent review before any future implementation; this file authorizes no source mutation.

@@ -1,0 +1,69 @@
+
+> test
+> node --test tests/*.test.mjs
+
+✔ fresh authorized experiences achieve only the fixed task criterion; every prefix independently replays (582.493542ms)
+✔ adaptation rejects override, stale input and bad authority; retries do not compound (345.616958ms)
+✔ literal canonical corpus, numeric keys, Unicode and closed byte domains (3.631125ms)
+✔ producer type, Unicode, depth, node, member and byte budgets (9.722708ms)
+✔ origin proof, exact shape and reference match fixed independent fixtures (3.094375ms)
+✔ admission distinguishes valid retry, invalid proof, sibling conflict and rotation (3.422833ms)
+✔ independent Phase22 audit binds actual grammar, controls and provenance (293.118667ms)
+✔ actual CLI initializes, appends, deduplicates, inspects and verifies expected head (1572.578792ms)
+✔ nonregular input refusal covers history and proposal CLIs without FIFO writers (1215.761333ms)
+✔ independently authored verifier matches exact state, hash and every prefix (482.73425ms)
+✔ cross-language literal byte corpus and strict Unicode/number parsing (999.710792ms)
+✔ cross-language rejection of altered/unsupported/gapped/symlink/fork histories (1272.341667ms)
+✔ strict encodings reject trailing newline, even under otherwise valid signatures (0.669834ms)
+✔ signed negative encounter corpus matches explicit independent diagnostic classes (594.984292ms)
+✔ retained PM-01 negatives have literal envelope codes and no admission effects (1078.999042ms)
+✔ compound origin and event faults follow reviewed structural dispatch precedence (3759.338167ms)
+✔ encounter evidence is acyclic; actual receipt refs, pending and refusal differ (8.303875ms)
+✔ proof-first stable nonce prevents exact/rebased double experience and changed reuse (256.730291ms)
+✔ source/policy/expression/missing-message and old-core proposals reject without effect (3.72775ms)
+✔ actual concurrent encounter retries admit once; signed separate sibling holds (312.670375ms)
+✔ independent encounter fixture and rejection of a duplicate in stored canonical history (163.592875ms)
+✔ three faithful views bind one state and repeat without mutation (6.956625ms)
+✔ independent full ancestry equals selected graph, rebuilds and preserves evidence (79.129667ms)
+✔ missing/private/altered ancestry and recursive aliases fail in both implementations (614.837667ms)
+✔ signed long ancestry is bounded, not a recursion escape (104.638709ms)
+✔ broad authenticated ancestry enforces node budgets in both verification surfaces (90.877ms)
+✔ memory derives only last accepted subject experience with exact provenance (11.8855ms)
+✔ three mocks, fixed priority, policy order and non-mutating negotiation (4.947375ms)
+✔ unsupported/legacy/attestation/frame/units/private/bounds fail closed (0.528666ms)
+✔ preregistered six-run selection controls count only accepted independently verified offspring (5482.545625ms)
+✔ publication failure retains partial evidence, stops study and never counts incomplete child (107.134666ms)
+fatal: not a tree object
+✔ synthetic freeze binds exact Git bytes and independently reproduces references (12719.210333ms)
+✔ freeze rejects malformed attribution, domains, paths, unavailable and altered bytes (3115.229709ms)
+✔ freeze supersession retains failed candidate and refuses accepted or absent evidence (16744.066ms)
+✔ supersession rejects unverified predecessor bytes even with valid successor proof (39577.672833ms)
+✔ two local archives restore independently offline; timestamps and optional skip do not affect refs (13481.864917ms)
+✔ archive publication interrupts fail closed, retain evidence and retry without overwriting (9017.015542ms)
+✔ synthetic birth admission is independently replayed once; bad evidence and conflicting binding fail (14808.3465ms)
+✔ real child termination at six birth boundaries retains evidence and requires dead-writer recovery (16785.312167ms)
+✔ concurrent synthetic birth retries cannot publish a second origin (12498.000917ms)
+✔ nonregular input refusal covers both ceremony readers without FIFO writers (355.42ms)
+✔ durable encounter causes later grammar change with matched controls and ablation (252.142333ms)
+✔ head-only change is not consequence; policies, malformed history and procedure mismatch fail closed (10.26625ms)
+✔ fixed replay known-answer, immutable inputs, repeat and every valid prefix (7.944917ms)
+✔ replay rejects invalid history without a partial success or option fallback (3.698875ms)
+✔ authenticated one/two/four-parent inheritance yields new children and unchanged parents (11.337375ms)
+✔ child validation rejects forged participation, ordering, state/identity and absent evidence (2.908083ms)
+✔ durable identical child retry and partial publication preserve evidence without counting incomplete offspring (397.011917ms)
+✔ bounded simulated encounter survives body replacement and replay without repeat actuation (136.293375ms)
+✔ body claims never grant organism authority, truth, witness or unbounded action (13.510125ms)
+✔ durable initialize, append, restart, verified duplicate and orphan temp (204.105791ms)
+✔ missing, partial, oversized, symlink and invalid conflict files fail closed (307.754167ms)
+✔ valid signed sibling persists evidence and holds load/admission (112.284542ms)
+✔ fsync failure reports IO uncertainty and verified retry recovers (121.274959ms)
+✔ real concurrent writers deduplicate or retain conflict without overwrite (408.0635ms)
+✔ directional synapse derives admitted evidence; suppression never bypasses verification (12.605042ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 139332.061333

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/encounter-v1/observer.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["version", "observerType", "subject", "capabilities"],
+  "properties": {
+    "version": {"const": "observer-v1"},
+    "observerType": {"type": "string", "minLength": 1, "maxLength": 128},
+    "subject": {"type": "string", "pattern": "^[a-z0-9-]{1,64}$", "maxLength": 64},
+    "capabilities": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "text": {"$ref": "#/$defs/claim"},
+        "symbols": {"$ref": "#/$defs/claim"},
+        "spatial": {
+          "type": "object", "additionalProperties": false,
+          "required": ["supported", "evidence", "frame", "unit"],
+          "properties": {"supported": {"type": "boolean"}, "evidence": {"const": "claimed"}, "frame": {"const": "fixture-plane-v1"}, "unit": {"const": "mm"}}
+        }
+      }
+    }
+  },
+  "$defs": {"claim": {"type": "object", "additionalProperties": false, "required": ["supported", "evidence"], "properties": {"supported": {"type": "boolean"}, "evidence": {"const": "claimed"}}}}
+}

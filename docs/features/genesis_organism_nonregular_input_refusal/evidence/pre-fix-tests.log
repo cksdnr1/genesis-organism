@@ -1,0 +1,68 @@
+✖ nonregular input refusal covers history and proposal CLIs without FIFO writers (3337.29ms)
+✖ nonregular input refusal covers both ceremony readers without FIFO writers (3039.445541ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3445.575083
+
+✖ failing tests:
+
+test at tests/cli.test.mjs:40:1
+✖ nonregular input refusal covers history and proposal CLIs without FIFO writers (3337.29ms)
+  AssertionError [ERR_ASSERTION]: ifError got unwanted exception: spawnSync /opt/homebrew/Cellar/node/25.9.0_3/bin/node ETIMEDOUT
+      at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/cli.test.mjs:63:12)
+      at Object.spawnSync (node:internal/child_process:1127:20)
+      at spawnSync (node:child_process:911:24)
+      at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/cli.test.mjs:62:20)
+      at TestContext.<anonymous> (file:///Users/chanwook.lee/PJ/genesis-organism/tests/cli.test.mjs:74:121)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: Error: spawnSync /opt/homebrew/Cellar/node/25.9.0_3/bin/node ETIMEDOUT
+        at Object.spawnSync (node:internal/child_process:1127:20)
+        at spawnSync (node:child_process:911:24)
+        at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/cli.test.mjs:62:20)
+        at TestContext.<anonymous> (file:///Users/chanwook.lee/PJ/genesis-organism/tests/cli.test.mjs:74:121)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1201:25)
+        at Test.start (node:internal/test_runner/test:1096:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17),
+    expected: null,
+    operator: 'ifError',
+    diff: 'simple'
+  }
+
+test at tests/rehearsal.test.mjs:310:1
+✖ nonregular input refusal covers both ceremony readers without FIFO writers (3039.445541ms)
+  AssertionError [ERR_ASSERTION]: ifError got unwanted exception: spawnSync /opt/homebrew/Cellar/node/25.9.0_3/bin/node ETIMEDOUT
+      at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/rehearsal.test.mjs:324:14)
+      at Object.spawnSync (node:internal/child_process:1127:20)
+      at spawnSync (node:child_process:911:24)
+      at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/rehearsal.test.mjs:323:22)
+      at TestContext.<anonymous> (file:///Users/chanwook.lee/PJ/genesis-organism/tests/rehearsal.test.mjs:329:3)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: Error: spawnSync /opt/homebrew/Cellar/node/25.9.0_3/bin/node ETIMEDOUT
+        at Object.spawnSync (node:internal/child_process:1127:20)
+        at spawnSync (node:child_process:911:24)
+        at refuses (file:///Users/chanwook.lee/PJ/genesis-organism/tests/rehearsal.test.mjs:323:22)
+        at TestContext.<anonymous> (file:///Users/chanwook.lee/PJ/genesis-organism/tests/rehearsal.test.mjs:329:3)
+        at Test.runInAsyncScope (node:async_hooks:226:14)
+        at Test.run (node:internal/test_runner/test:1201:25)
+        at Test.start (node:internal/test_runner/test:1096:17)
+        at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17),
+    expected: null,
+    operator: 'ifError',
+    diff: 'simple'
+  }

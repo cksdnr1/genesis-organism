@@ -1,0 +1,198 @@
+{
+  "checkedAt": "2026-10-08",
+  "source": "installed playspec get-task CLI, not edited internal files",
+  "tasks": [
+    {
+      "phase": 1,
+      "task": "genesis_organism_phase_01",
+      "status": "completed"
+    },
+    {
+      "phase": 2,
+      "task": "genesis_organism_phase_02",
+      "status": "completed"
+    },
+    {
+      "phase": 3,
+      "task": "genesis_organism_phase_03",
+      "status": "completed"
+    },
+    {
+      "phase": 4,
+      "task": "genesis_organism_phase_04",
+      "status": "completed"
+    },
+    {
+      "phase": 5,
+      "task": "genesis_organism_phase_05",
+      "status": "completed"
+    },
+    {
+      "phase": 6,
+      "task": "genesis_organism_phase_06",
+      "status": "completed"
+    },
+    {
+      "phase": 7,
+      "task": "genesis_organism_phase_07",
+      "status": "completed"
+    },
+    {
+      "phase": 8,
+      "task": "genesis_organism_phase_08",
+      "status": "completed"
+    },
+    {
+      "phase": 9,
+      "task": "genesis_organism_phase_09",
+      "status": "completed"
+    },
+    {
+      "phase": 10,
+      "task": "genesis_organism_phase_10",
+      "status": "completed"
+    },
+    {
+      "phase": 11,
+      "task": "genesis_organism_phase_11",
+      "status": "completed"
+    },
+    {
+      "phase": 12,
+      "task": "genesis_organism_phase_12",
+      "status": "completed"
+    },
+    {
+      "phase": 13,
+      "task": "genesis_organism_phase_13",
+      "status": "completed"
+    },
+    {
+      "phase": 14,
+      "task": "genesis_organism_phase_14",
+      "status": "completed"
+    },
+    {
+      "phase": 15,
+      "task": "genesis_organism_phase_15",
+      "status": "completed"
+    },
+    {
+      "phase": 16,
+      "task": "genesis_organism_phase_16",
+      "status": "completed"
+    },
+    {
+      "phase": 17,
+      "task": "genesis_organism_phase_17",
+      "status": "completed"
+    },
+    {
+      "phase": 18,
+      "task": "genesis_organism_phase_18",
+      "status": "completed"
+    },
+    {
+      "phase": 19,
+      "task": "genesis_organism_phase_19",
+      "status": "completed"
+    },
+    {
+      "phase": 20,
+      "task": "genesis_organism_phase_20",
+      "status": "completed"
+    },
+    {
+      "phase": 21,
+      "task": "genesis_organism_phase_21",
+      "status": "completed"
+    },
+    {
+      "phase": 22,
+      "task": "genesis_organism_phase_22",
+      "status": "completed"
+    },
+    {
+      "phase": 23,
+      "task": "genesis_organism_phase_23",
+      "status": "completed"
+    },
+    {
+      "phase": 24,
+      "task": "genesis_organism_phase_24",
+      "status": "completed"
+    },
+    {
+      "phase": 25,
+      "task": "genesis_organism_phase_25",
+      "status": "completed"
+    },
+    {
+      "phase": 26,
+      "task": "genesis_organism_phase_26",
+      "status": "completed"
+    },
+    {
+      "phase": 27,
+      "task": "genesis_organism_phase_27",
+      "status": "completed"
+    },
+    {
+      "phase": 28,
+      "task": "genesis_organism_phase_28",
+      "status": "completed"
+    },
+    {
+      "phase": 29,
+      "task": "genesis_organism_phase_29",
+      "status": "completed"
+    },
+    {
+      "phase": 30,
+      "task": "genesis_organism_phase_30",
+      "status": "completed"
+    },
+    {
+      "phase": 31,
+      "task": "genesis_organism_phase_31",
+      "status": "completed"
+    },
+    {
+      "phase": 32,
+      "task": "genesis_organism_phase_32",
+      "status": "completed"
+    },
+    {
+      "phase": 33,
+      "task": "genesis_organism_phase_33",
+      "status": "completed"
+    },
+    {
+      "phase": 34,
+      "task": "genesis_organism_phase_34",
+      "status": "completed"
+    },
+    {
+      "phase": 35,
+      "task": "genesis_organism_phase_35",
+      "status": "completed"
+    },
+    {
+      "phase": 36,
+      "task": "genesis_organism_phase_36",
+      "status": "completed"
+    },
+    {
+      "phase": 37,
+      "task": "genesis_organism_phase_37",
+      "status": "completed"
+    },
+    {
+      "phase": 38,
+      "task": "genesis_organism_phase_38",
+      "status": "completed"
+    }
+  ],
+  "count": 38,
+  "scope": "workflow completion for bounded synthetic phases, not actual birth or queue completion"
+}

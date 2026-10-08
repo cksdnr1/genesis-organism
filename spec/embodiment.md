@@ -19,3 +19,11 @@ ownership separation, consent, operational safety and body destruction.
 Movement/trajectory expressions are data, not authorization to operate machinery.
 A future adapter needs independent bounded actuation controls. No physical
 control or lifecycle death is specified in this phase.
+
+## Accepted simulated boundary — 2026-10-08
+
+[D11](../docs/decisions/D11-simulated-embodiment.md) specifies one pure bounded
+adapter: signed fixture body claim, separate organism event authorization, replayed
+ordinal/head checks, explicit simulated actuation permission and claim-only label.
+No hardware attestation/physical operation or body=identity assumption. Phase31
+must demonstrate body-loss/reconnect and conflict/refusal controls before claims.

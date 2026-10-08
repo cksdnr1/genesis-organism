@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/adaptation-v1/event.schema.json",
+  "description": "Synthetic shape only; D03 canonical bytes/proofs and D04 semantics require separate validation.",
+  "type": "object",
+  "properties": {
+    "body": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "const": "synthetic-v1"
+            },
+            "organism": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "sequence": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000
+            },
+            "previous": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "kind": {
+              "const": "rotate-v1"
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "authority": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                }
+              },
+              "required": [
+                "authority"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "profile",
+            "organism",
+            "sequence",
+            "previous",
+            "kind",
+            "data"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "const": "synthetic-v1"
+            },
+            "organism": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "sequence": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000000
+            },
+            "previous": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "kind": {
+              "const": "experience-v1"
+            },
+            "data": {
+              "type": "object",
+              "properties": {
+                "evidence": {
+                  "$ref": "evidence.schema.json"
+                }
+              },
+              "required": [
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "profile",
+            "organism",
+            "sequence",
+            "previous",
+            "kind",
+            "data"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "signature": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{128}$"
+    }
+  },
+  "required": [
+    "body",
+    "signature"
+  ],
+  "additionalProperties": false
+}
