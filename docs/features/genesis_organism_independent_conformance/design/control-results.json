@@ -1,0 +1,27 @@
+{
+  "revision": "656d1a3e65edc19d8349f0d77d1f0d7e7388817e",
+  "checks": {
+    "literalTreatment": true,
+    "literalBaseline": true,
+    "ablation": true,
+    "suppressed": true,
+    "unrelated": true,
+    "stateIndependentOfMemory": true,
+    "exactReplay": true
+  },
+  "grammars": {
+    "treatment": [
+      128,
+      255,
+      0,
+      64
+    ],
+    "baseline": [
+      0,
+      64,
+      128,
+      255
+    ]
+  },
+  "scope": "finite accepted D08 control check; no subjective meaning or general adaptation"
+}
