@@ -48,3 +48,5 @@ that source. No actual candidate/key adoption or lifecycle action. Later report-
 commits preserve tested source without inventing additional test runs.
 
 Retained child TEST tar.gz preserves the required empty pending/conflicts directories (Git expanded trees cannot retain them); see child evidence/README.md for complete-layout reproduction.
+
+Draft PR: [https://github.com/cksdnr1/genesis-organism/pull/11](https://github.com/cksdnr1/genesis-organism/pull/11), base genesis/protocol-origin. Shared parent/child reviewable preparation only; no merge or actual birth authority. Feature branch retained for review; no nonexistent master branch is created.

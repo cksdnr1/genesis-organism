@@ -189,3 +189,5 @@ live full67 tests pass. No claim that a source68f restore tested later child cod
 The two proposed archive locations may share one operator/custodian. No requirement for two people, independent witness or blockchain is invented; record shared-control/failure-domain limits explicitly.
 
 Retained child TEST tar.gz preserves the required empty pending/conflicts directories (Git expanded trees cannot retain them); see child evidence/README.md for complete-layout reproduction.
+
+Draft PR: [https://github.com/cksdnr1/genesis-organism/pull/11](https://github.com/cksdnr1/genesis-organism/pull/11), base genesis/protocol-origin. Shared parent/child reviewable preparation only; no merge or actual birth authority. Feature branch retained for review; no nonexistent master branch is created.

@@ -22,3 +22,5 @@ reports retain source hashes, commands, limits and public TEST evidence.
 Target genesis/protocol-origin; one parent draft PR contains the bounded child.
 No reusable agent guidance change is needed; existing policy already covers
 independent review, provisional evidence and separate real actions. No merge requested.
+
+Draft PR: [https://github.com/cksdnr1/genesis-organism/pull/11](https://github.com/cksdnr1/genesis-organism/pull/11), base genesis/protocol-origin. Shared parent/child reviewable preparation only; no merge or actual birth authority. Feature branch retained for review; no nonexistent master branch is created.
