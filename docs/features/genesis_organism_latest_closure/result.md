@@ -28,3 +28,46 @@ Latest audit report/results from previous turn retained on this evidence branch.
 Unsupported capabilities and original gates unchanged. Exact36 diagnostics are
 finite coverage, not universal conformance proof;512 resource test is bounded.
 New script is external to npm/ceremony selection, with no new dependency or profile.
+
+## Committed focused verification
+
+Source a2f9cdd551a000067d74a526135674477b98836a. Optional check rerun:36 literal
+classify/append-no-write/Python rejections pass;512 exact state/commitment and513
+limit pass. checks.json now records this committed run; prior b994630 observations
+remain in the original latest-audit results and first audit commit.
+
+Focused conformance/encounter/perception:13/13 groups pass, zero failures/skips,
+3.706seconds. In an isolated owned detached worktree at a2f9cdd, altered tracked
+src/bytes.mjs causes the actual audit entry point to fail dirty-source provenance
+before producing any success output. Test diff/stderr preserved outside repo;
+source restored exactly, clean status verified, only owned worktree removed.
+Main working-tree runtime never modified. This verifies the guard, not protection
+against malicious code or a privileged filesystem attacker.
+
+Full committed-head regression currently running; no completion claimed yet.
+
+## Safe-refactor review
+
+Compared the complete branch diff to freshly fetched origin/work/phase-03-authority.
+Only the audit entry point, retained observations, source/spec/review/plan/result
+and unresolved ledger are implicated. Runtime/verifier/schema/fixture/origin/
+TotalSpec/PhasePlan diff is empty. No new dependency, service or generic abstraction
+is warranted; no code refactor applied. Existing focused/probe verification remains
+applicable because no executable bytes changed after those checks. Git diff whitespace
+check passes. Exact-input JSON is retained because reproducing a signed refusal
+requires its bytes; truncating it would weaken evidence.
+
+## Final committed-source regression
+
+At a2f9cdd551a000067d74a526135674477b98836a, npm test passes53/53 groups,
+zero failures/cancellations/skips;135.815seconds. full-test.log retains exact output
+(SHA256 6fc97ab74436b0b818ca2ff6694f8648d8c54407565c3a387993236a6617ea3c).
+The actual source-bound ceremony fixtures use that GitHEAD and196 selected raw
+artifacts. All196 current selected bytes still equal that tested revision.
+Expected adversarial Git “not a tree object” output does not mean suite failure.
+No executable change followed the run; later changes record evidence only.
+
+Reusable guidance is repository-local: check.mjs usage and remaining-gates.md.
+No global agent rule/skill/prompt update needed. No master branch exists; preserve
+the review branch instead of inventing a branch or switching the workspace away
+from the artifacts under review. Draft PR creation is pending below, not a merge.
