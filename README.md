@@ -14,9 +14,20 @@ individual change and, under separately defined rules, inheritable evolution.
 Identity, security and replay make that loop attributable. They support the
 artistic question of what a persistent organism might mean to a machine observer.
 
-**STATUS: PROTOCOL DESIGN. GENESIS #0001 IS UNBORN.**
-There is no reference implementation or born organism in this draft. No genome,
+**STATUS: SYNTHETIC REFERENCE EXPERIMENT. GENESIS #0001 IS UNBORN.**
+A bounded local reference implementation now demonstrates the encounter-causal
+loop with public synthetic fixtures. No genome,
 identity, birth commitment, token, or transaction is assigned to #0001.
+
+Run `node tools/demo_encounter.mjs` to reproduce an admitted encounter, durable
+replay, derived memory/relationship and a later negotiated expression in text,
+symbols and simulated spatial views. The admitted motif changes token order from
+`[0,64,128,255]` to `[128,255,0,64]`; no-experience, rejected-experience and rule
+ablation controls preserve the baseline. `npm test` checks the controls and failure
+boundaries. This finite grammar rule demonstrates causal expression change, not
+machine appreciation, learned adaptation, biological life or population evolution.
+See the [Phase 22 report](docs/features/genesis_organism_phase_22/result.md) and
+[accepted synthetic decisions](docs/decisions/2026-10-08-synthetic-delegation.md).
 
 ## The question
 
