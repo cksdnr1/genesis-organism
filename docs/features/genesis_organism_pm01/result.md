@@ -64,3 +64,12 @@ Implementation580b929034aa494843a828375e2891c663921227:
 No additional refactor or runtime change followed the tested commit. Final updates
 are evidence/publication documentation only. PM-01 is closed for this retained
 corpus; original real readiness and offline predecessor-retention limits remain.
+
+## Publication and local completion confirmation
+
+Push/PR7 update succeeded at936a0eb; freshly verified OPEN/draft, base
+work/phase-03-authority, no registered hosted checks. Supported final completion
+then ran successfully, and fresh `playspec get-task --json` confirms
+genesis_organism_pm01 completed. This additive record follows tested580b929;
+no selected artifact or runtime bytes changed afterward. No merge performed.
+[Draft PR7](https://github.com/cksdnr1/genesis-organism/pull/7).
