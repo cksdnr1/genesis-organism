@@ -1,24 +1,24 @@
-# Prepare a concrete birth proposal and independently falsifiable evidence
+# Prepare a concrete birth proposal and independently verifiable evidence
 
-Existing synthetic fixture/rehearsal success cannot establish real GENESIS #0001
-readiness. Add a clean-Git-bound provisional adaptation/encounter packet, an exact
-unsigned candidate/ceremony proposal, and a TEST-only read-only ceremony checker
-that rejects inconsistent raw artifacts, proofs, publication references and journals.
-Preserve the original twelve birth gates and all synthetic runtime/history bytes.
+Existing synthetic fixture success does not establish real GENESIS #0001 readiness.
+Add a clean-Git-bound provisional adaptation/encounter packet, exact unsigned
+candidate/ceremony proposals, and a TEST-only read-only checker for raw artifacts,
+proofs, publication references and journal consistency. Preserve the original twelve
+gates and all existing runtime, schemas, fixtures and dependency bytes.
 
-The readiness report remains NO-GO: actual profile adoption, creator/key association,
-public disclosure/rights, archive destinations and separately scoped lifecycle
-approvals are still absent. No actual candidate selection, signer, birth writer,
-public release, merge or deployment is performed. Recovery evidence is measured
-same-host macOS ARM64 software restoration, not external durable publication.
+The actual readiness report remains NO-GO. Profile adoption, creator/key association,
+rights/disclosure, actual archive/publication choices and separately scoped lifecycle
+approvals are still required. Neither tool signs, freezes, releases or accepts a
+real organism. Recovery evidence concerns same-host macOS ARM64 public software;
+it does not demonstrate external durable archives or actual birth.
 
-Validation: separately approved spec/plan gates for parent and bounded child;
-independent Python shadow/ceremony checkers and adversarial mutations; public
-unsigned ceremony vectors; preliminary exact-source68f full61/61 tests; actual
-network-denied restored-runtime61/61 tests. Final combined-source full suite and
-public packet references are recorded in the result addendum before PR creation.
+Validation: independent spec/plan/implementation reviews for parent and bounded
+child; exact source2a91f1850a1af8883f4101376860c8bd71a59450 full67/67 tests; independent
+12-view causal verification,19 parent and22 child attack rejections plus positive
+archive-order control; unsigned ceremony vectors. Restored source68f independently
+passed61/61 with retained runtimes/dependency bytes under network denial. Result
+reports retain source hashes, commands, limits and public TEST evidence.
 
-Target: genesis/protocol-origin, feature branch work/genesis-birth-readiness.
-One parent draft PR contains the bounded child; no separate implementation owner
-or artificial roadmap phase. No new reusable agent guidance is needed: existing
-policy already distinguishes provisional mechanics, independent review and real acts.
+Target genesis/protocol-origin; one parent draft PR contains the bounded child.
+No reusable agent guidance change is needed; existing policy already covers
+independent review, provisional evidence and separate real actions. No merge requested.

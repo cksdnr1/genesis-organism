@@ -32,7 +32,9 @@ Later TEST verifier/evidence commits do not silently change these proposal bytes
    Key-possession challenge grants no lifecycle permission. TEST signatures and
    zero references in unsigned vectors are not actual creator/candidate evidence.
 5. Designate actual two archive locations/custodians and public package destination,
-   retention/access responsibilities and intended witnessing assumptions. Current
+   retention/access responsibilities and intended witnessing assumptions. One operator
+   may control both locations; distinct people/independent witnessing are not
+   required by this proposal, and shared control/failure limits must be explicit. Current
    local owned-scratch restore evidence demonstrates bounded host mechanics only.
 
 These decisions can unblock scoped real-purpose verification and exact concrete

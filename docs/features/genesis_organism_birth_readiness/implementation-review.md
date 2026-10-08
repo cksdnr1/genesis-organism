@@ -66,3 +66,31 @@ actual creator facts. Runtime evidence additionally passed independent verificat
 of34 retained raw evidence hashes, source68f full61-pass log and four loader checks
 with zero original Homebrew loads; see redteam/runtime-evidence-check.json. Same-host
 synthetic recovery is not a real external archive, portability or duration guarantee.
+
+Final committed-source independent review: source
+2a91f1850a1af8883f4101376860c8bd71a59450 and its new external preparation packet
+pass the complete raw Git selection check:598 blobs,2,792,014 bytes. Python verifies
+the fresh synthetic origin/proof, exact canonical/state/commitment bytes and all12
+causal views, including signal0 to2 and the within-treatment memory ablation.
+All19 independently mutated packet copies reject. The final source-bound child
+also passes Python baseline and23 dual-checker cases (22 rejected attacks plus
+reversed-archive-order positive), with unchanged input snapshots. Exact retained
+results and hashes are redteam/final-source-review.json,
+redteam/packet-falsification-results.json and the child's redteam results.
+
+Independent recommendation: APPROVE this bounded technical preparation for draft
+PR review, conditional only on the engineer's separately reported final regression.
+No unresolved mandatory implementation finding remains. Actual #0001 is UNBORN /
+NO-GO: the five concrete creator choices in creator-review-packet.md are unanswered,
+and their acceptance cannot be inferred from synthetic proof/report labels. Once
+selected, verify actual creator/key possession and rights, bind exact real origin
+bytes, and perform separately authorized freeze/archive/publication/birth checkpoints
+with actual retrieval and retained records. No real act is authorized by this report.
+
+Runtime packaging follow-up is closed: independently hashed the measured
+99,283,976-byte public distribution archive and counted15,805 inner members,
+with no absolute/traversal member names or hardlinks. The one outer distribution
+artifact fits the proposed256MiB/file and1GiB package budgets;14,624 expanded
+runtime entries are separately inventoried extraction contents. This check verifies
+the local archive bytes/member structure, not actual external retention, extraction
+execution, or creator adoption. Exact digest is in redteam/final-source-review.json.

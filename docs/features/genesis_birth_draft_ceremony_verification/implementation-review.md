@@ -41,3 +41,15 @@ APPROVED for source freeze and committed-source validation of this TEST experime
 Actual GENESIS #0001 remains NO-GO pending precise creator values/adoption and
 separately authorized real freeze/publication/birth. No new framework, prerequisite,
 D-number or roadmap phase is recommended. Final exact-source addendum follows.
+
+Final source addendum: independently checked committed source
+2a91f1850a1af8883f4101376860c8bd71a59450 against the new external
+/private/tmp/genesis-draft-ceremony-2a91f18 package and external trusted context.
+Python baseline passes seven selected raw artifacts. The complete23-case rerun
+rejects22 attacks in both implementations and accepts reversed archive order;
+all input snapshots remain unchanged. Exact references and output digest are in
+the parent's redteam/final-source-review.json and this child's
+redteam/falsification-results.json. Direct API canonical producer validation now
+also rejects symbol/accessor inputs without invoking their getters. No unresolved
+mandatory source finding remains. Full-suite result is separately owned and
+recorded by the engineer; this independent result does not borrow that verdict.

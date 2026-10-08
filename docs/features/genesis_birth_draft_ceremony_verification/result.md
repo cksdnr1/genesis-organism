@@ -36,3 +36,13 @@ Use that actual requested PR target for scoped diff review, preserving all runti
 and historical artifacts. No source cleanup beyond correctness changes.
 
 Direct trusted-context API also rejects symbol/accessor producer objects through existing canonical validation; accessor test confirms no getter invocation.
+
+
+## Final exact-source validation
+
+Source2a91f1850a1af8883f4101376860c8bd71a59450 full suite67/67,exit0,zero failed/
+cancelled/skipped (parent evidence/npm-test-2a91f18.log). Independent final TEST package
+7files/fullrefs agreed;22 attacks reject, reversed aliases positive accepts, all input
+snapshots unchanged. Public retained package/context/js-result under evidence/ bind
+that source. No actual candidate/key adoption or lifecycle action. Later report-only
+commits preserve tested source without inventing additional test runs.

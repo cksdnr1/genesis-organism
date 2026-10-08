@@ -11,3 +11,5 @@ mutations, numeric lexical attacks, order-positive control and actual FIFO refus
 support the scoped result. Final committed-source suite and independently retained
 TEST packet appear in result.md before parent PR creation. Existing synthetic/core
 contracts unchanged. No new reusable agent guidance or separate child PR required.
+
+Final validation: tested source2a91f1850a1af8883f4101376860c8bd71a59450, full67/67 exit0; exact logs, independent19 parent/22 child attack results and retained public TEST packets in result.md. No source changes after this run.

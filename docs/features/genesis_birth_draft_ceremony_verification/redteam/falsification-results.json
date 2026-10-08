@@ -2,10 +2,10 @@
   "scope": "independent PUBLIC TEST consistency/failure checks; no actual creator permission or physical operations",
   "baseline": {
     "scope": "draft TEST mechanics only; GENESIS #0001 UNBORN/NO-GO",
-    "manifestRef": "b84367579c54ccd808d64e4be0f6428c6f33d65cd36ead0606f6847e4784b4fa",
-    "freezeRef": "692d5c70c9b8d8d4c1c3fcc5f50f2f7c0839e301fd4f4e9597048564e7e2d99c",
-    "releaseRef": "ab0881eb0ce49c0f91fd0b0926a26011f11d5686529f377827979838cf42b139",
-    "birthRef": "f0b5df54cb2a1afe691c91fb46edfb2ec978f2e263edc23b86903b2e9cbb5cb5",
+    "manifestRef": "e0564cd76135e50b98d53a57455308475aa873667b7cec827cdafbe1e13ec825",
+    "freezeRef": "f6eec7b3dc53b47786a737cead777b80ee42d70e66656c5d0d30ec094b00fe0a",
+    "releaseRef": "346af2c19e6e08956b0bff1c1a6cf4ef7521e7603d5e83e497aa08c3a7479273",
+    "birthRef": "c6c25c7847b273f1d37463fbea4a6695b8016f4a99553288548b195d505288b3",
     "journalStatus": "accepted",
     "artifacts": 7
   },
@@ -20,10 +20,10 @@
       "readOnly": true,
       "pythonDetail": {
         "scope": "draft TEST mechanics only; GENESIS #0001 UNBORN/NO-GO",
-        "manifestRef": "b84367579c54ccd808d64e4be0f6428c6f33d65cd36ead0606f6847e4784b4fa",
-        "freezeRef": "692d5c70c9b8d8d4c1c3fcc5f50f2f7c0839e301fd4f4e9597048564e7e2d99c",
-        "releaseRef": "61d6297343d343708846e37775a3be2042e97d953424f5d0bd919c57deb1f992",
-        "birthRef": "632d73730167f0c095e6fe6e79ec148b9f08e37b596263f891b6b3eacedbc63b",
+        "manifestRef": "e0564cd76135e50b98d53a57455308475aa873667b7cec827cdafbe1e13ec825",
+        "freezeRef": "f6eec7b3dc53b47786a737cead777b80ee42d70e66656c5d0d30ec094b00fe0a",
+        "releaseRef": "170eb44023dce518dff9a4af7178018fd5c3d522361520398eed530c947f1c22",
+        "birthRef": "e90a0091d70e6df43b730c6f9e94c52719189d5b53a944ca4837f4ebbf6116a3",
         "journalStatus": "accepted",
         "artifacts": 7
       },

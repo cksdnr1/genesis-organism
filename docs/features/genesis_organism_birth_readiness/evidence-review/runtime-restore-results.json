@@ -227,9 +227,24 @@
       "sha256": "f9e52cae99da79d5221d654eadbfb2805bcc645cf0718580e2a1ac513256a039"
     },
     {
+      "path": "runtime-distribution.tar.gz",
+      "size": 99283976,
+      "sha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d"
+    },
+    {
       "path": "runtime-inventory.json",
       "size": 2985359,
       "sha256": "5eff54e70ee923c3d0556200a47c0f7ac51fb394a9b02c1f82a343711302f846"
+    },
+    {
+      "path": "runtime-packaging-results.json",
+      "size": 1005,
+      "sha256": "30b7f303e928555630bb476a0d97fe74416b5bf272f1753ee8b6336e54b35915"
+    },
+    {
+      "path": "source-2a91f18.bundle",
+      "size": 1060693,
+      "sha256": "cad9a6e6e12a68d868f0f1fe5b06f71cf5279c062fa062e67d2ccac5a552ef4c"
     },
     {
       "path": "source-68f4d39.bundle",
@@ -304,5 +319,23 @@
     "network": "sandbox-exec deny network*",
     "runtime": "restored Node25.9.0/Python3.14.7; explicit restored DYLD/PYTHONHOME/PYTHONPATH",
     "dependencySite": "restored-site (8 offline-installed pinned wheel distributions)"
+  },
+  "packaging": {
+    "purpose": "LOCAL SYNTHETIC DISTRIBUTION PACKAGING ONLY; NO REAL ARCHIVE OR BIRTH",
+    "archive": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-distribution.tar.gz",
+    "archiveBytes": 99283976,
+    "archiveSha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d",
+    "archiveMemberCount": 15805,
+    "selectedDistributionArtifactCount": 1,
+    "within256MiBPerDistributionLimit": true,
+    "within1GiBAggregateLimit": true,
+    "expandedRuntimeEntries": 14624,
+    "expandedRuntimeRawBytes": 318589589,
+    "extraction": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-bundle-extracted",
+    "runtimeInventoryMismatches": [],
+    "wheelCount": 8,
+    "wheelMismatches": 0,
+    "inventoryRawBytesMatch": true,
+    "limits": "Inner expanded14624entries distinct from outer selected distribution1artifact; known owned public archive checked for traversal/hardlinks/symlink-ancestor writes before extraction. Absolute symlink targets preserved but not followed. Samehost/OS limitations unchanged."
   }
 }

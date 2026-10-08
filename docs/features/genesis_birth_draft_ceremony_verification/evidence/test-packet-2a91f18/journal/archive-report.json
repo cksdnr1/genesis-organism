@@ -1,0 +1,41 @@
+{
+  "version": "archive-report-v1",
+  "manifestRef": "e0564cd76135e50b98d53a57455308475aa873667b7cec827cdafbe1e13ec825",
+  "archives": [
+    {
+      "location": "archive-a",
+      "custodian": "PUBLIC TEST ONLY",
+      "retrievalEvidenceSha256": "49630aead811336c5cd9a09d71f93d6f588e1e083dc2cf136fc47a94044f23a0",
+      "restored": true
+    },
+    {
+      "location": "archive-b",
+      "custodian": "PUBLIC TEST ONLY",
+      "retrievalEvidenceSha256": "bc699f5b69f670a3c4d5b434c668757455a9fe2f2c64dfcacae7026e44139d30",
+      "restored": true
+    }
+  ],
+  "publication": {
+    "location": "public-package",
+    "packageInventorySha256": "0ba6349ef10f96ecfb2005d88f3fec175ab84ff2930bba70b6547ec328409fe0",
+    "retrievalEvidenceSha256": "1cbd3f66d25fb20e4701d188134cebedd2b30b67cb6adbad495daee7324fea09"
+  },
+  "dependencies": [
+    {
+      "name": "test-dependency",
+      "version": "TEST",
+      "sha256": "5e9190d1e4f999c8cebb2a7b3a9a5c18532425abbcf23febea2c3922426f0437"
+    }
+  ],
+  "verification": {
+    "sourceRevision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+    "node": "TEST",
+    "python": "TEST",
+    "cryptography": "TEST",
+    "commands": [
+      "TEST ONLY no actual restore claim"
+    ],
+    "resultsSha256": "1cbd3f66d25fb20e4701d188134cebedd2b30b67cb6adbad495daee7324fea09",
+    "network": "disabled"
+  }
+}

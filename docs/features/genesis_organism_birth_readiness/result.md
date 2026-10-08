@@ -70,15 +70,16 @@ Python wheels, complete source68f Git bundle, independently compared second-copy
 inventory and network-denied restored Node/Python/schema/causal/full61-test run.
 Loader logs distinguish restored dependencies from original Homebrew paths. Initial
 ensurepip externally-managed failure and corrected targeted-wheel route are retained;
-no system installation or external-managed override. See exact report for hashes,
-commands and final expanded/package sizes.
+no system installation or external-managed override. See exact report for hashes, commands and measured expanded/file sizes.
+Distribution packaging measurements, if performed, are retained as an explicit
+separate addendum rather than inferred from the expanded-copy test.
 
 This demonstrates same-host macOS ARM64 synthetic recovery; OS frameworks, hardware,
 code-signing/loader assumptions and future availability remain external. Owned scratch
 is not a durable external archive or public release. Source32MiB/8MiB limits are
 unchanged; runtime distributions use separately justified package limits because
-measured libnode alone66399712bytes exceeds source limits. Exact measured retained
-bundles, not inferred caches, support current rehearsal. No private key enters it.
+measured libnode alone66399712bytes exceeds source limits. Exact retained software bytes and verified source bundles, rather than inferred
+caches, support current rehearsal. No private key enters it.
 
 ## Minimality, validation and remaining actions
 
@@ -135,3 +136,54 @@ preparation directory. Missing current real acceptance/action in any row is neve
 filled by these synthetic mechanisms. Controller private-key backup/recovery by its
 owner preserves SAME existing key possession; restoring public software/history does
 not recreate a lost sole key, and no exceptional reset authority is introduced.
+
+
+## Final committed-source validation
+
+Tested source `2a91f1850a1af8883f4101376860c8bd71a59450` contains both reviewed tools,
+all source/tests and independent checkers. `npm test` exited0:67/67,zero failures,
+cancellations/skips,135225.254083ms. Exact log evidence/npm-test-2a91f18.log and
+raw SHA-256/summary evidence/final-validation.json retained. No source/test/dependency
+changes follow this tested commit; subsequent commits only retain public evidence
+and reports, so no additional full suite is claimed or needed.
+
+Fresh source-bound parent packet evidence/preparation-2a91f18/ contains598 regular
+tracked blobs/2792014 raw bytes in exact selection and public ephemeral adaptation
+shadow. Independent final-source-review.json verifies inventory/proofs/state and12
+causal views; all19 falsifications reject. Child evidence/test-packet-2a91f18/ and
+external trust example evidence/trusted-context-2a91f18.json retain the TEST seven-file
+raw package/closed chain. Independent child checker agrees;22 adversarial attacks
+reject and reversed archive order positive accepts, with no input writes. Existing
+canonical/synthetic runtime, fixtures, schemas and dependency pins equal baseline.
+
+Reproduce retained child package by copying it into a NEW real directory outside
+repository, then `node tools/check_draft_ceremony.mjs NEW_TEST_ROOT
+CHILD_EVIDENCE/trusted-context-2a91f18.json`; independent counterpart is child
+redteam/check_draft.py. The public trust example is not actual creator authority.
+
+Independent implementation/evidence reviewers approve technical-preparation draft
+PR scope, while actual readiness stays NO-GO. Required real creator/operator values
+and specific action authorizations are listed in creator-review-packet.md; key
+question remains unanswered. Same-key private backup is separate from software
+recovery; public archives cannot recover a lost sole signing key. No scores or
+TEST acceptance references are represented as actual birth. No real signing engine
+is manufactured: local creator-approved signing/manual operational procedure plus
+falsifiable TEST checker provide preparation; actual values/actions must be reviewed
+before any actual mechanism is used or extended.
+
+## Actual dependency distribution packaging
+
+The already authorized owned-scratch retention was packed as one actual
+runtime-distribution.tar.gz:99,283,976bytes, SHA-256
+131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d.
+It fits the separate256MiB/file,1GiB aggregate package budget as one outer artifact;
+expanded14624runtime entries are not falsely called a1024-file package. Actual safe
+extraction verified14624runtime entries with zero mismatches,8wheels and exact
+inventory;15805archive members. Evidence-review/runtime-packaging-results.json and
+updated runtime-restore reports retain measurements; redteam independently checked
+size/hash/member names/outer envelope. This remains local software packaging, not
+actual external archive, release or birth. Network-denied full restore61 tests was
+source68f; source2a91's complete Git bundle is separately retained/verified and its
+live full67 tests pass. No claim that a source68f restore tested later child code.
+
+The two proposed archive locations may share one operator/custodian. No requirement for two people, independent witness or blockchain is invented; record shared-control/failure-domain limits explicitly.

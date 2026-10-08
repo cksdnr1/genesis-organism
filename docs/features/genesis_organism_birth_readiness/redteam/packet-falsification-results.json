@@ -1,12 +1,12 @@
 {
   "scope": "provisional synthetic packet adversarial checks only; no real candidate/birth",
-  "sourcePacket": "/private/tmp/genesis-birth-preparation-68f4d39",
+  "sourcePacket": "/private/tmp/genesis-birth-preparation-2a91f18",
   "baseline": {
     "scope": "independent provisional synthetic preparation only; actual #0001 NO-GO",
-    "revision": "68f4d395f471995c90be58c25b88f592aadf2f96",
-    "artifacts": 562,
-    "rawBytes": 2496718,
-    "originCommitment": "666a1723a748aa3356934eaabc602d9bbe098095512010cf17d73b9204201e62",
+    "revision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+    "artifacts": 598,
+    "rawBytes": 2792014,
+    "originCommitment": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
     "causal": {
       "views": 12,
       "initialSignal": 0,
@@ -20,7 +20,7 @@
     }
   },
   "checkerSha256": "19c2726c9b730bd2388a5653c482538c86bf3e5dc135e89ef7ea43bced34e1d5",
-  "inventoryRawSha256": "531dc1631b863e4b28558c8040320f7caa93e663183a7b5eb9c3c3c7325ab79f",
+  "inventoryRawSha256": "d68aabc05a6c73240a06ef094ad61e61ceb574d5ec11d8a2f2411ace2e6f9871",
   "mutations": [
     {
       "case": "forged-origin",
@@ -134,7 +134,7 @@
       "case": "nonregular-complete-marker",
       "outcome": "rejected",
       "exception": "OSError",
-      "detail": "[Errno 62] Too many levels of symbolic links: '/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/genesis-redteam-packet-q0bg14mw/nonregular-complete-marker/COMPLETE'"
+      "detail": "[Errno 62] Too many levels of symbolic links: '/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/genesis-redteam-packet-fdsxl663/nonregular-complete-marker/COMPLETE'"
     }
   ]
 }

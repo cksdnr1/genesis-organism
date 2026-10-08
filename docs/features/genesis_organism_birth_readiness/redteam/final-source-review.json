@@ -1,0 +1,49 @@
+{
+  "source": "2a91f1850a1af8883f4101376860c8bd71a59450",
+  "parent": {
+    "scope": "independent provisional synthetic preparation only; actual #0001 NO-GO",
+    "revision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+    "artifacts": 598,
+    "rawBytes": 2792014,
+    "originCommitment": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+    "causal": {
+      "views": 12,
+      "initialSignal": 0,
+      "treatmentSignal": 2,
+      "withinTreatmentMemoryEffect": true
+    },
+    "python": "3.14.7",
+    "dependencies": {
+      "cryptography": "50.0.2",
+      "jsonschema": "4.26.0"
+    }
+  },
+  "parentMutationCount": 19,
+  "parentMutationAllRejected": true,
+  "inventoryRawSha256": "d68aabc05a6c73240a06ef094ad61e61ceb574d5ec11d8a2f2411ace2e6f9871",
+  "child": {
+    "scope": "draft TEST mechanics only; GENESIS #0001 UNBORN/NO-GO",
+    "manifestRef": "e0564cd76135e50b98d53a57455308475aa873667b7cec827cdafbe1e13ec825",
+    "freezeRef": "f6eec7b3dc53b47786a737cead777b80ee42d70e66656c5d0d30ec094b00fe0a",
+    "releaseRef": "346af2c19e6e08956b0bff1c1a6cf4ef7521e7603d5e83e497aa08c3a7479273",
+    "birthRef": "c6c25c7847b273f1d37463fbea4a6695b8016f4a99553288548b195d505288b3",
+    "journalStatus": "accepted",
+    "artifacts": 7
+  },
+  "childCases": 23,
+  "childAttacksRejected": 22,
+  "childReversedArchivePositive": true,
+  "childInputSnapshotsUnchanged": true,
+  "childResultSha256": "8da79296d654171d1b7dc4c292e8024a197ddc783ee7794479af556e15588973",
+  "scope": "final committed-source synthetic preparation/TEST mechanics only; actual GENESIS #0001 UNBORN/NO-GO",
+  "runtimeDistributionIndependentCheck": {
+    "archiveSha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d",
+    "archiveBytes": 99283976,
+    "archiveMembers": 15805,
+    "outerArtifacts": 1,
+    "expandedRuntimeEntries": 14624,
+    "memberPathsNoAbsoluteOrTraversal": true,
+    "noHardlinks": true,
+    "scope": "local public distribution byte/member check; no external archive or independent extraction execution claim"
+  }
+}

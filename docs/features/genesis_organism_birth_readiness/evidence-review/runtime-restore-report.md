@@ -62,3 +62,21 @@ toolchains/OS distributions and ongoing archival responsibility remain separate
 reviewed choices. Measured runtime size exceeds the small32MiB source-preparation
 budget; runtime/dependency retention therefore needs its own measured inventory
 and cannot be silently omitted or claimed to fit that source bound.
+
+## Measured distribution packaging addendum
+
+The already retained public runtime,8 wheels and exact runtime inventory were
+packed in owned scratch as `runtime-distribution.tar.gz`:99,283,976bytes,
+SHA256 `131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d`.
+This is one selected distribution artifact, below the proposed256MiB per-file and
+1GiB aggregate distribution budgets; the inner expanded14,624runtime entries are
+not misrepresented as fitting a1,024-file outer inventory. The archive contains
+15,805inner members including directories, inventory and wheels.
+
+Actual extraction into fresh owned `runtime-bundle-extracted` completed after
+checking member paths, kinds and absence of symlink-ancestor writes/hardlinks.
+All14,624runtime entries match known raw hashes/link targets, all8 wheels match,
+and extracted inventory raw bytes match. Absolute symlink target bytes remain
+preserved and were not traversed during extraction. No new test suite, actual
+candidate operation or portability claim follows from packaging. Exact measured
+facts are retained in runtime-packaging-results.json and runtime-restore-results.json.
