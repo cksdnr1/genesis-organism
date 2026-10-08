@@ -1,0 +1,118 @@
+{
+  "cases": 12,
+  "disagreements": 0,
+  "results": [
+    {
+      "name": "observer-version",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unknown-capability",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "private-disclosure",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "attested-capability",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "empty-policy",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-policy-profile",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-policy-version",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-evidence-version",
+      "jsStatus": "rejected",
+      "jsCode": "unsupported",
+      "pyStatus": 1,
+      "pyCode": "unsupported",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "missing-policy",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "invalid-message",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unsupported-frame",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    },
+    {
+      "name": "unauthenticated-source",
+      "jsStatus": "rejected",
+      "jsCode": "invalid",
+      "pyStatus": 1,
+      "pyCode": "invalid",
+      "rejected": true,
+      "match": true
+    }
+  ],
+  "sourceCorpusRevision": "e6d0e6633fd657216549fd64f1031a6d96fd7b87",
+  "testedImplementationRevision": "580b929034aa494843a828375e2891c663921227",
+  "sourceCorpusPath": "docs/features/genesis_organism/post-merge-audit/diagnostic-results.json",
+  "sourceCorpusSha256": "2cf962da12fb957922fd9f2330e2f33368b3d0eeea86f1e49dae2bd0454dadf2"
+}

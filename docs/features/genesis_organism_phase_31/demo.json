@@ -1,0 +1,338 @@
+{
+  "status": "synthetic simulation only; GENESIS #0001 UNBORN",
+  "first": {
+    "status": "accepted",
+    "state": {
+      "profile": "synthetic-v1",
+      "rules": "adaptation-v1",
+      "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+      "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "sequence": 1,
+      "head": "821bbab887ba98c32e17874880413f7a7fc3377e4ed13a9ab77715f27744e5c7",
+      "signal": 2
+    },
+    "action": {
+      "frame": "fixture-plane-v1",
+      "unit": "mm",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "evidenceLevel": "signed-synthetic-claim"
+  },
+  "retry": {
+    "status": "duplicate",
+    "state": {
+      "profile": "synthetic-v1",
+      "rules": "adaptation-v1",
+      "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+      "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "sequence": 1,
+      "head": "821bbab887ba98c32e17874880413f7a7fc3377e4ed13a9ab77715f27744e5c7",
+      "signal": 2
+    },
+    "action": null,
+    "evidenceLevel": "signed-synthetic-claim"
+  },
+  "replacement": {
+    "status": "accepted",
+    "state": {
+      "profile": "synthetic-v1",
+      "rules": "adaptation-v1",
+      "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+      "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "sequence": 2,
+      "head": "85990f0b3c33a6d9213d0520b85b714797500d13e3d762cb1c2478ebae588c66",
+      "signal": 3
+    },
+    "action": {
+      "frame": "fixture-plane-v1",
+      "unit": "mm",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    },
+    "evidenceLevel": "signed-synthetic-claim"
+  },
+  "reconnect": {
+    "status": "accepted",
+    "state": {
+      "profile": "synthetic-v1",
+      "rules": "adaptation-v1",
+      "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+      "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "sequence": 3,
+      "head": "28ac41386912a1ef9d91a1d4f27f738455c01105229db5680539b7331cffbf4e",
+      "signal": 1
+    },
+    "action": {
+      "frame": "fixture-plane-v1",
+      "unit": "mm",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "evidenceLevel": "signed-synthetic-claim"
+  },
+  "origin": {
+    "body": {
+      "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+      "birth": "fixture-adaptation-001",
+      "creator": "PUBLIC SYNTHETIC TEST FIXTURE",
+      "genome": {
+        "signal": 0
+      },
+      "profile": "synthetic-v1",
+      "rules": "adaptation-v1"
+    },
+    "signature": "b657b4c324644515e1d095ffa2df6583db88da34f0055cd9f1a17bf338238b968a1a3eb6cabfc3383dffab0a95ef74c8d4c2cd3efe6a7a0d6a25cc0298cb480d"
+  },
+  "events": [
+    {
+      "body": {
+        "profile": "synthetic-v1",
+        "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+        "sequence": 1,
+        "previous": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+        "kind": "experience-v1",
+        "data": {
+          "evidence": {
+            "version": "evidence-v1",
+            "nonce": "body-a-1",
+            "sourceState": {
+              "profile": "synthetic-v1",
+              "rules": "adaptation-v1",
+              "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+              "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+              "sequence": 0,
+              "head": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+              "signal": 0
+            },
+            "observer": {
+              "version": "observer-v1",
+              "observerType": "simulated-body",
+              "subject": "sim-a",
+              "capabilities": {
+                "spatial": {
+                  "supported": true,
+                  "evidence": "claimed",
+                  "frame": "fixture-plane-v1",
+                  "unit": "mm"
+                }
+              }
+            },
+            "policy": {
+              "version": "policy-v1",
+              "allow": [
+                "path-v1"
+              ],
+              "disclosure": "public-synthetic"
+            },
+            "expression": {
+              "selection": {
+                "version": "negotiation-v1",
+                "sourceStateRef": "50d6db5f20c01c34bb94634b0acbbe1eac8bc57d5f20d2a0fe79906eb623fed7",
+                "observerProfileCommitment": "175bb92feb091ee890f42449330e0cb95373ce31636f447081a668b23e1848cb",
+                "accessPolicyCommitment": "16964a107e17f8edf6fbe45c4ba276f475d5f0f77ac633f89f489f6ee1772ef7",
+                "profile": "path-v1",
+                "procedure": "expression-v1"
+              },
+              "output": {
+                "kind": "path-v1",
+                "signal": 0,
+                "frame": "fixture-plane-v1",
+                "unit": "mm",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0
+                  ]
+                ]
+              }
+            },
+            "interaction": {
+              "motif": 2,
+              "message": "{\"b\":\"a\",\"h\":\"37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc\",\"n\":1,\"sig\":\"e3346c529db465371ebb374cc338fcb513ac235d53590e4815286bb0e4166edfd0b67c408ac4d6bf9aa7a6f84374a95b7c0e89e7e448e29ed648f367a07eea07\",\"t\":2,\"v\":\"b1\"}"
+            }
+          }
+        }
+      },
+      "signature": "2f843e2175a68068a178ca61a09eff0c8307b8e1e465ac7c67e7bb7ec877831cf46238866e017108128ad3c8b5e7d7918e05aa8a1523fff6ac6bc71719b43a00"
+    },
+    {
+      "body": {
+        "profile": "synthetic-v1",
+        "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+        "sequence": 2,
+        "previous": "821bbab887ba98c32e17874880413f7a7fc3377e4ed13a9ab77715f27744e5c7",
+        "kind": "experience-v1",
+        "data": {
+          "evidence": {
+            "version": "evidence-v1",
+            "nonce": "body-b-1",
+            "sourceState": {
+              "profile": "synthetic-v1",
+              "rules": "adaptation-v1",
+              "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+              "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+              "sequence": 1,
+              "head": "821bbab887ba98c32e17874880413f7a7fc3377e4ed13a9ab77715f27744e5c7",
+              "signal": 2
+            },
+            "observer": {
+              "version": "observer-v1",
+              "observerType": "simulated-body",
+              "subject": "sim-b",
+              "capabilities": {
+                "spatial": {
+                  "supported": true,
+                  "evidence": "claimed",
+                  "frame": "fixture-plane-v1",
+                  "unit": "mm"
+                }
+              }
+            },
+            "policy": {
+              "version": "policy-v1",
+              "allow": [
+                "path-v1"
+              ],
+              "disclosure": "public-synthetic"
+            },
+            "expression": {
+              "selection": {
+                "version": "negotiation-v1",
+                "sourceStateRef": "7694fe7828d7d82694879a8b0e5e14ddf617d3b84a7bc6d01b39540295fa590c",
+                "observerProfileCommitment": "682e7659274710c6effa77db0d4d2dd453dc403971c04411cb2533c9eb061d69",
+                "accessPolicyCommitment": "16964a107e17f8edf6fbe45c4ba276f475d5f0f77ac633f89f489f6ee1772ef7",
+                "profile": "path-v1",
+                "procedure": "expression-v1"
+              },
+              "output": {
+                "kind": "path-v1",
+                "signal": 2,
+                "frame": "fixture-plane-v1",
+                "unit": "mm",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    2,
+                    0
+                  ]
+                ]
+              }
+            },
+            "interaction": {
+              "motif": 3,
+              "message": "{\"b\":\"b\",\"h\":\"821bbab887ba98c32e17874880413f7a7fc3377e4ed13a9ab77715f27744e5c7\",\"n\":1,\"sig\":\"616eaa58d7149934b8fe6b8dddf5a24dc28bfb455f330fc3910ecdc33f25763044c364adc8240ca115eb5469fd8dbd251a41741d9cbcae5a19bc5c09d25e4102\",\"t\":3,\"v\":\"b1\"}"
+            }
+          }
+        }
+      },
+      "signature": "3a5d95305b43861ffbd267961a72dc1ad6c2d034c7928e640530565549351e8e31f6641a1ed54f8e606b370bfcbf40f3942b915d3b40e3b87c6dbd3b82c6a007"
+    },
+    {
+      "body": {
+        "profile": "synthetic-v1",
+        "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+        "sequence": 3,
+        "previous": "85990f0b3c33a6d9213d0520b85b714797500d13e3d762cb1c2478ebae588c66",
+        "kind": "experience-v1",
+        "data": {
+          "evidence": {
+            "version": "evidence-v1",
+            "nonce": "body-a-2",
+            "sourceState": {
+              "profile": "synthetic-v1",
+              "rules": "adaptation-v1",
+              "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+              "authority": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+              "sequence": 2,
+              "head": "85990f0b3c33a6d9213d0520b85b714797500d13e3d762cb1c2478ebae588c66",
+              "signal": 3
+            },
+            "observer": {
+              "version": "observer-v1",
+              "observerType": "simulated-body",
+              "subject": "sim-a",
+              "capabilities": {
+                "spatial": {
+                  "supported": true,
+                  "evidence": "claimed",
+                  "frame": "fixture-plane-v1",
+                  "unit": "mm"
+                }
+              }
+            },
+            "policy": {
+              "version": "policy-v1",
+              "allow": [
+                "path-v1"
+              ],
+              "disclosure": "public-synthetic"
+            },
+            "expression": {
+              "selection": {
+                "version": "negotiation-v1",
+                "sourceStateRef": "27e159984a6723f594f4519a6310518ad39048b251c57435b2f7514f5d495833",
+                "observerProfileCommitment": "175bb92feb091ee890f42449330e0cb95373ce31636f447081a668b23e1848cb",
+                "accessPolicyCommitment": "16964a107e17f8edf6fbe45c4ba276f475d5f0f77ac633f89f489f6ee1772ef7",
+                "profile": "path-v1",
+                "procedure": "expression-v1"
+              },
+              "output": {
+                "kind": "path-v1",
+                "signal": 3,
+                "frame": "fixture-plane-v1",
+                "unit": "mm",
+                "points": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3,
+                    0
+                  ]
+                ]
+              }
+            },
+            "interaction": {
+              "motif": 1,
+              "message": "{\"b\":\"a\",\"h\":\"85990f0b3c33a6d9213d0520b85b714797500d13e3d762cb1c2478ebae588c66\",\"n\":2,\"sig\":\"a4e9778d173517328a2a823296e36ed1ba7c874416e7e5cb7e0070664e973d1cdaa15a4cfaad6dd9944cd4d6ce5554876c3a8cab3d5f00650d0a60ca26500c00\",\"t\":1,\"v\":\"b1\"}"
+            }
+          }
+        }
+      },
+      "signature": "a3fdb1991a2dd98ed91a4076e7ed2ffcdae095ca5f52dd9d26c5eea2c9b6054b0bf41fde3007734ac5230e69dcb58e51910616e50ba230427384c800cf92900b"
+    }
+  ]
+}

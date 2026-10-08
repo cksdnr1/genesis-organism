@@ -1,0 +1,19 @@
+✔ actual CLI initializes, appends, deduplicates, inspects and verifies expected head (1487.104708ms)
+✔ nonregular input refusal covers history and proposal CLIs without FIFO writers (1172.844125ms)
+✔ independent full ancestry equals selected graph, rebuilds and preserves evidence (71.749541ms)
+✔ missing/private/altered ancestry and recursive aliases fail in both implementations (546.605667ms)
+✔ signed long ancestry is bounded, not a recursion escape (95.793541ms)
+✔ broad authenticated ancestry enforces node budgets in both verification surfaces (75.548709ms)
+✔ durable initialize, append, restart, verified duplicate and orphan temp (132.238333ms)
+✔ missing, partial, oversized, symlink and invalid conflict files fail closed (192.731708ms)
+✔ valid signed sibling persists evidence and holds load/admission (96.018916ms)
+✔ fsync failure reports IO uncertainty and verified retry recovers (59.878542ms)
+✔ real concurrent writers deduplicate or retain conflict without overwrite (320.642875ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2761.806875

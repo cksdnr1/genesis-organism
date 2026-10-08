@@ -1,0 +1,106 @@
+{
+  "scope": "independent working-tree IC01 check; POSIX observed host,3s harness only",
+  "cases": [
+    {
+      "name": "replay",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "inspect",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "python-history",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "append-source",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "init-source",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "node-ceremony",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "limit",
+      "noWrite": true
+    },
+    {
+      "name": "python-ceremony",
+      "mode": "no-writer",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "replay",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "inspect",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "python-history",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "append-source",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "init-source",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    },
+    {
+      "name": "node-ceremony",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "limit",
+      "noWrite": true
+    },
+    {
+      "name": "python-ceremony",
+      "mode": "no-data-counterpart",
+      "exit": 1,
+      "class": "invalid",
+      "noWrite": true
+    }
+  ],
+  "regularReplayAgreement": true,
+  "regularCeremonyControls": 2,
+  "initRefusalNoTarget": true
+}

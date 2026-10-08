@@ -1,0 +1,68 @@
+{
+  "tested_source_revision": "c4ab35222e00a8a3c0b5441a63c638b134982be9",
+  "branch": "work/conformance-remediation",
+  "node": "v25.9.0",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "packages": {
+    "cryptography": "50.0.2",
+    "jsonschema": "4.26.0"
+  },
+  "commands": [
+    {
+      "command": "npm test",
+      "exit": 0,
+      "tests": 56,
+      "pass_count": 56,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 139332.061333
+    },
+    {
+      "command": ".venv/bin/python tests/schema_vectors.py",
+      "exit": 0,
+      "tests": 6
+    },
+    {
+      "command": ".venv/bin/python tests/successor_schema_vectors.py",
+      "exit": 0,
+      "tests": 2
+    },
+    {
+      "command": ".venv/bin/python verifier/lineage.py fixtures/reproduction-v1/manifest.json",
+      "exit": 0,
+      "nodes": 4,
+      "edges": 3
+    }
+  ],
+  "selected_artifacts": 197,
+  "source_sha256": {
+    "src/cli.mjs": "95b68ecc947aface307c725a211b9c2247f95eeaadc33e76bb0747896b886348",
+    "src/store.mjs": "100cad05fbb27ff87f7d08d38ca96c1751cf7e5afa8b38ac386c05e0d1c748c5",
+    "tools/rehearsal.mjs": "91eab7332d23c3b1d6b5c721da8b7c003de50b6e69f8904312c592e2f1dc8c8d",
+    "verifier/verify.py": "07f1149833240c09cdf89c259f79693e3d2180fb93f1b8e104fc4999951aa785",
+    "verifier/rehearsal.py": "b8ff09ff8b690a5bdca0b95043db3a2797ccb48997e767e2f0b58137ee095d44",
+    "tests/cli.test.mjs": "f649732f57efb8e29897a06a9b8263905334d8210f8681e414687f9073b41172",
+    "tests/conformance.test.mjs": "7366a55979eb276f06532d6888379993cea5b5d1c5953a59fcf476ebce2ad2dd",
+    "tests/rehearsal.test.mjs": "adff6aad2d29e44f9d4734bba78e4a84963139fca660a6d11a3584f64ba6ce5f",
+    "fixtures/ceremony-v1/artifacts.json": "496d7c523413b749abfaf7f1b08a9ac58e81df00f79fb9f8f25f0f8b83b963bd",
+    "spec/README.md": "7213dd6177e7b92df1ad210ef96333815c07019d0ff72f2847341ae02f197237",
+    "docs/decisions/2026-10-08-diagnostic-precedence-clarification.md": "021a762e89be900b7691c4ed1e9b30cac65789607131ad8fb6170f731f285647"
+  },
+  "preserved_against_audit_merge": [
+    "docs/decisions/D04-events.md",
+    "docs/decisions/D06-implementation.md",
+    "spec/GENESIS.md",
+    "organisms/genesis-0001/README.md",
+    "docs/features/genesis_organism/genesis_organism_total_spec.md",
+    "docs/features/genesis_organism/genesis_organism_phase_plan.md"
+  ],
+  "log_sha256": {
+    "final-lineage.json": "d5425a2a9f94f75a72dd65d88a1ef9c3270949719fe27239af0556fc798b4531",
+    "final-schema.log": "ba7ccc824660f99f10c5378a4598ede6de9cccb44d4230bf847998033f779998",
+    "final-successor.log": "7d5c9ab002d7c614c71e0655c1f64ea23d420dec69d8e37bf300ce249ba786bc",
+    "final-suite.log": "64038c29264366c1b67f85ce8509f3dc10d2cad8de90f42dac9787d0bedfbea3"
+  },
+  "limitations": "Observed macOS/POSIX/runtime; finite cases, no universal safety/privacy/availability/birth claim; final evidence/docs SHA may follow tested source SHA.",
+  "metadata_capture_note": "Initial metadata-only system-python invocation lacked cryptography distribution; rerun with test .venv. No source/test rerun required."
+}

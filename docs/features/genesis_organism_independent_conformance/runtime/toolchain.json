@@ -1,0 +1,21 @@
+{
+  "head": "656d1a3e65edc19d8349f0d77d1f0d7e7388817e",
+  "branch": "work/pr8-critical-conformance",
+  "origin_tracking": "656d1a3e65edc19d8349f0d77d1f0d7e7388817e",
+  "node": "v25.9.0",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "packages": {
+    "cryptography": "50.0.2",
+    "jsonschema": "4.26.0"
+  },
+  "tracked_diff_empty": true,
+  "commands": {
+    "targeted": "node --test tests/admission.test.mjs tests/replay.test.mjs tests/store.test.mjs tests/cli.test.mjs tests/encounter.test.mjs tests/conformance.test.mjs",
+    "full": "npm test",
+    "schema": ".venv/bin/python tests/schema_vectors.py",
+    "successor": ".venv/bin/python tests/successor_schema_vectors.py",
+    "own_probes": ".venv/bin/python docs/features/genesis_organism_independent_conformance/runtime/probe.py",
+    "historical_recheck": ".venv/bin/python docs/features/genesis_organism_independent_conformance/runtime/historical_recheck.py",
+    "lineage": ".venv/bin/python verifier/lineage.py fixtures/reproduction-v1/manifest.json"
+  }
+}

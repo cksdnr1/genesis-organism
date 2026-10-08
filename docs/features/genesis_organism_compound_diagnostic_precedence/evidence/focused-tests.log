@@ -1,0 +1,26 @@
+✔ literal canonical corpus, numeric keys, Unicode and closed byte domains (2.921542ms)
+✔ producer type, Unicode, depth, node, member and byte budgets (2.662917ms)
+✔ origin proof, exact shape and reference match fixed independent fixtures (2.737792ms)
+✔ admission distinguishes valid retry, invalid proof, sibling conflict and rotation (3.354458ms)
+✔ independently authored verifier matches exact state, hash and every prefix (398.287666ms)
+✔ cross-language literal byte corpus and strict Unicode/number parsing (893.199417ms)
+✔ cross-language rejection of altered/unsupported/gapped/symlink/fork histories (810.091208ms)
+✔ strict encodings reject trailing newline, even under otherwise valid signatures (0.579333ms)
+✔ signed negative encounter corpus matches explicit independent diagnostic classes (516.546875ms)
+✔ retained PM-01 negatives have literal envelope codes and no admission effects (897.760209ms)
+✔ compound origin and event faults follow reviewed structural dispatch precedence (3512.341ms)
+✔ encounter evidence is acyclic; actual receipt refs, pending and refusal differ (7.912041ms)
+✔ proof-first stable nonce prevents exact/rebased double experience and changed reuse (150.040208ms)
+✔ source/policy/expression/missing-message and old-core proposals reject without effect (3.800875ms)
+✔ actual concurrent encounter retries admit once; signed separate sibling holds (225.180875ms)
+✔ independent encounter fixture and rejection of a duplicate in stored canonical history (100.406833ms)
+✔ fixed replay known-answer, immutable inputs, repeat and every valid prefix (7.801416ms)
+✔ replay rejects invalid history without a partial success or option fallback (3.708125ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7130.06775
