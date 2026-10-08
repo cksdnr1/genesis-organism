@@ -1,0 +1,193 @@
+# Birth-readiness preparation result
+
+STATUS: ACTUAL GENESIS #0001 NO-GO / UNBORN. Preparation is a reviewable candidate
+proposal and reproducible mechanisms, not a selected/signed real origin. No original
+gate changed. Current creator key/possession question is unanswered; elapsed time
+supplies no approval. No actual freeze/release/birth/merge has been performed.
+
+## Concrete result and source binding
+
+candidate-proposal.md recommends explicit real-purpose adoption of supported
+synthetic-v1/adaptation-v1 semantics, signal0, discriminator genesis-0001 and empty
+history/lineage except origin. This requires NEW acceptance; previous synthetic-only
+records do not extend automatically. Optional genesis-v1 successor is compared under
+Removal Test and not invented as a prerequisite. Confirm exact creator string,
+public rights/disclosure, controller association/loss contract and archive ownership.
+creator-review-packet.md identifies exact proposal hashes and five concrete choices.
+
+Exact proposed real ceremony domains, closed record shapes, possession challenge,
+acyclic raw package/publication references, journal membership/retry/conflict and
+failure rules are in ceremony-proposal.md. Six unsigned PUBLIC TEST vectors fix bytes.
+No actual unknown values are filled. operations-runbook.md places separate verified
+approvals before origin signing/freeze, publication and birth. No general lifecycle
+framework or real signer/writer is added.
+
+Source68f4d395f471995c90be58c25b88f592aadf2f96 contains the reviewed parent tool/tests
+and proposal. Its clean-source preparation output is retained externally at
+/private/tmp/genesis-birth-preparation-68f4d39. Independent Python verified its
+raw Git inventory, ephemeral public origin proof/canonical bytes/state/commitment,
+negative origin/domain cases and12 exact adaptation causal views. Nineteen independent
+mutations reject. This is provisional synthetic shadow evidence, not #0001 history.
+Actual selected rule signal0→2 and memory rotation are separately ablated at same
+post-treatment state; omitted/forged-rejected histories remain signal0.
+
+Both preliminary and exact68f full runs passed61/61. The source-bound log is
+/tmp/genesis-birth-68f4d39-tests.log,137103.412ms,fail/cancelled/skipped0. Existing
+synthetic ceremony tests bind that actual GitHEAD; no earlier report is relabelled.
+Child TEST-only draft verifier is independently gated and adds necessary raw
+prerequisite/report/journal falsification; final combined committed-source validation
+and its exact evidence are recorded in the subsequent final validation addendum.
+
+## Original twelve gates, assessed for this proposed candidate
+
+| Original gate | Verified preparation support | Actual candidate gap and classification |
+| --- | --- | --- |
+| Identity/authority | Explicit D02 choices, independently checked fresh nonfixture shadow origin/authority and synthetic rotation/conflict semantics | Exact creator claim/key association and possession, actual real-purpose acceptance; creator decision/candidate evidence |
+| Genome | Proposed signal0/adaptation-v1, empty initial history, immutable genesis preserved in shadow | Creator has not selected/frozen exact real body; decision/authorization |
+| Canonical bytes | Existing restricted integer bytes/domains, JS/Python vectors and shadow proofs; optional real namespace explicitly compared | Select/adopt exact real-purpose semantics; actual origin bytes unknown; decision/candidate evidence |
+| Events | Existing signed experience/ordering/duplicate/rejection/adaptation semantics and fresh forged control | Real-purpose applicability not accepted; exact real history not instantiated; decision/candidate evidence |
+| Replay | Same shadow origin/events give independent exact state/commitment, retained source commit | Actual candidate bytes/head not supplied; no globally latest/fork-free claim; candidate evidence |
+| Perception | Three claimed mock capabilities, supported/refusal/provenance/fidelity tested | Accept chosen public-only profile for real data; no physical/subjective meaning claim; decision |
+| Experience | Fresh adaptation/memory/synapse treatment/omitted/rejected/same-state ablation, directional unverified consent | Real public disclosure/profile adoption unknown; no preloaded real experience required; decision |
+| Lineage | Existing bounded inheritance/consent/child-origin and independent lineage evidence retained; proposed origin-only start | Adopt applicability; no children required at birth and none fabricated; decision |
+| Versioning | Exact source/history bundle, retained validators/schemas/versions; measured local dependency/runtime recovery | Actual public retention owner/platform/long-term procedure not selected or operated; decision/external operation |
+| Commitments | Exact unsigned real ceremony template, tested public signature domains/provisional Git/raw selection | Actual accepted creator binding/origin/freeze proofs absent; candidate evidence/authorization |
+| Publication | Actual local software retention+offline restore rehearsal; concrete external retrieval/publication procedure | No selected/executed real archives/public package/accessible release or rights approval; decision/external operation/authorization |
+| Birth act | Exact proposed staged authorization/local uniqueness/retry/conflict contract; bounded TEST consistency checker | No accepted real birth contract or separately authorized concrete act; decision/authorization |
+
+Supported draft mechanics is not actual gate completion. Phase38 original
+“All birth gates ... accepted” entry remains unsatisfied for real #0001. A conditional
+pre-freeze recommendation can evaluate later authorized sequence checkpoints; it
+cannot call unperformed publication/birth completed. Optional chain/witnessing and
+open-ended evolution are not fabricated universal requirements. Conversely current
+synthetic success never waives the original twelve gates.
+
+## Measured recovery, with practical limits
+
+Evidence-review/runtime-restore-report.md and runtime-restore-results.json retain
+actual copied25 Homebrew packages,318589589 raw regular bytes/14624 entries,8 pinned
+Python wheels, complete source68f Git bundle, independently compared second-copy
+inventory and network-denied restored Node/Python/schema/causal/full61-test run.
+Loader logs distinguish restored dependencies from original Homebrew paths. Initial
+ensurepip externally-managed failure and corrected targeted-wheel route are retained;
+no system installation or external-managed override. See exact report for hashes, commands and measured expanded/file sizes.
+Distribution packaging measurements, if performed, are retained as an explicit
+separate addendum rather than inferred from the expanded-copy test.
+
+This demonstrates same-host macOS ARM64 synthetic recovery; OS frameworks, hardware,
+code-signing/loader assumptions and future availability remain external. Owned scratch
+is not a durable external archive or public release. Source32MiB/8MiB limits are
+unchanged; runtime distributions use separately justified package limits because
+measured libnode alone66399712bytes exceeds source limits. Exact retained software bytes and verified source bundles, rather than inferred
+caches, support current rehearsal. No private key enters it.
+
+## Minimality, validation and remaining actions
+
+One parent offline preparation tool binds exact Git raw bytes and provisional causal
+vectors. One bounded child read-only TEST consistency checker is necessary because
+manual canonical vectors alone cannot detect raw omissions/prerequisite/journal
+contradictions. Neither tool adopts a profile or signs/accepts actual births. Existing
+canonical/runtime/synthetic ceremony bytes remain unchanged; no dependency, D-number,
+roadmap phase, source schema or service introduced. Historical PR8 untracked audits
+were backed up and preserved. Findings were corrected through independent gates,
+including final marker failure retention and exact readable integer lexemes.
+
+Remaining engineering is conditional on selected real-purpose contract and exact
+creator/operator values, not an excuse to leave solvable TEST preparation undone.
+The real local signer is the creator's own reviewed signing mechanism; manufacturing
+a new signing service/actual acceptance engine before those decisions is unnecessary.
+Any actual writer/tool extension must first review its exact accepted contract and
+prerequisites. Complete child/readiness evidence review and validated draft PR are
+preparation deliverables; no merge authority inferred.
+
+Focused tests: `node --test tests/prepare-birth.test.mjs`5/5, including dirty source,
+symlink/new-only output, public shadow proofs/causal controls and final COMPLETE
+ENOSPC injection preserving partial evidence. Child `node --test
+tests/draft-ceremony.test.mjs`6/6, including24 direct mutations and explicit numeric
+rounding/alias-order controls. No extra refactor needed; source changes add isolated
+preparation/checking paths. Verified target origin/genesis/protocol-origin at c9c12b0;
+existing runtime and historical selected artifacts remain byte-identical.
+
+
+## Exact gate evidence paths
+
+All68f references resolve at source68f4d395f471995c90be58c25b88f592aadf2f96;
+new child references resolve at the final committed source in the addendum.
+Retained public shadow bytes are evidence/preparation-68f4d39/, and full source-bound
+log evidence/npm-test-68f4d39.log. They remain explicitly provisional.
+
+| Gate | Reproducible file/test references |
+| --- | --- |
+| Identity/authority | D02-identity-authority.md; tests/admission.test.mjs; evidence/preparation-68f4d39/shadow-origin.json; redteam/check_shadow.py |
+| Genome | candidate-proposal.md; shadow-origin.json; tests/adaptation.test.mjs; src/admission.mjs validateOrigin |
+| Canonical bytes | docs/decisions/D03-canonical-bytes.md; tests/conformance.test.mjs; verifier/verify.py; shadow-result.json; ceremony-vectors.json + redteam/check_ceremony_vectors.py |
+| Events | docs/decisions/D04-events.md + diagnostic clarification; tests/admission.test.mjs/encounter.test.mjs/adaptation.test.mjs; shadow-event.json |
+| Replay | tests/replay.test.mjs; verifier/verify.py; shadow-result.json; redteam/check_shadow.py |
+| Perception | D07-perception.md; tests/perception.test.mjs/expression.test.mjs/related-expression.test.mjs; shadow-demo.json12views |
+| Experience | D08-memory-synapse.md/D09-adaptation.md/D13-encounters.md; tests/memory.test.mjs/synapse.test.mjs; shadow-demo.json + independent check_shadow.py |
+| Lineage | D10-reproduction.md; tests/reproduction.test.mjs/lineage.test.mjs; verifier/lineage.py; fixtures/reproduction-v1/manifest.json + child/grandchild lineage.json |
+| Versioning | requirements.lock; evidence/preparation-68f4d39/inventory.json; evidence-review/runtime-restore-report.md/results.json; retained source68f bundle/full history |
+| Commitments | tools/prepare_birth.mjs; ceremony-proposal.md/vectors.json; child tools/check_draft_ceremony.mjs + independent child redteam/check_draft.py |
+| Publication | operations-runbook.md; evidence-review/archive-recovery-proposal.md/runtime-restore-report.md; child raw package/retrieval falsifications; actual external publication absent |
+| Birth act | ceremony-proposal.md exact contract; child tests/draft-ceremony.test.mjs + independent redteam/falsification-results.json; actual authorization/acceptance absent |
+
+The D paths above are under docs/decisions/; shadow filenames are under the retained
+preparation directory. Missing current real acceptance/action in any row is never
+filled by these synthetic mechanisms. Controller private-key backup/recovery by its
+owner preserves SAME existing key possession; restoring public software/history does
+not recreate a lost sole key, and no exceptional reset authority is introduced.
+
+
+## Final committed-source validation
+
+Tested source `2a91f1850a1af8883f4101376860c8bd71a59450` contains both reviewed tools,
+all source/tests and independent checkers. `npm test` exited0:67/67,zero failures,
+cancellations/skips,135225.254083ms. Exact log evidence/npm-test-2a91f18.log and
+raw SHA-256/summary evidence/final-validation.json retained. No source/test/dependency
+changes follow this tested commit; subsequent commits only retain public evidence
+and reports, so no additional full suite is claimed or needed.
+
+Fresh source-bound parent packet evidence/preparation-2a91f18/ contains598 regular
+tracked blobs/2792014 raw bytes in exact selection and public ephemeral adaptation
+shadow. Independent final-source-review.json verifies inventory/proofs/state and12
+causal views; all19 falsifications reject. Child evidence/test-packet-2a91f18/ and
+external trust example evidence/trusted-context-2a91f18.json retain the TEST seven-file
+raw package/closed chain. Independent child checker agrees;22 adversarial attacks
+reject and reversed archive order positive accepts, with no input writes. Existing
+canonical/synthetic runtime, fixtures, schemas and dependency pins equal baseline.
+
+Reproduce retained child package by copying it into a NEW real directory outside
+repository, then `node tools/check_draft_ceremony.mjs NEW_TEST_ROOT
+CHILD_EVIDENCE/trusted-context-2a91f18.json`; independent counterpart is child
+redteam/check_draft.py. The public trust example is not actual creator authority.
+
+Independent implementation/evidence reviewers approve technical-preparation draft
+PR scope, while actual readiness stays NO-GO. Required real creator/operator values
+and specific action authorizations are listed in creator-review-packet.md; key
+question remains unanswered. Same-key private backup is separate from software
+recovery; public archives cannot recover a lost sole signing key. No scores or
+TEST acceptance references are represented as actual birth. No real signing engine
+is manufactured: local creator-approved signing/manual operational procedure plus
+falsifiable TEST checker provide preparation; actual values/actions must be reviewed
+before any actual mechanism is used or extended.
+
+## Actual dependency distribution packaging
+
+The already authorized owned-scratch retention was packed as one actual
+runtime-distribution.tar.gz:99,283,976bytes, SHA-256
+131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d.
+It fits the separate256MiB/file,1GiB aggregate package budget as one outer artifact;
+expanded14624runtime entries are not falsely called a1024-file package. Actual safe
+extraction verified14624runtime entries with zero mismatches,8wheels and exact
+inventory;15805archive members. Evidence-review/runtime-packaging-results.json and
+updated runtime-restore reports retain measurements; redteam independently checked
+size/hash/member names/outer envelope. This remains local software packaging, not
+actual external archive, release or birth. Network-denied full restore61 tests was
+source68f; source2a91's complete Git bundle is separately retained/verified and its
+live full67 tests pass. No claim that a source68f restore tested later child code.
+
+The two proposed archive locations may share one operator/custodian. No requirement for two people, independent witness or blockchain is invented; record shared-control/failure-domain limits explicitly.
+
+Retained child TEST tar.gz preserves the required empty pending/conflicts directories (Git expanded trees cannot retain them); see child evidence/README.md for complete-layout reproduction.
+
+Draft PR: [https://github.com/cksdnr1/genesis-organism/pull/11](https://github.com/cksdnr1/genesis-organism/pull/11), base genesis/protocol-origin. Shared parent/child reviewable preparation only; no merge or actual birth authority. Feature branch retained for review; no nonexistent master branch is created.

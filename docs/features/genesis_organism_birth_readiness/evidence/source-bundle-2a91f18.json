@@ -1,0 +1,8 @@
+{
+  "scope": "Public source history retention only; not actual archive/publication",
+  "path": "/private/tmp/genesis-birth-recovery-68f4d39/source-2a91f18.bundle",
+  "revision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+  "size": 1060693,
+  "sha256": "cad9a6e6e12a68d868f0f1fe5b06f71cf5279c062fa062e67d2ccac5a552ef4c",
+  "verified": "git bundle verify: complete history, HEAD exact2a91f18"
+}

@@ -1,0 +1,140 @@
+{
+  "scope": "provisional synthetic packet adversarial checks only; no real candidate/birth",
+  "sourcePacket": "/private/tmp/genesis-birth-preparation-2a91f18",
+  "baseline": {
+    "scope": "independent provisional synthetic preparation only; actual #0001 NO-GO",
+    "revision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+    "artifacts": 598,
+    "rawBytes": 2792014,
+    "originCommitment": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+    "causal": {
+      "views": 12,
+      "initialSignal": 0,
+      "treatmentSignal": 2,
+      "withinTreatmentMemoryEffect": true
+    },
+    "python": "3.14.7",
+    "dependencies": {
+      "cryptography": "50.0.2",
+      "jsonschema": "4.26.0"
+    }
+  },
+  "checkerSha256": "19c2726c9b730bd2388a5653c482538c86bf3e5dc135e89ef7ea43bced34e1d5",
+  "inventoryRawSha256": "d68aabc05a6c73240a06ef094ad61e61ceb574d5ec11d8a2f2411ace2e6f9871",
+  "mutations": [
+    {
+      "case": "forged-origin",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "invalid proof"
+    },
+    {
+      "case": "changed-genome",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "invalid proof"
+    },
+    {
+      "case": "forged-experience",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "invalid proof"
+    },
+    {
+      "case": "changed-interaction",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "invalid proof"
+    },
+    {
+      "case": "fake-canonical-vector",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "literal canonical bytes"
+    },
+    {
+      "case": "fake-state-commitment",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "origin commitment"
+    },
+    {
+      "case": "missing-cross-domain-proof",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "one forged and one real alternate-domain proof"
+    },
+    {
+      "case": "treatment-is-omission",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "independent text treatment"
+    },
+    {
+      "case": "ablation-keeps-memory",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "independent text ablation"
+    },
+    {
+      "case": "rejection-causes-change",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "independent text rejectedExperience"
+    },
+    {
+      "case": "forged-memory-source",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "memory provenance"
+    },
+    {
+      "case": "asserted-refusal-no-evidence",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "actual rejected event evidence"
+    },
+    {
+      "case": "omitted-source-artifact",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "complete tracked selection"
+    },
+    {
+      "case": "changed-source-blob-hash",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "raw Git inventory binding"
+    },
+    {
+      "case": "duplicate-report-key",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "duplicate report key"
+    },
+    {
+      "case": "incomplete-marker-also-present",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "complete exact preparation member set"
+    },
+    {
+      "case": "no-complete-marker",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "complete exact preparation member set"
+    },
+    {
+      "case": "unrecognized-output-member",
+      "outcome": "rejected",
+      "exception": "Invalid",
+      "detail": "complete exact preparation member set"
+    },
+    {
+      "case": "nonregular-complete-marker",
+      "outcome": "rejected",
+      "exception": "OSError",
+      "detail": "[Errno 62] Too many levels of symbolic links: '/var/folders/ld/1g67pwms4g13xwzcygsddwlh0000gn/T/genesis-redteam-packet-fdsxl663/nonregular-complete-marker/COMPLETE'"
+    }
+  ]
+}

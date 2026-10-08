@@ -1,0 +1,460 @@
+{
+  "status": "PROVISIONAL SYNTHETIC PREPARATION ONLY; GENESIS #0001 UNBORN; NO-GO",
+  "admission": "accepted",
+  "retry": "duplicate",
+  "refusal": "invalid",
+  "rejectedEvent": {
+    "body": {
+      "profile": "synthetic-v1",
+      "organism": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+      "sequence": 1,
+      "previous": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+      "kind": "experience-v1",
+      "data": {
+        "evidence": {
+          "version": "evidence-v1",
+          "nonce": "provisional-encounter-one",
+          "sourceState": {
+            "profile": "synthetic-v1",
+            "rules": "adaptation-v1",
+            "organism": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+            "authority": "36c324a347dbc6c3d1528390e676c48eb0a2224eec23327c61135702eb8be202",
+            "sequence": 0,
+            "head": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+            "signal": 0
+          },
+          "observer": {
+            "version": "observer-v1",
+            "observerType": "language-mock",
+            "subject": "provisional-observer",
+            "capabilities": {
+              "symbols": {
+                "supported": true,
+                "evidence": "claimed"
+              }
+            }
+          },
+          "policy": {
+            "version": "policy-v1",
+            "allow": [
+              "text-v1",
+              "symbols-v1",
+              "path-v1"
+            ],
+            "disclosure": "public-synthetic"
+          },
+          "expression": {
+            "selection": {
+              "version": "negotiation-v1",
+              "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+              "observerProfileCommitment": "ea4a40599d91abcbc2bc2225b4d001297e571c6fd98783be142ba432ed0bfc5e",
+              "accessPolicyCommitment": "8e7163180585a41f8cfe70d83ac7802db42b0b880ca3c90f2f14cc5c7ca6000f",
+              "profile": "symbols-v1",
+              "procedure": "expression-v1"
+            },
+            "output": {
+              "kind": "symbols-v1",
+              "signal": 0,
+              "symbols": [
+                0,
+                255
+              ]
+            }
+          },
+          "interaction": {
+            "motif": 2,
+            "message": "PROVISIONAL SYNTHETIC INPUT"
+          }
+        }
+      }
+    },
+    "signature": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "rejectedState": {
+    "profile": "synthetic-v1",
+    "rules": "adaptation-v1",
+    "organism": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+    "authority": "36c324a347dbc6c3d1528390e676c48eb0a2224eec23327c61135702eb8be202",
+    "sequence": 0,
+    "head": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+    "signal": 0
+  },
+  "restoredState": {
+    "profile": "synthetic-v1",
+    "rules": "adaptation-v1",
+    "organism": "8e39341d818b931fcef95965f5b1454beb3472ed2d4f522577526e967232745e",
+    "authority": "36c324a347dbc6c3d1528390e676c48eb0a2224eec23327c61135702eb8be202",
+    "sequence": 1,
+    "head": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be",
+    "signal": 2
+  },
+  "memory": {
+    "subject": "provisional-observer",
+    "motif": 2,
+    "encounterId": "764488082ca4f2212901e3af3ac29a1e32abfa2c6ba74c9e543579e035fc6afb",
+    "eventRef": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be"
+  },
+  "synapse": {
+    "subject": "provisional-observer",
+    "motif": 2,
+    "encounterId": "764488082ca4f2212901e3af3ac29a1e32abfa2c6ba74c9e543579e035fc6afb",
+    "eventRef": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be",
+    "scope": "directional-claim",
+    "partnerConsent": "unverified"
+  },
+  "views": [
+    {
+      "capability": "text",
+      "noExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "3fe9823ada39422cf10347178ce66eacca50be32754dbc8997fdababb2dca3ac",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "dbc93ddf39189f48debaba81b27a02c18e5c6d37734451c0c4dd9cbf311f549d",
+        "expressionOutputDigest": "92cbe44887a349145e44e49fcbefaf0c1ff6cfe6755ddb5ac37bbe994ee28b54",
+        "output": {
+          "kind": "relationship-text-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": "grammar:0,64,128,255"
+        }
+      },
+      "treatment": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "3fe9823ada39422cf10347178ce66eacca50be32754dbc8997fdababb2dca3ac",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be",
+        "expressionInputCommitment": "625fef070d5377ba022ec1378616ff0e05dd0a1c04c66282903b232cdd56049d",
+        "expressionOutputDigest": "e7e011478cb4b10210cabd26233b87799ff3906b55df08aacc516d6ba6c1876d",
+        "output": {
+          "kind": "relationship-text-v1",
+          "signal": 2,
+          "grammar": [
+            130,
+            253,
+            2,
+            66
+          ],
+          "presentation": "grammar:130,253,2,66"
+        }
+      },
+      "rejectedExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "3fe9823ada39422cf10347178ce66eacca50be32754dbc8997fdababb2dca3ac",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "dbc93ddf39189f48debaba81b27a02c18e5c6d37734451c0c4dd9cbf311f549d",
+        "expressionOutputDigest": "92cbe44887a349145e44e49fcbefaf0c1ff6cfe6755ddb5ac37bbe994ee28b54",
+        "output": {
+          "kind": "relationship-text-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": "grammar:0,64,128,255"
+        }
+      },
+      "ablation": {
+        "procedure": "control-no-memory-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "3fe9823ada39422cf10347178ce66eacca50be32754dbc8997fdababb2dca3ac",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "f081fbd45164c8d6a3e3ae38f256aa618ab99b0e62a6f842fce8329b09927d70",
+        "expressionOutputDigest": "c4d559891f3f54b823dbf5db326bfcbd2e2c4bb45b129415421d598d5e57d8b1",
+        "output": {
+          "kind": "relationship-text-v1",
+          "signal": 2,
+          "grammar": [
+            2,
+            66,
+            130,
+            253
+          ],
+          "presentation": "grammar:2,66,130,253"
+        }
+      }
+    },
+    {
+      "capability": "symbols",
+      "noExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "48eb96e6302b1de2215b3799feb6a09a64f472b001d779b856e1df86454f60f2",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "271038811cf1df7cc7444377e31584c9e68031da1760f2d9d8e4f43c4217f05b",
+        "expressionOutputDigest": "6d2239aa8ab221e314a5d125500218bcb86f05c848b20ea54894d15605b8ba68",
+        "output": {
+          "kind": "relationship-symbols-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": [
+            0,
+            64,
+            128,
+            255
+          ]
+        }
+      },
+      "treatment": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "48eb96e6302b1de2215b3799feb6a09a64f472b001d779b856e1df86454f60f2",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be",
+        "expressionInputCommitment": "e47cd50c7d3501535e606b094ec3698afceb8646bc7696e229a21aa6ea5516b9",
+        "expressionOutputDigest": "544c5e53ac95ab9fb9e08cbb36d464069941f8e5c1f30d807a511401471fae83",
+        "output": {
+          "kind": "relationship-symbols-v1",
+          "signal": 2,
+          "grammar": [
+            130,
+            253,
+            2,
+            66
+          ],
+          "presentation": [
+            130,
+            253,
+            2,
+            66
+          ]
+        }
+      },
+      "rejectedExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "48eb96e6302b1de2215b3799feb6a09a64f472b001d779b856e1df86454f60f2",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "271038811cf1df7cc7444377e31584c9e68031da1760f2d9d8e4f43c4217f05b",
+        "expressionOutputDigest": "6d2239aa8ab221e314a5d125500218bcb86f05c848b20ea54894d15605b8ba68",
+        "output": {
+          "kind": "relationship-symbols-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": [
+            0,
+            64,
+            128,
+            255
+          ]
+        }
+      },
+      "ablation": {
+        "procedure": "control-no-memory-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "48eb96e6302b1de2215b3799feb6a09a64f472b001d779b856e1df86454f60f2",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "e7cc0f4f24de3c5d2aadbc70348bd220657ce8bc4c0c6dcdcfb48f57ad8d5773",
+        "expressionOutputDigest": "ec8a73f90e7b7f93203d0eb51d6d04f2ea9c458f0d4f353a3fe595ee833dfb69",
+        "output": {
+          "kind": "relationship-symbols-v1",
+          "signal": 2,
+          "grammar": [
+            2,
+            66,
+            130,
+            253
+          ],
+          "presentation": [
+            2,
+            66,
+            130,
+            253
+          ]
+        }
+      }
+    },
+    {
+      "capability": "spatial",
+      "noExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "c8db019b308e4c3a76e3aa50df1dd4dcd542bbefad14c475a74c84f2fa0cf2ed",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "13463023c739f597d73e3c45b02ed47a93e62af902fcccb909e0507117309ca6",
+        "expressionOutputDigest": "44955872bdc49a78f863dbb538a57c5d8b55bf9ad512aafd01be56c2bc47818c",
+        "output": {
+          "kind": "relationship-path-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": {
+            "frame": "fixture-plane-v1",
+            "unit": "mm",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                64,
+                1
+              ],
+              [
+                128,
+                2
+              ],
+              [
+                255,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "treatment": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "c8db019b308e4c3a76e3aa50df1dd4dcd542bbefad14c475a74c84f2fa0cf2ed",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": "2bd59026752fe3d95a055323a2e9ab51230cd1b3edcc537a451db56d36f569be",
+        "expressionInputCommitment": "b08bb597e9be3e28d148c2329e4259f249d52248886b360be0856939de48386e",
+        "expressionOutputDigest": "9ee846a5acceffab271ddf52e2d5add6ca1a89662843e3e76fba394e4a115900",
+        "output": {
+          "kind": "relationship-path-v1",
+          "signal": 2,
+          "grammar": [
+            130,
+            253,
+            2,
+            66
+          ],
+          "presentation": {
+            "frame": "fixture-plane-v1",
+            "unit": "mm",
+            "points": [
+              [
+                130,
+                0
+              ],
+              [
+                253,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                66,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "rejectedExperience": {
+        "procedure": "relationship-expression-v1",
+        "sourceStateRef": "faf77e23f98ea02d6c7158f195893cd5b7424b27ac220e15be8df03509bfeb56",
+        "observerProfileCommitment": "c8db019b308e4c3a76e3aa50df1dd4dcd542bbefad14c475a74c84f2fa0cf2ed",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "13463023c739f597d73e3c45b02ed47a93e62af902fcccb909e0507117309ca6",
+        "expressionOutputDigest": "44955872bdc49a78f863dbb538a57c5d8b55bf9ad512aafd01be56c2bc47818c",
+        "output": {
+          "kind": "relationship-path-v1",
+          "signal": 0,
+          "grammar": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "presentation": {
+            "frame": "fixture-plane-v1",
+            "unit": "mm",
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                64,
+                1
+              ],
+              [
+                128,
+                2
+              ],
+              [
+                255,
+                3
+              ]
+            ]
+          }
+        }
+      },
+      "ablation": {
+        "procedure": "control-no-memory-v1",
+        "sourceStateRef": "cd88477aef778ad5ac74931a9100e9c4e71194992b83d554568de05875c95960",
+        "observerProfileCommitment": "c8db019b308e4c3a76e3aa50df1dd4dcd542bbefad14c475a74c84f2fa0cf2ed",
+        "accessPolicyCommitment": "2958af9d4dfdae98c6f8ad7c93e5a62af7f0c06842f37c13b1282e9b0f42d643",
+        "memorySource": null,
+        "expressionInputCommitment": "03d7cd895633ae471cb19404b64d3fc7103407dbc2d0f78a7462481a3ee9b16d",
+        "expressionOutputDigest": "8446db85589af0661516fb8594ad69883b877ecd257aca12b39e0189d5a40c70",
+        "output": {
+          "kind": "relationship-path-v1",
+          "signal": 2,
+          "grammar": [
+            2,
+            66,
+            130,
+            253
+          ],
+          "presentation": {
+            "frame": "fixture-plane-v1",
+            "unit": "mm",
+            "points": [
+              [
+                2,
+                0
+              ],
+              [
+                66,
+                1
+              ],
+              [
+                130,
+                2
+              ],
+              [
+                253,
+                3
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[
+  {
+    "case": "forged-origin-proof",
+    "origin": {
+      "body": {
+        "profile": "synthetic-v1",
+        "rules": "adaptation-v1",
+        "birth": "provisional-birth-readiness-shadow",
+        "creator": "PROVISIONAL SYNTHETIC TEST ONLY",
+        "authority": "9060f4d612defed07611ef798c4692f39191ece792b92c8c494560a81f07b4ab",
+        "genome": {
+          "signal": 0
+        }
+      },
+      "signature": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "expectedCode": "invalid"
+  },
+  {
+    "case": "cross-purpose-proof",
+    "origin": {
+      "body": {
+        "profile": "synthetic-v1",
+        "rules": "adaptation-v1",
+        "birth": "provisional-birth-readiness-shadow",
+        "creator": "PROVISIONAL SYNTHETIC TEST ONLY",
+        "authority": "9060f4d612defed07611ef798c4692f39191ece792b92c8c494560a81f07b4ab",
+        "genome": {
+          "signal": 0
+        }
+      },
+      "signature": "13a1758fff40e9184265763a301e9e0b3f9060edbd1bb1fe7d300d0f2c5ac50811c12b96141b5697b9b56b97d21b088c1acc6f3381e920fd31208531f63c3206"
+    },
+    "expectedCode": "invalid"
+  }
+]

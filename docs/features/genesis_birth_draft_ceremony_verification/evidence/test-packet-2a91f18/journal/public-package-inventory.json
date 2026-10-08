@@ -1,0 +1,40 @@
+{
+  "version": "public-package-v1",
+  "files": [
+    {
+      "path": "creator-binding.json",
+      "sha256": "9bd4c78867809279d97ba6354646ad3885476c4c29a0a5930c7f107986ad9eae",
+      "size": 232
+    },
+    {
+      "path": "dependencies/test-dependency",
+      "sha256": "5e9190d1e4f999c8cebb2a7b3a9a5c18532425abbcf23febea2c3922426f0437",
+      "size": 39
+    },
+    {
+      "path": "files/spec/GENESIS.md",
+      "sha256": "2e681e603ef2976fdb403c907d3676ebd35551f59afacc2ea51c8b216fee59d8",
+      "size": 3575
+    },
+    {
+      "path": "freeze.json",
+      "sha256": "b97058f6446f9b3af585fe8274a3e0c5032d197d790581b578919886aae606ca",
+      "size": 338
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "2cf0a09a82301f32508e9c770d14e545d7e30f981c6be9d548cd35b908249a13",
+      "size": 333
+    },
+    {
+      "path": "manifest.json",
+      "sha256": "a2548b5cc4cd623e55494a7903cc384a4c7f6fb5ba12530af543ec933922ed92",
+      "size": 518
+    },
+    {
+      "path": "origin.json",
+      "sha256": "94cb7bc105ad40baf7c431f61377cf06928e1482a8a5f7aa15349f11abe2b1f1",
+      "size": 374
+    }
+  ]
+}

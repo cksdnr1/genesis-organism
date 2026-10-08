@@ -1,0 +1,56 @@
+{
+  "scope": "independent narrow baseline probes only; candidate not reviewed yet",
+  "results": [
+    {
+      "probe": "canonical-cross-language",
+      "result": "pass",
+      "detail": {
+        "sha256": "c5a386b2897dc81f602ea260eadf944ddf99532881868ffc1d717c09e710d491",
+        "utf16Ordering": true
+      }
+    },
+    {
+      "probe": "malformed-wire-rejection",
+      "result": "pass",
+      "detail": 7
+    },
+    {
+      "probe": "synthetic-origin-replay",
+      "result": "pass",
+      "detail": {
+        "organism": "37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc",
+        "stateCommitment": "50d6db5f20c01c34bb94634b0acbbe1eac8bc57d5f20d2a0fe79906eb623fed7",
+        "scope": "public synthetic baseline, no actual candidate"
+      }
+    },
+    {
+      "probe": "causal-oracle-falsification",
+      "result": "pass",
+      "detail": {
+        "baseline": {
+          "verifiedViews": 12,
+          "grammarBefore": [
+            0,
+            64,
+            128,
+            255
+          ],
+          "grammarAfter": [
+            128,
+            255,
+            0,
+            64
+          ],
+          "scope": "independent synthetic D08 evidence; no subjective meaning or real birth"
+        },
+        "rejectedMutations": [
+          "treatment-equals-control",
+          "ablation-keeps-effect",
+          "rejected-experience-has-effect",
+          "forged-memory-reference",
+          "missing-view"
+        ]
+      }
+    }
+  ]
+}

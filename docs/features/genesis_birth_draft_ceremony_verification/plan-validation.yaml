@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "taskId": "genesis_birth_draft_ceremony_verification",
+  "phaseId": "implementation_plan_validate",
+  "result": "approved",
+  "score": 98,
+  "blockers": [],
+  "summary": "Approved bounded TEST revision: strict integer lexemes reject rounded fractions/exponents/-0; archive aliases order-independent; normalized retained historical paths permitted while actual roots remain protected. No actual lifecycle scope.",
+  "dimensions": [
+    {
+      "name": "correctness",
+      "earned": 30,
+      "max": 30,
+      "evidence": [
+        "spec.md TEST wrapper, trust context and prerequisite graph; parent ceremony-proposal.md"
+      ],
+      "deductions": "Original gate evidence scoped to TEST mechanics; no actual rights/adoption/action inferred."
+    },
+    {
+      "name": "contracts",
+      "earned": 25,
+      "max": 25,
+      "evidence": [
+        "spec.md exact files/context/records/retrieval bindings and output artifacts type"
+      ],
+      "deductions": "External trusted context, acyclic raw-package graph, exact copied release bytes and journal matching fixed."
+    },
+    {
+      "name": "failure_handling",
+      "earned": 19,
+      "max": 20,
+      "evidence": [
+        "spec.md readers/path/member/resource/lock/conflict/supersession clauses"
+      ],
+      "deductions": "Trusted private parent assumption; no hostile-admin race or physical archive truth claimed."
+    },
+    {
+      "name": "testability",
+      "earned": 15,
+      "max": 15,
+      "evidence": [
+        "spec.md Required evidence; plan.md independent fixture/mutation/no-write tests"
+      ],
+      "deductions": "Independent Python parser/proof checks, malformed raw JSON, FIFO timeout and directory snapshots required."
+    },
+    {
+      "name": "scope",
+      "earned": 9,
+      "max": 10,
+      "evidence": [
+        "spec.md purpose/minimality; plan.md rollback/source ownership"
+      ],
+      "deductions": "Actual creator adoption/real ceremony remains outside this mechanical TEST proof; no writer/signing API."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/features/genesis_birth_draft_ceremony_verification/spec.md",
+      "sha256": "564de2b0b5f3f278346d6c882db0e56de5d675174bf16916c1e989f30de03abd"
+    },
+    {
+      "path": "docs/features/genesis_birth_draft_ceremony_verification/plan.md",
+      "sha256": "5ae526d0bcd2758ede619526ffa70f99445df637f05c04fd72aa2e2be96c3b93"
+    }
+  ]
+}

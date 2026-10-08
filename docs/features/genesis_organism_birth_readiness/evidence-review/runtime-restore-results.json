@@ -1,0 +1,341 @@
+{
+  "purpose": "ACTUAL LOCAL SYNTHETIC RETENTION/RESTORE EXPERIMENT; NO REAL CANDIDATE OR EXTERNAL ARCHIVE",
+  "sourceRevision": "68f4d395f471995c90be58c25b88f592aadf2f96",
+  "scratch": "/private/tmp/genesis-birth-recovery-68f4d39",
+  "runtimePackages": 25,
+  "runtimeInventoryEntries": 14624,
+  "runtimeRawBytes": 318589589,
+  "restoredInventoryMismatches": 0,
+  "host": {
+    "system": "Darwin",
+    "release": "25.4.0",
+    "machine": "arm64"
+  },
+  "retainedWheels": [
+    {
+      "name": "attrs-26.1.0-py3-none-any.whl",
+      "size": 67548,
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+    },
+    {
+      "name": "cffi-2.1.1-cp314-cp314-macosx_11_0_arm64.whl",
+      "size": 184962,
+      "sha256": "661c298b4821edebead0c91edd2b00374d67ad7c5a1f7a91d4442633b79d6a72"
+    },
+    {
+      "name": "cryptography-50.0.2-cp311-abi3-macosx_11_0_arm64.whl",
+      "size": 3914904,
+      "sha256": "fa8f5efb344d6908a1ce62f4a24e2e5780f825d6f53f5f50ec5ffacac72936cb"
+    },
+    {
+      "name": "jsonschema-4.26.0-py3-none-any.whl",
+      "size": 90630,
+      "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"
+    },
+    {
+      "name": "jsonschema_specifications-2025.9.1-py3-none-any.whl",
+      "size": 18437,
+      "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+    },
+    {
+      "name": "pycparser-3.0-py3-none-any.whl",
+      "size": 48172,
+      "sha256": "b727414169a36b7d524c1c3e31839a521725078d7b2ff038656844266160a992"
+    },
+    {
+      "name": "referencing-0.37.0-py3-none-any.whl",
+      "size": 26766,
+      "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+    },
+    {
+      "name": "rpds_py-2026.9.1-cp314-cp314-macosx_11_0_arm64.whl",
+      "size": 341878,
+      "sha256": "3f0e9ac28fc067d4d34b88ae43c48e9489455c97fee9633d851f7eeed5a05d35"
+    }
+  ],
+  "verifiedRuntimeChecks": [
+    {
+      "name": "verified-runtime-imports",
+      "command": [
+        "/private/tmp/genesis-birth-recovery-68f4d39/restored-runtime/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+        "-c",
+        "import sys,cryptography,jsonschema,importlib.metadata,json;print(json.dumps({\"prefix\":sys.prefix,\"crypto\":cryptography.__file__,\"versions\":{k:importlib.metadata.version(k) for k in [\"attrs\",\"cffi\",\"cryptography\",\"jsonschema\",\"jsonschema-specifications\",\"pycparser\",\"referencing\",\"rpds-py\"]}}))"
+      ],
+      "exit": 0,
+      "originalHomebrewLoads": 0,
+      "loaderLogLines": 1725
+    },
+    {
+      "name": "verified-restored-schema",
+      "command": [
+        "/private/tmp/genesis-birth-recovery-68f4d39/restored-runtime/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+        "tests/schema_vectors.py"
+      ],
+      "exit": 0,
+      "originalHomebrewLoads": 0,
+      "loaderLogLines": 1736
+    },
+    {
+      "name": "verified-restored-successor",
+      "command": [
+        "/private/tmp/genesis-birth-recovery-68f4d39/restored-runtime/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+        "tests/successor_schema_vectors.py"
+      ],
+      "exit": 0,
+      "originalHomebrewLoads": 0,
+      "loaderLogLines": 1730
+    },
+    {
+      "name": "verified-restored-causal",
+      "command": [
+        "/private/tmp/genesis-birth-recovery-68f4d39/restored-runtime/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/bin/python3.14",
+        "tools/audit_causal.py"
+      ],
+      "exit": 0,
+      "originalHomebrewLoads": 0,
+      "loaderLogLines": 1717
+    }
+  ],
+  "offlineInstallation": {
+    "exit": 0,
+    "network": "sandbox-exec deny network*",
+    "originalHomebrewLoaderPaths": 0,
+    "loaderLogLines": 1746
+  },
+  "networkProbe": {
+    "errno": 1,
+    "message": "Operation not permitted"
+  },
+  "failedAttempt": {
+    "operation": "ensurepip --upgrade",
+    "result": "externally-managed-environment; no override; switched to bundled pip zip with --target owned scratch"
+  },
+  "evidenceFiles": [
+    {
+      "path": "ensurepip.stderr",
+      "size": 3669,
+      "sha256": "bc72b380b583e6ee53aea0d6caa2eae220d13d2ca8519dd8bc2e6c18b3a32cb0"
+    },
+    {
+      "path": "ensurepip.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "install-wheels-verified.stderr",
+      "size": 184937,
+      "sha256": "91a78adb5fd905f51656a760b7861d748e16575e8257427c78eda1b7788f437f"
+    },
+    {
+      "path": "install-wheels-verified.stdout",
+      "size": 1974,
+      "sha256": "87ff9852a6f18a6bb14229512e80a0546953b0d6b0a289cc8d5e34905b85c6e0"
+    },
+    {
+      "path": "install-wheels.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "install-wheels.stdout",
+      "size": 1814,
+      "sha256": "4c49ffc076d689bab6adbe17e2108e641b586e83c761058583d5c29cfb77b0a9"
+    },
+    {
+      "path": "node-version.stderr",
+      "size": 91751,
+      "sha256": "6067e78fff6bcd6c7f22d5c51962fe6c644ff05c15b56bd2d632ebe1febef0db"
+    },
+    {
+      "path": "node-version.stdout",
+      "size": 8,
+      "sha256": "9b8856ee50cf06a9ce94d984812927448e9be59b03931bc1478b1d1d49a0d7b5"
+    },
+    {
+      "path": "python-prefix.stderr",
+      "size": 176333,
+      "sha256": "b735e1e1cddc99e0047a132065c401940506f4469b25919732bee97345483c48"
+    },
+    {
+      "path": "python-prefix.stdout",
+      "size": 403,
+      "sha256": "e71a44decc220f8241207f6de5076f80ae3eaeef440911c58b9a48ec864417d7"
+    },
+    {
+      "path": "restored-causal.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "restored-causal.stdout",
+      "size": 177,
+      "sha256": "84bd49b3606f214958c0ac750749063f691e4d370881c3e5fbc7faed2a2577dc"
+    },
+    {
+      "path": "restored-check-results.json",
+      "size": 1691,
+      "sha256": "bbc421de9d44a9fad1260fe9b2386a4a818048b4de3a7f655f82011d4528004d"
+    },
+    {
+      "path": "restored-imports.stderr",
+      "size": 180393,
+      "sha256": "fed9e4f229963857fe85b77dc22b5026ebaa7b540f07dea6095f1d1816f8a5bf"
+    },
+    {
+      "path": "restored-imports.stdout",
+      "size": 511,
+      "sha256": "65fea1069af57c7a4657f19162c7690c6e61caab4b52c96d4e3d7d4fae7b1fc7"
+    },
+    {
+      "path": "restored-inventory-check.json",
+      "size": 43,
+      "sha256": "26ddf7804e8714e7012579e176cdd1b0ac1947a35a26a29c88ded635ded5b494"
+    },
+    {
+      "path": "restored-runtime-env.json",
+      "size": 3101,
+      "sha256": "b10b9760373748398fad3a077284c73585cf7df2e7b3696de4f5f1510bdc4f02"
+    },
+    {
+      "path": "restored-schema.stderr",
+      "size": 104,
+      "sha256": "e11bbb630c1a6ea91f4322ac92d7ce2a6c043ad84d3e41ecf0d0f5a73e9c9fd0"
+    },
+    {
+      "path": "restored-schema.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "restored-successor.stderr",
+      "size": 100,
+      "sha256": "d3cb31c0dd90ec3a1d21bb5dfe377f481960b528a9a09cc1385c3e7ab6bcb53c"
+    },
+    {
+      "path": "restored-successor.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "restored-tests.stderr",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "restored-tests.stdout",
+      "size": 6204,
+      "sha256": "f9e52cae99da79d5221d654eadbfb2805bcc645cf0718580e2a1ac513256a039"
+    },
+    {
+      "path": "runtime-distribution.tar.gz",
+      "size": 99283976,
+      "sha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d"
+    },
+    {
+      "path": "runtime-inventory.json",
+      "size": 2985359,
+      "sha256": "5eff54e70ee923c3d0556200a47c0f7ac51fb394a9b02c1f82a343711302f846"
+    },
+    {
+      "path": "runtime-packaging-results.json",
+      "size": 1005,
+      "sha256": "30b7f303e928555630bb476a0d97fe74416b5bf272f1753ee8b6336e54b35915"
+    },
+    {
+      "path": "source-2a91f18.bundle",
+      "size": 1060693,
+      "sha256": "cad9a6e6e12a68d868f0f1fe5b06f71cf5279c062fa062e67d2ccac5a552ef4c"
+    },
+    {
+      "path": "source-68f4d39.bundle",
+      "size": 966361,
+      "sha256": "d343e358f1030b376a3aca30ebbca03508d836fb2614ece791637d024c4cdf2f"
+    },
+    {
+      "path": "verified-restored-causal.stderr",
+      "size": 177894,
+      "sha256": "106fc479afbf921425dccc067dd650317c1a807f299cf42571936e9695bb41a6"
+    },
+    {
+      "path": "verified-restored-causal.stdout",
+      "size": 177,
+      "sha256": "84bd49b3606f214958c0ac750749063f691e4d370881c3e5fbc7faed2a2577dc"
+    },
+    {
+      "path": "verified-restored-schema.stderr",
+      "size": 181320,
+      "sha256": "68207a175181f7ad42f428c70347833d398004adac2a7e3586821ab67d2514c6"
+    },
+    {
+      "path": "verified-restored-schema.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-restored-successor.stderr",
+      "size": 180251,
+      "sha256": "abb9823b8a63e5d8fc06e7c8120fda19e0c2f7de02ac0f0a74f6b296791b381f"
+    },
+    {
+      "path": "verified-restored-successor.stdout",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "verified-runtime-check-results.json",
+      "size": 1698,
+      "sha256": "90130d57e5948215ffdc26309fecfbdbaafbeb66fdc919a48ac241dd14215da2"
+    },
+    {
+      "path": "verified-runtime-imports.stderr",
+      "size": 180151,
+      "sha256": "a7910f115270816486b1ac9d4a68574eed0653f2e134d516e9f061753d231d47"
+    },
+    {
+      "path": "verified-runtime-imports.stdout",
+      "size": 470,
+      "sha256": "da2371699d7f13cd5379a7b77539b6a401579e61beda69a4a85c595b544dff66"
+    }
+  ],
+  "limits": [
+    "Same macOS/arm64 host; OS frameworks, loader, sandbox-exec and system Git remain host dependencies",
+    "No physical failure, permanent retention, different-host portability or independent archive witnessed",
+    "Actual candidate key/rights/adoption/freeze/release/birth remain unperformed",
+    "Runtime retained as public package bytes; absolute symlink targets can refer to original prefix, execution uses explicit restored PYTHONHOME/DYLD paths with loader evidence",
+    "Source bundle restored by sole Git owner; reviewer wrote only owned runtime/setup/evidence scratch files"
+  ],
+  "restoredInventoryCheck": {
+    "entries": 14624,
+    "mismatches": []
+  },
+  "fullRestoredTests": {
+    "sourceRevision": "68f4d395f471995c90be58c25b88f592aadf2f96",
+    "exit": 0,
+    "tests": 61,
+    "pass": 61,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 246300.285125,
+    "network": "sandbox-exec deny network*",
+    "runtime": "restored Node25.9.0/Python3.14.7; explicit restored DYLD/PYTHONHOME/PYTHONPATH",
+    "dependencySite": "restored-site (8 offline-installed pinned wheel distributions)"
+  },
+  "packaging": {
+    "purpose": "LOCAL SYNTHETIC DISTRIBUTION PACKAGING ONLY; NO REAL ARCHIVE OR BIRTH",
+    "archive": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-distribution.tar.gz",
+    "archiveBytes": 99283976,
+    "archiveSha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d",
+    "archiveMemberCount": 15805,
+    "selectedDistributionArtifactCount": 1,
+    "within256MiBPerDistributionLimit": true,
+    "within1GiBAggregateLimit": true,
+    "expandedRuntimeEntries": 14624,
+    "expandedRuntimeRawBytes": 318589589,
+    "extraction": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-bundle-extracted",
+    "runtimeInventoryMismatches": [],
+    "wheelCount": 8,
+    "wheelMismatches": 0,
+    "inventoryRawBytesMatch": true,
+    "limits": "Inner expanded14624entries distinct from outer selected distribution1artifact; known owned public archive checked for traversal/hardlinks/symlink-ancestor writes before extraction. Absolute symlink targets preserved but not followed. Samehost/OS limitations unchanged."
+  }
+}

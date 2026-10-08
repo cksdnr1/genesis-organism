@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "purpose": "PUBLIC TEST ONLY",
+  "revision": "2a91f1850a1af8883f4101376860c8bd71a59450",
+  "selection": "TEST ONLY bounded source selection",
+  "artifacts": [
+    {
+      "path": "spec/GENESIS.md",
+      "sha256": "2e681e603ef2976fdb403c907d3676ebd35551f59afacc2ea51c8b216fee59d8",
+      "size": 3575
+    }
+  ]
+}

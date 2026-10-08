@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "taskId": "genesis_organism_birth_readiness",
+  "phaseId": "tech_spec_validate",
+  "result": "approved",
+  "score": 97,
+  "blockers": [],
+  "summary": "Approved updated fail-closed preparation completion contract: publish COMPLETE exclusively before removing INCOMPLETE; exact set required; failed initial-marker write never counts complete. Actual birth remains NO-GO.",
+  "dimensions": [
+    {
+      "name": "correctness",
+      "earned": 30,
+      "max": 30,
+      "evidence": [
+        "redteam/oracle.md; spec.md acceptance criteria 1-7"
+      ],
+      "deductions": "All twelve original gates, causal product and Phase38 entry are retained."
+    },
+    {
+      "name": "contracts",
+      "earned": 24,
+      "max": 25,
+      "evidence": [
+        "spec.md Fixed preparation-tool contract"
+      ],
+      "deductions": "Readable report subfields reuse existing demo; plan must map exact APIs without changing semantics."
+    },
+    {
+      "name": "failure_handling",
+      "earned": 19,
+      "max": 20,
+      "evidence": [
+        "spec.md Git equality, path/blob bounds, no overwrite and INCOMPLETE contract"
+      ],
+      "deductions": "Power-loss or privileged filesystem adversaries are not established by preparation; no such claim is permitted."
+    },
+    {
+      "name": "testability",
+      "earned": 15,
+      "max": 15,
+      "evidence": [
+        "spec.md shadow event/three views/controls; redteam/probe-results.json"
+      ],
+      "deductions": "Independent shadow verification and focused negative cases are explicitly required."
+    },
+    {
+      "name": "scope",
+      "earned": 9,
+      "max": 10,
+      "evidence": [
+        "spec.md alternatives/minimality; candidate-proposal.md; accepted D01/D12 scope"
+      ],
+      "deductions": "Real adoption, attribution and ceremony are unresolved creator decisions outside implementation scope; actual readiness stays NO-GO."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/features/genesis_organism_birth_readiness/spec.md",
+      "sha256": "31776203172fab3bed3378d25a634c4ea19116d093b57745c6e37363f542ec8e"
+    }
+  ]
+}

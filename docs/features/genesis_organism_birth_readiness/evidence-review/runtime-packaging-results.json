@@ -1,0 +1,18 @@
+{
+  "purpose": "LOCAL SYNTHETIC DISTRIBUTION PACKAGING ONLY; NO REAL ARCHIVE OR BIRTH",
+  "archive": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-distribution.tar.gz",
+  "archiveBytes": 99283976,
+  "archiveSha256": "131fb2233ce7ea200e5ef492fd31a1a0daa173f3929089fb2f9ffd0ad2be641d",
+  "archiveMemberCount": 15805,
+  "selectedDistributionArtifactCount": 1,
+  "within256MiBPerDistributionLimit": true,
+  "within1GiBAggregateLimit": true,
+  "expandedRuntimeEntries": 14624,
+  "expandedRuntimeRawBytes": 318589589,
+  "extraction": "/private/tmp/genesis-birth-recovery-68f4d39/runtime-bundle-extracted",
+  "runtimeInventoryMismatches": [],
+  "wheelCount": 8,
+  "wheelMismatches": 0,
+  "inventoryRawBytesMatch": true,
+  "limits": "Inner expanded14624entries distinct from outer selected distribution1artifact; known owned public archive checked for traversal/hardlinks/symlink-ancestor writes before extraction. Absolute symlink targets preserved but not followed. Samehost/OS limitations unchanged."
+}

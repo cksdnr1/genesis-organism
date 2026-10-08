@@ -1,0 +1,36 @@
+{
+  "scope": "unsigned PUBLIC TEST byte mechanics only; no actual key, origin, approval or runtime acceptance",
+  "vectorFileSha256": "4a4a296f792eec513bb0ddc6dab446c2ba5adb4556d49fa5de45301749c06cfb",
+  "vectors": [
+    {
+      "kind": "creator-binding",
+      "canonicalBytes": 248,
+      "messageSha256": "f4f46963e19e8d36fae80339bc393267bc8e96e44b3433c63e20bb160e932b69"
+    },
+    {
+      "kind": "manifest",
+      "canonicalBytes": 515,
+      "messageSha256": "8fbffe4c8f35204ffa9f1c65afa9b580a677d031d1a245b89d3317b848140641"
+    },
+    {
+      "kind": "possession",
+      "canonicalBytes": 327,
+      "messageSha256": "4db81c2ce965e6b13c039f40fae587f11b526d27251ac678cecbec9dc077a410"
+    },
+    {
+      "kind": "freeze",
+      "canonicalBytes": 186,
+      "messageSha256": "7e494b19139b42bf6c7ab41f1c248b008b76842846e2c3f9c9a512834fb2c6bf"
+    },
+    {
+      "kind": "release",
+      "canonicalBytes": 351,
+      "messageSha256": "88d87f04567e0101c6a23ced6ccc976f973c160c3409d8bfb21aa4a355fe1a2e"
+    },
+    {
+      "kind": "birth",
+      "canonicalBytes": 436,
+      "messageSha256": "e388e588fd15159006b2da07d9b31ce09b5d943efd0a13bee8ba8079624be25a"
+    }
+  ]
+}
