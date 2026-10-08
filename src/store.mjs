@@ -23,7 +23,7 @@ function guard(directory) {
   return absolute;
 }
 function readBounded(filename) {
-  const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW);
+  const descriptor = fs.openSync(filename, fs.constants.O_RDONLY | fs.constants.O_NOFOLLOW | fs.constants.O_NONBLOCK);
   try {
     const stat = fs.fstatSync(descriptor);
     requireThat(stat.isFile(), 'invalid', 'regular history file required');

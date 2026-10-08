@@ -21,6 +21,7 @@ test('synthetic freeze binds exact Git bytes and independently reproduces refere
   const manifest = manifestFor(revision), freeze = freezeFor(manifest);
   assert.ok(manifest.artifacts.some(item => item.path === 'docs/features/genesis_organism_phase_36/freeze.json'), 'retain historical freeze fixture needed by archive/birth tests');
   assert.ok(manifest.artifacts.some(item => item.path === 'docs/features/genesis_organism/post-merge-audit/diagnostic-results.json'), 'retain exact negative inputs required by conformance tests');
+  assert.ok(manifest.artifacts.some(item => item.path === 'docs/decisions/2026-10-08-diagnostic-precedence-clarification.md'), 'retain accepted diagnostic precedence required by compound conformance');
   const checked = checkFreeze(manifest, freeze);
   assert.equal(readArtifacts(manifest).size, manifest.artifacts.length);
   const independent = python({ manifest, freeze });
@@ -305,4 +306,34 @@ test('concurrent synthetic birth retries cannot publish a second origin', async 
   assert.equal(acceptBirth(...args(root, bundle)).status, 'duplicate');
   assert.equal(fs.readdirSync(path.join(root, 'accepted')).length, 1);
   assert.equal(offline(bundle, root).status, 0);
+});
+
+test('nonregular input refusal covers both ceremony readers without FIFO writers', { skip: process.platform === 'win32' }, t => {
+  const root = scratch(t), target = path.join(root, 'payload');
+  const marker = fs.readFileSync(path.join(root, 'REHEARSAL'));
+  assert.deepEqual(readRehearsal(root, 'REHEARSAL'), marker, 'regular marker control');
+  assert.equal(spawnSync('mkfifo', [target]).status, 0);
+  const nodeScript = `import {readRehearsal} from './tools/rehearsal.mjs';try { console.log(readRehearsal(process.argv[1],'payload').toString('hex')); } catch(e) { console.error(JSON.stringify({error:e.code}));process.exitCode=1; }`;
+  const pythonScript = `import sys,json;sys.path.insert(0,'verifier');import rehearsal as r
+try: print(r.read_local(r.guard_root(sys.argv[1]),'payload').hex())
+except Exception as e: print(json.dumps({'error':getattr(e,'code','io')}),file=sys.stderr);sys.exit(1)`;
+  const readers = [[process.execPath, ['--input-type=module', '-e', nodeScript, root], 'limit'], ['.venv/bin/python', ['-c', pythonScript, root], 'invalid']];
+  const before = { names: fs.readdirSync(root).sort(), mode: fs.lstatSync(target).mode, marker: marker.toString('hex') };
+  function refuses() {
+    for (const [command, args, code] of readers) {
+      const result = spawnSync(command, args, { encoding: 'utf8', timeout: 3000 });
+      assert.ifError(result.error); assert.equal(result.signal, null); assert.equal(result.status, 1);
+      assert.equal(result.stdout, ''); assert.equal(JSON.parse(result.stderr).error, code);
+      assert.deepEqual({ names: fs.readdirSync(root).sort(), mode: fs.lstatSync(target).mode, marker: fs.readFileSync(path.join(root, 'REHEARSAL')).toString('hex') }, before);
+    }
+  }
+  refuses();
+  const descriptor = fs.openSync(target, fs.constants.O_RDWR | fs.constants.O_NONBLOCK);
+  try { refuses(); } finally { fs.closeSync(descriptor); }
+  fs.unlinkSync(target); const bytes = Buffer.from('captured synthetic archive bytes'); fs.writeFileSync(target, bytes);
+  for (const [command, args] of readers) {
+    const result = spawnSync(command, args, { encoding: 'utf8', timeout: 3000 });
+    assert.ifError(result.error); assert.equal(result.status, 0, result.stderr);
+    assert.equal(result.stdout.trim(), bytes.toString('hex')); assert.equal(result.stderr, '');
+  }
 });
