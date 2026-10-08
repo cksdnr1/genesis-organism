@@ -43,3 +43,7 @@ step closes only after this evidence is committed/pushed; the subsequent CLI
 completion inventory records its final status, not a premature result assertion.
 Actual #0001 audit remains NO-GO, original minimum gates/bytes unchanged, no real
 freeze/tag/release/birth/mint/deploy or automatic merge. Existing stacked draft PR6.
+
+Subsequent publication confirmation: Phase38 PR workflow completed; installed
+PlaySpec CLI freshly confirmed all38 tasks completed. workflow-completion.json
+retains that inventory. This closes execution bookkeeping, not any real birth gate.

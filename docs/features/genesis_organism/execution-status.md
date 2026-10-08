@@ -25,7 +25,7 @@ mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase add
 | 35 | own completed mono-spec; all-original-gate audit | Independent12-view later-expression gap closed; actual #0001 NO-GO, synthetic rehearsal prerequisites audited. |
 | 36 | own completed mono-spec;194artifact freeze atb9c2972 | Exact Git bytes/proofs independently reproduced; tamper/unavailable/attribution/supersession controls. |
 | 37 | own completed mono-spec; offline local archive trial ata9f5e69 | Two copies, four write-boundary faults, timestamp/skip/negative checks; no witness/durability claim. |
-| 38 | runtime/rehearsal verified atc3a918f; final PR step pending |195artifact successor closes test-input omission;50 groups pass, six real SIGKILL recoveries and one-origin retry/concurrency evidence. |
+| 38 | own completed mono-spec; runtime/rehearsal verified atc3a918f |195artifact successor closes test-input omission;50 groups pass, six real SIGKILL recoveries and one-origin retry/concurrency evidence. |
 
 Tasks use genesis_organism_phase_XX; versioned spec/review/plan/review/result/pr
 artifacts live in docs/features/genesis_organism_phase_XX. Phases4–38 are in stacked
@@ -44,6 +44,14 @@ Current D01 tested-profile rights and D12 synthetic ceremony are creator-accepte
 see2026-10-08-rights-and-rehearsal-acceptance.md. D12 SKIP remains accepted only for
 this profile. Actual #0001 remains NO-GO/UNBORN: no actual candidate, key attribution,
 freeze, public release, operational archive/rights or birth acceptance is fabricated.
+
+Final CLI inventory: all38 `genesis_organism_phase_XX` mono-spec tasks freshly
+confirmed completed after Phase38 publication; see
+[workflow completion](../genesis_organism_phase_38/workflow-completion.json).
+This is direct local PlaySpec execution, not Novis queue/worker status. Every
+phase retains its own six versioned artifacts. D01 open historical wording is
+superseded only for the explicitly accepted tested profile. PR6 remains draft;
+PR3/4/5 remain stacked/open. No automatic merge or actual ceremony occurred.
 
 Historical proposals prepared2026-10-08:
 [D01 layered licensing/rights](../../decisions/D01-licensing-proposal.md) and
