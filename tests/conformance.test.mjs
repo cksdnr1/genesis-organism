@@ -6,7 +6,8 @@ import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { canonical, parseCanonical } from '../src/bytes.mjs';
-import { validateOrigin } from '../src/admission.mjs';
+import { validateOrigin, classify } from '../src/admission.mjs';
+import { verifiedHistory } from '../src/replay.mjs';
 import { initialize, append, load } from '../src/store.mjs';
 import { fixture, history, signed } from './helpers.mjs';
 
@@ -70,4 +71,35 @@ test('strict encodings reject trailing newline, even under otherwise valid signa
     assert.throws(() => validateOrigin(signed('origin', { ...origin.body, ...update })));
   }
   assert.throws(() => validateOrigin({ ...origin, signature: origin.signature + '\n' }));
+});
+
+test('signed negative encounter corpus matches explicit independent diagnostic classes', context => {
+  const parent = fs.mkdtempSync(path.join(os.tmpdir(), 'genesis-diagnostic-'));
+  context.after(() => fs.rmSync(parent, { recursive: true }));
+  const origin = JSON.parse(fs.readFileSync('fixtures/encounter-v1/origin.json'));
+  const original = JSON.parse(fs.readFileSync('fixtures/encounter-v1/000001.json'));
+  const { states } = verifiedHistory(origin, []);
+  const cases = [
+    ['evidence-version', 'unsupported', body => { body.data.evidence.version = 'future'; }],
+    ['policy-version', 'invalid', body => { body.data.evidence.policy.version = 'future'; }],
+    ['frame', 'invalid', body => { body.data.evidence.observer.capabilities.spatial = { supported: true, evidence: 'claimed', frame: 'future', unit: 'mm' }; }],
+    ['event-profile', 'unsupported', body => { body.profile = 'future'; }],
+    ['event-kind', 'unsupported', body => { body.kind = 'future'; }],
+    ['bad-proof', 'invalid', () => {}],
+    ['unknown-parent', 'invalid', body => { body.previous = '0'.repeat(64); }],
+  ];
+  for (const [name, expected, mutate] of cases) {
+    const body = structuredClone(original.body); mutate(body);
+    const candidate = signed('event', body);
+    if (name === 'bad-proof') candidate.signature = '0'.repeat(128);
+    const result = classify(states, [], candidate);
+    assert.equal(result.status, 'rejected', name);
+    assert.equal(result.code, expected, name);
+    const directory = path.join(parent, name);
+    initialize(directory, canonical(origin));
+    fs.writeFileSync(path.join(directory, '000001.json'), canonical(candidate));
+    const independent = python(directory);
+    assert.equal(independent.status, 1, name);
+    assert.equal(JSON.parse(independent.stderr).error, expected, name);
+  }
 });

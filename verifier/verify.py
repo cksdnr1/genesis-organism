@@ -173,7 +173,7 @@ def expression_result(state, observer, policy):
 def evidence_id(evidence, states):
     canonical(evidence)
     exact(evidence, ("version", "nonce", "sourceState", "observer", "policy", "expression", "interaction"))
-    need(evidence["version"] == "evidence-v1", "evidence version")
+    need(evidence["version"] == "evidence-v1", "evidence version", "unsupported")
     need(type(evidence["nonce"]) is str and re.fullmatch(r"[a-z0-9-]{1,128}", evidence["nonce"]) is not None, "nonce")
     need(any(canonical(state) == canonical(evidence["sourceState"]) for state in states), "unverified source")
     expected = expression_result(evidence["sourceState"], evidence["observer"], evidence["policy"])
