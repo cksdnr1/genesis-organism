@@ -14,3 +14,5 @@ export function signed(kind, body, seed = seeds[0]) {
 }
 export const reference = envelope => digest('event', envelope.body);
 export const history = () => [1, 2, 3].map(sequence => fixture(`${String(sequence).padStart(6, '0')}.json`));
+export const policy = () => ({ version: 'policy-v1', allow: ['text-v1', 'symbols-v1', 'path-v1'], disclosure: 'public-synthetic' });
+export const observer = (capability = 'text', subject = 'mock') => ({ version: 'observer-v1', observerType: 'mock', subject, capabilities: { [capability]: { supported: true, evidence: 'claimed', ...(capability === 'spatial' ? { frame: 'fixture-plane-v1', unit: 'mm' } : {}) } } });

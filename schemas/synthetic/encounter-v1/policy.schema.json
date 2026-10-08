@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cksdnr1/genesis-organism/schemas/synthetic/encounter-v1/policy.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["version", "allow", "disclosure"],
+  "properties": {
+    "version": {"const": "policy-v1"},
+    "allow": {"type": "array", "maxItems": 3, "uniqueItems": true, "items": {"enum": ["text-v1", "symbols-v1", "path-v1"]}},
+    "disclosure": {"const": "public-synthetic"}
+  }
+}
