@@ -1,5 +1,26 @@
 # Sequential phase execution status
 
+## Readiness scope clarification — A03, 2026-10-08
+
+[Evidence and birth readiness](readiness-scope.md) separates workflow delivery,
+bounded synthetic capabilities, real candidate gate acceptance and authorization
+for actual actions. Phase35 delivered a NO-GO audit; Phases36–38 are rehearsals.
+Neither workflow completion nor their public fixture proves the Phase38 plan's
+all-birth-gates entry condition for actual #0001. Original gate/plan bytes and
+UNBORN status remain; no corrective task is permission to birth an organism.
+
+## Conformance audit qualification — 2026-10-08
+
+The [fresh Total Spec / Phase Plan audit](conformance-audit-2026-10-08.md) at
+`2090fcd11b1f81d3fb381849913a6ceb3ed11dc0` supersedes any interpretation of the
+workflow table below as complete protocol conformance. All 50 existing tests pass,
+but additional probes reproduce unverified prior-candidate supersession (A01)
+and JS/Python unsupported-evidence diagnostic disagreement (A02). Phase36's
+supersession obligation fails; dependent ceremony claims remain qualified.
+The bounded Phase22 causal milestone remains demonstrated. Actual #0001 remains
+UNBORN/NO-GO. Historical workflow/task completion and earlier reports are retained;
+they do not close these newly found defects or the original real birth gates.
+
 Updated: 2026-10-08. Governing merged baseline: `0fd529ee2d8be2db6fa7a8c565ccca776f444527`.
 Creator requested all 38 existing execution phases, individually through PlaySpec
 mono-spec, with Total Spec and Phase Plan as the acceptance oracle. No phase added.

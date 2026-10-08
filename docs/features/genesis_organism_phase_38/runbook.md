@@ -1,5 +1,9 @@
 # Synthetic ceremony verification and recovery
 
+Current interpretation: [evidence versus real birth readiness](../genesis_organism/readiness-scope.md).
+This rehearsal cannot establish the original plan's all-real-birth-gates entry
+condition. The original gate source remains authoritative and actual #0001 NO-GO.
+
 This runbook exercises only public fixture origin
 `37d5a9c4b7163c331b296545a52130cd2c8006cfa010cc5e31353cac8e2061cc` and TEST1
 authority. It cannot supply real #0001 authority or turn UNBORN into ALIVE.
@@ -72,3 +76,14 @@ publishes one fixture request or returns duplicate/same reference. `checkJournal
 and the independent checker must then agree. Conflicts are a fail-closed hold;
 this profile has no automatic resolution or history-erasing reset. Never reuse a
 fixture key or these local test permissions for actual organisms/private data.
+
+## Supersession evidence limit — A01 correction, 2026-10-08
+
+Live supersession verification requires the predecessor's complete selected Git
+artifacts, including raw hashes and explicit selection. A supplied predecessor
+manifest/failure record alone cannot establish that evidence. Current-candidate
+offline archives do not retain predecessor bytes: the Python offline command
+explicitly refuses superseding candidates as unavailable without calling Git.
+The retained nonsuperseding rehearsal still verifies offline. Do not present
+this limit as full offline supersession or a proof that supplied births=[] is a
+complete/global absence record. No historical fixture or real birth gate changed.
