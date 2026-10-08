@@ -8,8 +8,10 @@ import { fileURLToPath } from 'node:url';
 import { canonical, parseCanonical } from '../src/bytes.mjs';
 import { validateOrigin, classify } from '../src/admission.mjs';
 import { verifiedHistory } from '../src/replay.mjs';
+import { negotiate } from '../src/perception.mjs';
+import { express } from '../src/expression.mjs';
 import { initialize, append, load } from '../src/store.mjs';
-import { fixture, history, signed } from './helpers.mjs';
+import { fixture, history, signed, observer, policy } from './helpers.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 function python(...argumentsList) { return spawnSync(path.join(root, '.venv/bin/python'), [path.join(root, 'verifier/verify.py'), ...argumentsList], { encoding: 'utf8' }); }
@@ -102,4 +104,41 @@ test('signed negative encounter corpus matches explicit independent diagnostic c
     assert.equal(independent.status, 1, name);
     assert.equal(JSON.parse(independent.stderr).error, expected, name);
   }
+});
+
+test('retained PM-01 negatives have literal envelope codes and no admission effects', context => {
+  const parent = fs.mkdtempSync(path.join(os.tmpdir(), 'genesis-pm01-'));
+  context.after(() => fs.rmSync(parent, { recursive: true }));
+  const origin = JSON.parse(fs.readFileSync('fixtures/encounter-v1/origin.json'));
+  const corpus = JSON.parse(fs.readFileSync('docs/features/genesis_organism/post-merge-audit/diagnostic-results.json'));
+  const expected = {
+    'observer-version': 'invalid', 'unknown-capability': 'invalid',
+    'private-disclosure': 'invalid', 'attested-capability': 'invalid',
+    'empty-policy': 'invalid', 'unsupported-policy-profile': 'invalid',
+    'unsupported-policy-version': 'invalid', 'unsupported-evidence-version': 'unsupported',
+    'missing-policy': 'invalid', 'invalid-message': 'invalid',
+    'unsupported-frame': 'invalid', 'unauthenticated-source': 'invalid',
+  };
+  assert.deepEqual(corpus.results.map(item => item.name).sort(), Object.keys(expected).sort());
+  const { states } = verifiedHistory(origin, []);
+  const inventory = directory => fs.readdirSync(directory).sort().map(name => [name, fs.readFileSync(path.join(directory, name)).toString('hex')]);
+  for (const { name, candidate } of corpus.results) {
+    const outcome = classify(states, [], candidate);
+    assert.equal(outcome.status, 'rejected', name);
+    assert.equal(outcome.code, expected[name], name);
+    const directory = path.join(parent, name);
+    initialize(directory, canonical(origin));
+    const before = inventory(directory);
+    assert.throws(() => append(directory, canonical(candidate)), error => error.code === expected[name], name);
+    assert.deepEqual(inventory(directory), before, name);
+    // Inject solely into this owned verifier fixture, after no-write assertion.
+    fs.writeFileSync(path.join(directory, '000001.json'), canonical(candidate));
+    const independent = python(directory);
+    assert.equal(independent.status, 1, name);
+    assert.equal(JSON.parse(independent.stderr).error, expected[name], name);
+  }
+  const state = states[0];
+  assert.throws(() => negotiate(state, { ...observer(), version: 'future' }, policy()), error => error.code === 'unsupported');
+  assert.throws(() => negotiate(state, { ...observer(), capabilities: { future: { supported: true, evidence: 'claimed' } } }, policy()), error => error.code === 'unsupported');
+  assert.throws(() => express(state, observer(), { ...policy(), disclosure: 'private' }), error => error.code === 'unauthorized');
 });

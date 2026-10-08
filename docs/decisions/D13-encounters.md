@@ -118,3 +118,27 @@ finite history budgets and fork liveness loss. Scope to public synthetic fixture
 no sensor truth, AI preference, private confidentiality or meaningful memory effect
 claimed until its separately accepted D08 demonstration. Finite experiments do
 not establish open-ended evolution.
+
+## PM-01 contextual diagnostics — 2026-10-08
+
+Submitted evidence-v1 expression/observer/policy failures are invalid at the
+expression-fidelity predicate, consistent with A02's explicit policy-version/frame
+mapping. Python evidence_id converts only expression_result Invalid exceptions
+at that call boundary; standalone negotiation retains unsupported/unauthorized.
+Unknown evidence.version remains unsupported and outer canonical/resource/source/
+interaction checks retain their diagnostics. No denied/private input becomes
+permitted, disclosed or accepted. Successful state/proof/byte/version rules remain.
+
+### Minimality / Complexity Justification
+
+Minimum: one specific exception boundary, twelve retained literal negative cases
+and standalone/no-write checks. Propagating all JS negotiation exceptions would
+change existing envelope outcomes; globally flattening Python would destroy useful
+diagnostics. Removal restores independent rejection-class disagreement. Required
+property is Phase13/18/D06 error conformance and D07 boolean fidelity, not a new
+authorization or private profile. New failure risk is hiding unrelated errors:
+Invalid-only catch around one call, outside envelope/byte checks, bounds it.
+The exact retained JSON is added to the existing ceremony selection (196 paths)
+because the new regression reads it. One list entry/inclusion assertion preserves
+archive input closure; historical195/194 manifests and failed evidence are untouched.
+No new domain/state/dependency/D-number/phase or birth readiness follows.
